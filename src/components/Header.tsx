@@ -183,15 +183,15 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="bg-stone-950 text-stone-300 border-b border-stone-800 text-[11px] py-1.5 px-3 sm:px-6 lg:px-8 tracking-wide">
         <div className="max-w-[1440px] mx-auto flex items-center justify-between gap-3 sm:gap-4">
           
-          {/* Left: Social Media Icons & Studio Info */}
-          <div className="flex items-center gap-3 shrink-0">
+          {/* Left: Social Media Icons & WhatsApp */}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <div className="flex items-center gap-2 text-stone-400">
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Follow Ananya Collection on Instagram"
-                className="hover:text-amber-300 transition-colors cursor-pointer p-0.5"
+                className="hidden sm:inline-flex hover:text-amber-300 transition-colors cursor-pointer p-0.5"
               >
                 <Instagram className="w-3.5 h-3.5" />
               </a>
@@ -200,7 +200,7 @@ export const Header: React.FC<HeaderProps> = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Facebook"
-                className="hover:text-amber-300 transition-colors cursor-pointer p-0.5"
+                className="hidden sm:inline-flex hover:text-amber-300 transition-colors cursor-pointer p-0.5"
               >
                 <Facebook className="w-3.5 h-3.5" />
               </a>
@@ -209,7 +209,7 @@ export const Header: React.FC<HeaderProps> = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 title="YouTube Studio"
-                className="hover:text-amber-300 transition-colors cursor-pointer p-0.5"
+                className="hidden sm:inline-flex hover:text-amber-300 transition-colors cursor-pointer p-0.5"
               >
                 <Youtube className="w-3.5 h-3.5" />
               </a>
@@ -287,17 +287,17 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {/* 2. Main Navigation Bar (Clean Luxury Marketplace Header - NO public theme customizer!) */}
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-4 h-20 sm:h-24">
+      <div className="max-w-[1440px] mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between gap-2 sm:gap-4 h-16 sm:h-24">
           
           {/* Left: Brand Logo & Deliver To PIN code */}
-          <div className="flex items-center gap-4 sm:gap-6 shrink-0">
+          <div className="flex items-center gap-2 sm:gap-4 min-w-0">
             <button
               onClick={() => setActiveTab('storefront')}
-              className="text-left group flex items-center gap-3 sm:gap-4 focus:outline-none cursor-pointer"
+              className="text-left group flex items-center gap-2 sm:gap-4 focus:outline-none cursor-pointer min-w-0"
             >
               {theme.logoUrl ? (
-                <div className="relative w-14 h-14 sm:w-16 sm:h-16 lg:w-18 lg:h-18 rounded-full p-1 bg-gradient-to-tr from-amber-600 via-amber-300 to-yellow-500 shadow-md group-hover:scale-105 transition-all shrink-0 ring-2 ring-amber-400/50">
+                <div className="relative w-10 h-10 sm:w-16 sm:h-16 lg:w-18 lg:h-18 rounded-full p-0.5 sm:p-1 bg-gradient-to-tr from-amber-600 via-amber-300 to-yellow-500 shadow-md group-hover:scale-105 transition-all shrink-0 ring-1.5 sm:ring-2 ring-amber-400/50">
                   <img
                     src={theme.logoUrl}
                     alt={theme.storeName}
@@ -307,19 +307,19 @@ export const Header: React.FC<HeaderProps> = ({
               ) : (
                 <div
                   style={{ backgroundColor: 'var(--theme-primary)' }}
-                  className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-md group-hover:scale-105 transition-transform shrink-0"
+                  className="w-10 h-10 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center text-white font-bold text-lg sm:text-2xl shadow-md group-hover:scale-105 transition-transform shrink-0"
                 >
                   {theme.logoText ? theme.logoText.slice(0, 2) : 'AC'}
                 </div>
               )}
-              <div className="flex flex-col justify-center">
-                <span className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-[0.05em] uppercase whitespace-nowrap leading-none font-serif text-stone-900 dark:text-amber-100">
+              <div className="flex flex-col justify-center min-w-0">
+                <span className="text-base sm:text-2xl lg:text-3xl font-extrabold tracking-wide uppercase truncate leading-tight font-serif text-stone-900 dark:text-amber-100">
                   {theme.storeName}
                 </span>
-                <div className="flex items-center gap-2 mt-1.5">
-                  <span className="text-[10px] sm:text-xs font-bold tracking-[0.18em] uppercase flex items-center gap-1.5 text-amber-950 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-full border border-amber-300 dark:border-amber-700/60 shadow-2xs">
+                <div className="flex items-center gap-1.5 sm:gap-2 mt-0.5 sm:mt-1.5">
+                  <span className="text-[9px] sm:text-xs font-bold tracking-wider uppercase flex items-center gap-1 sm:gap-1.5 text-amber-950 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-1.5 sm:px-2.5 py-0.5 rounded-full border border-amber-300 dark:border-amber-700/60 shrink-0 shadow-2xs">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                    Rohini, Delhi
+                    Rohini
                   </span>
                   <span className="text-stone-300 dark:text-stone-600 text-xs hidden sm:inline">|</span>
                   <span className="text-[11px] text-stone-600 dark:text-stone-300 font-medium tracking-wide truncate max-w-[150px] sm:max-w-[280px] hidden sm:inline">
@@ -555,13 +555,13 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
 
           {/* Right Actions: Language, Wishlist, Cart Drawer & User Account */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <div className="flex items-center gap-1 sm:gap-2.5 shrink-0">
 
             {/* Language Toggle: English <-> हिंदी */}
             <button
               onClick={toggleLanguage}
               title={language === 'en' ? 'हिंदी में बदलें' : 'Switch to English'}
-              className="px-2.5 py-1.5 text-xs font-bold text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shrink-0 cursor-pointer"
+              className="px-2 sm:px-2.5 py-1 sm:py-1.5 text-[11px] sm:text-xs font-bold text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shrink-0 cursor-pointer"
             >
               {language === 'en' ? 'हिंदी' : 'EN'}
             </button>
@@ -573,11 +573,11 @@ export const Header: React.FC<HeaderProps> = ({
                 onSearchChange('__wishlist__');
               }}
               title="Your Saved Wishlist"
-              className="relative p-2 text-slate-600 dark:text-slate-300 hover:text-rose-500 dark:hover:text-rose-400 transition-colors cursor-pointer rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800"
+              className="relative p-1.5 sm:p-2 text-slate-600 dark:text-slate-300 hover:text-rose-500 dark:hover:text-rose-400 transition-colors cursor-pointer rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800"
             >
-              <Heart className={`w-5 h-5 ${wishlist.length > 0 ? 'text-rose-500 fill-rose-500/20' : ''}`} />
+              <Heart className={`w-4 h-4 sm:w-5 sm:h-5 ${wishlist.length > 0 ? 'text-rose-500 fill-rose-500/20' : ''}`} />
               {wishlist.length > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 bg-rose-600 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center animate-heart-pop shadow-xs">
+                <span className="absolute -top-0.5 -right-0.5 bg-rose-600 text-white text-[9px] sm:text-[10px] font-bold w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full flex items-center justify-center animate-heart-pop shadow-xs">
                   {wishlist.length}
                 </span>
               )}
@@ -586,12 +586,12 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Cart Drawer Trigger */}
             <button
               onClick={() => setIsCartDrawerOpen(true)}
-              className="flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-full font-semibold text-xs transition-all shadow-xs bg-stone-900 hover:bg-black text-amber-200 dark:bg-amber-400 dark:text-stone-950 border border-amber-400/40 active:scale-95 whitespace-nowrap cursor-pointer"
+              className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full font-semibold text-xs transition-all shadow-xs bg-stone-900 hover:bg-black text-amber-200 dark:bg-amber-400 dark:text-stone-950 border border-amber-400/40 active:scale-95 whitespace-nowrap cursor-pointer"
             >
               <div className="relative">
-                <ShoppingCart className="w-4 h-4 text-amber-300 dark:text-stone-950" />
+                <ShoppingCart className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-300 dark:text-stone-950" />
                 {cartCount > 0 && (
-                  <span className="absolute -top-2 -right-2.5 bg-amber-400 text-stone-950 text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center shadow-xs animate-cart-bounce">
+                  <span className="absolute -top-2 -right-2 bg-amber-400 text-stone-950 text-[9px] sm:text-[10px] font-bold w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full flex items-center justify-center shadow-xs animate-cart-bounce">
                     {cartCount}
                   </span>
                 )}
@@ -605,9 +605,9 @@ export const Header: React.FC<HeaderProps> = ({
             <div className="relative">
               <button
                 onClick={() => setIsAccountMenuOpen(!isAccountMenuOpen)}
-                className="flex items-center gap-1.5 p-1 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
+                className="flex items-center gap-1 sm:gap-1.5 p-0.5 sm:p-1 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
               >
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs shadow-xs ${
+                <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center font-bold text-xs shadow-xs ${
                   currentUser.role === 'super_admin'
                     ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300'
                     : currentUser.role === 'seller'
@@ -617,7 +617,7 @@ export const Header: React.FC<HeaderProps> = ({
                   {currentUser.isLoggedIn ? (
                     currentUser.name.charAt(0)
                   ) : (
-                    <User className="w-4 h-4" />
+                    <User className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   )}
                 </div>
                 <div className="hidden xl:flex flex-col text-left">
@@ -719,7 +719,7 @@ export const Header: React.FC<HeaderProps> = ({
                 setIsSearchFocused(true);
               }}
               placeholder={t.searchPlaceholder}
-              className="w-full pl-9 pr-9 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full pl-9 pr-9 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#B8860B]/50"
             />
             <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
             {searchQuery && (

@@ -22,17 +22,17 @@ export interface SearchSuggestionsResult {
 // Popular Indian E-Commerce search terms
 export const POPULAR_SEARCH_TERMS = [
   'Kanjeevaram Silk Saree',
-  'ANC Earbuds',
-  'Pure Himalayan Shilajit',
-  'Cast Iron Dosa Tawa',
+  'Pure Banarasi Katan Silk',
+  'Russian Silk Anarkali Suit',
   'Lucknowi Chikankari Kurta',
-  'Kolhapuri Chappals',
-  'A2 Gir Cow Ghee',
-  'Kashmiri Kesar',
-  'Moradabad Brass Diya',
-  'Fast GaN Charger',
-  'Curved AMOLED Smartwatch',
-  'Jaipuri Razai & Bedsheet',
+  'Bridal Heritage Lehengas',
+  'Phulkari Gotta Patti Dupatta',
+  'Kashmiri Pashmina Shawl',
+  'Velvet Wedding Ensembles',
+  'Men Raw Silk Kurta Pajama',
+  'Kids Festive Kurta Set',
+  'Pure Cotton Nightwear Set',
+  'Satin Silk Lounge Set',
 ];
 
 // Curated Indian E-Commerce phonetic and typo dictionary

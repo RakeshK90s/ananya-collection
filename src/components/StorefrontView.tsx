@@ -514,33 +514,33 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
             ))}
 
             {/* Top-Right Verified Luxury Badge */}
-            <div className="absolute top-4 right-4 sm:top-6 sm:right-8 z-20 px-4 py-1.5 bg-stone-900/80 text-amber-200 backdrop-blur-md border border-amber-400/40 rounded-full text-xs font-medium flex items-center gap-2 shadow-lg">
-              <ShieldCheck className="w-4 h-4 text-amber-400" />
-              <span className="font-serif tracking-wider uppercase text-[11px]">Rohini Flagship Boutique</span>
+            <div className="absolute top-3 right-3 sm:top-6 sm:right-8 z-20 px-2.5 sm:px-4 py-1 sm:py-1.5 bg-stone-900/80 text-amber-200 backdrop-blur-md border border-amber-400/40 rounded-full text-[10px] sm:text-xs font-medium flex items-center gap-1.5 sm:gap-2 shadow-lg">
+              <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" />
+              <span className="font-serif tracking-wider uppercase text-[10px] sm:text-[11px]">Rohini Flagship Boutique</span>
             </div>
 
             {/* Slide Content */}
-            <div className="relative z-10 max-w-2xl px-6 sm:px-14 py-12 space-y-4">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-400/20 backdrop-blur-md border border-amber-400/40 text-xs font-semibold text-amber-200 tracking-wider uppercase">
-                <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-                <span>{language === 'hi' ? heroSlides[heroSlide].kickerHi : heroSlides[heroSlide].kicker}</span>
+            <div className="relative z-10 max-w-2xl px-4 sm:px-14 py-8 sm:py-12 space-y-3 sm:space-y-4">
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1 rounded-full bg-amber-400/20 backdrop-blur-md border border-amber-400/40 text-[10px] sm:text-xs font-semibold text-amber-200 tracking-wider uppercase">
+                <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-300" />
+                <span className="truncate max-w-[260px] sm:max-w-none">{language === 'hi' ? heroSlides[heroSlide].kickerHi : heroSlides[heroSlide].kicker}</span>
               </div>
 
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-medium tracking-tight leading-[1.12] text-white">
+              <h1 className="text-2xl sm:text-5xl lg:text-6xl font-serif font-medium tracking-tight leading-[1.15] text-white">
                 {language === 'hi' ? heroSlides[heroSlide].titleHi : heroSlides[heroSlide].title}
               </h1>
 
-              <p className="text-xs sm:text-base text-stone-200 line-clamp-3 leading-relaxed max-w-xl font-light">
+              <p className="text-xs sm:text-base text-stone-200 line-clamp-2 sm:line-clamp-3 leading-relaxed max-w-xl font-light">
                 {language === 'hi' ? heroSlides[heroSlide].descHi : heroSlides[heroSlide].desc}
               </p>
 
-              <div className="pt-3 flex flex-wrap items-center gap-3">
+              <div className="pt-2 sm:pt-3 flex flex-wrap items-center gap-2.5 sm:gap-3">
                 <button
                   onClick={() => onSelectCategory(heroSlides[heroSlide].category)}
-                  className="px-8 py-3.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-serif font-bold text-xs sm:text-sm tracking-wider uppercase rounded-full shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center gap-2 cursor-pointer"
+                  className="px-5 sm:px-8 py-2.5 sm:py-3.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-serif font-bold text-xs sm:text-sm tracking-wider uppercase rounded-full shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <span>{heroSlides[heroSlide].ctaText}</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </button>
 
                 <button
@@ -552,9 +552,9 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
                       onSelectCategory('all');
                     }
                   }}
-                  className="px-6 py-3.5 bg-white/15 hover:bg-white/25 text-white backdrop-blur-md border border-white/30 rounded-full text-xs sm:text-sm font-semibold tracking-wide uppercase transition-all flex items-center gap-2 cursor-pointer"
+                  className="px-4 sm:px-6 py-2.5 sm:py-3.5 bg-white/15 hover:bg-white/25 text-white backdrop-blur-md border border-white/30 rounded-full text-xs sm:text-sm font-semibold tracking-wide uppercase transition-all flex items-center gap-2 cursor-pointer"
                 >
-                  <Flame className="w-4 h-4 text-amber-300" />
+                  <Flame className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-300" />
                   <span>{language === 'hi' ? 'आज के डील्स देखें' : "Festive Specials"}</span>
                 </button>
               </div>
@@ -1554,11 +1554,11 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
                 ))}
               </div>
               <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                "AuraPro Earbuds are a game changer on the Bengaluru metro commute. 42dB ANC completely cuts out crowd rumble, and 10 min charge gives 5 hrs battery."
+                "The Russian Silk Anarkali Suit set from Ananya Collection is breathtaking! The intricate zari work and perfect master tailoring fitting made me the center of attention at my family Sangeet in Rohini."
               </p>
               <div className="pt-2 border-t border-slate-100 dark:border-slate-700 text-[11px]">
-                <p className="font-bold text-slate-900 dark:text-white">Arjun Nambiar</p>
-                <p className="text-slate-400">Bengaluru · Verified Tech Enthusiast</p>
+                <p className="font-bold text-slate-900 dark:text-white">Priya Sharma</p>
+                <p className="text-slate-400">Rohini, New Delhi · Verified Boutique Buyer</p>
               </div>
             </div>
 
@@ -1569,11 +1569,11 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
                 ))}
               </div>
               <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                "Pure Himalayan Shilajit resin lab tested report verified with QR code. Delivered to Jaipur in exactly 48 hours by Delhivery with Cash on Delivery."
+                "Ordered the pure Banarasi Katan Silk Dupatta with heavy gold zari jaal. The fabric texture, royal crimson color, and prompt delivery across Mumbai were truly outstanding."
               </p>
               <div className="pt-2 border-t border-slate-100 dark:border-slate-700 text-[11px]">
-                <p className="font-bold text-slate-900 dark:text-white">Dr. Harshvardhan Singh</p>
-                <p className="text-slate-400">Jaipur · Verified Wellness Buyer</p>
+                <p className="font-bold text-slate-900 dark:text-white">Simran Kaur</p>
+                <p className="text-slate-400">Mumbai · Verified Heritage Buyer</p>
               </div>
             </div>
           </div>

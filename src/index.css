@@ -27,13 +27,25 @@
     --theme-font-heading: 'Playfair Display', 'Noto Sans Devanagari', Georgia, serif;
   }
 
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   body {
     background-color: var(--theme-bg);
     color: var(--theme-text);
     font-family: var(--theme-font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
   }
 
   h1, h2, h3, .font-heading {

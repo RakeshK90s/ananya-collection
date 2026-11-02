@@ -48,7 +48,7 @@ const AppContent: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col transition-colors duration-300 pb-16 md:pb-0">
+    <div className="min-h-screen flex flex-col transition-colors duration-300 pb-16 md:pb-0 w-full max-w-full overflow-x-hidden">
       {/* Universal Top Header */}
       <Header
         onSearchChange={setSearchQuery}
