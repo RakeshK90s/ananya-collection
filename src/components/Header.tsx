@@ -217,24 +217,14 @@ export const Header: React.FC<HeaderProps> = ({
                 href="https://wa.me/919667417843?text=Hello%20Ananya%20Collection%2C%20I%20have%20an%20enquiry"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="WhatsApp Concierge: +91 96674 17843"
-                className="hover:text-emerald-400 transition-colors cursor-pointer p-0.5"
+                title="Chat on WhatsApp (+91 96674 17843)"
+                className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-950/70 border border-emerald-500/40 text-emerald-400 hover:bg-emerald-900/80 hover:text-emerald-300 transition-all cursor-pointer font-medium text-[11px]"
               >
-                <Phone className="w-3.5 h-3.5 text-emerald-400" />
-              </a>
-            </div>
-
-            <span className="text-stone-700 hidden sm:inline">|</span>
-
-            <div className="hidden sm:flex items-center gap-1.5 text-stone-400 text-[11px]">
-              <MapPin className="w-3 h-3 text-amber-400 shrink-0" />
-              <a
-                href="https://wa.me/919667417843"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-amber-300 transition-colors"
-              >
-                40 Feet Rd, Rama Vihar, Rohini · Call: +91 96674 17843
+                <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.074-2.127-.521-1.625-.675-2.712-2.316-2.793-2.425-.08-.108-.66-.879-.66-1.674 0-.795.416-1.187.564-1.347.149-.16.326-.2.434-.2.108 0 .216.002.31.006.1.005.234-.038.366.279.136.327.464 1.132.505 1.215.041.083.069.18.014.288-.054.108-.082.176-.162.271-.08.096-.168.214-.24.288-.08.083-.163.173-.07.333.093.16.413.682.886 1.103.61.543 1.124.711 1.284.791.16.08.254.07.35-.041.096-.11.41-.477.52-.641.11-.164.22-.137.369-.082.149.055.945.446 1.107.527.162.081.27.121.31.189.04.068.04.394-.104.799z"/>
+                  <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.98-1.309A9.96 9.96 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.05c-1.656 0-3.197-.482-4.502-1.316l-.323-.205-2.96.777.79-2.885-.224-.356A8.026 8.026 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8.05-8 8.05z"/>
+                </svg>
+                <span>WhatsApp</span>
               </a>
             </div>
           </div>
@@ -607,7 +597,7 @@ export const Header: React.FC<HeaderProps> = ({
                 )}
               </div>
               <span className="hidden sm:inline font-bold font-serif tracking-wide">
-                {cartCount > 0 ? formatINR(cartGrandTotal) : t.cart}
+                {t.cart}
               </span>
             </button>
 

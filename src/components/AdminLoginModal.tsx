@@ -97,7 +97,7 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ isOpen, onClos
         )}
 
         {/* Admin Login Form */}
-        <form onSubmit={handleAdminLogin} className="space-y-4">
+        <form onSubmit={handleAdminLogin} autoComplete="off" className="space-y-4">
           <div>
             <label className="block text-xs font-bold text-stone-700 dark:text-stone-300 mb-1">
               Admin ID
@@ -107,6 +107,7 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ isOpen, onClos
               <input
                 type="text"
                 required
+                autoComplete="off"
                 value={adminId}
                 onChange={(e) => {
                   setAdminId(e.target.value);
@@ -127,6 +128,7 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ isOpen, onClos
               <input
                 type={showPassword ? 'text' : 'password'}
                 required
+                autoComplete="new-password"
                 value={adminPassword}
                 onChange={(e) => {
                   setAdminPassword(e.target.value);

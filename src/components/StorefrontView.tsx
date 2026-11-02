@@ -18,7 +18,7 @@ import {
   ArrowRight,
   TrendingUp,
   SlidersHorizontal,
-  Palette,
+  Layers,
   X,
   Search,
   Check,
@@ -63,13 +63,14 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
   // Filter & Sort States
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState<'featured' | 'price-low' | 'price-high' | 'rating' | 'newest'>('featured');
-  const [maxPrice, setMaxPrice] = useState<number>(10000);
-  const [pricePreset, setPricePreset] = useState<'all' | 'under1000' | '1000-2500' | '2500-5000' | 'above5000'>('all');
+  const [maxPrice, setMaxPrice] = useState<number>(30000);
+  const [pricePreset, setPricePreset] = useState<'all' | 'under3500' | '3500-5000' | '5000-10000' | 'above10000'>('all');
   const [minRating, setMinRating] = useState<number>(0);
   const [inStockOnly, setInStockOnly] = useState<boolean>(false);
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
   const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
-  const [selectedColors, setSelectedColors] = useState<string[]>([]);
+  const [selectedFabrics, setSelectedFabrics] = useState<string[]>([]);
+  const [selectedOccasions, setSelectedOccasions] = useState<string[]>([]);
   const [showMobileFilter, setShowMobileFilter] = useState<boolean>(false);
   const [dismissedSuggestion, setDismissedSuggestion] = useState<string | null>(null);
 
@@ -140,16 +141,16 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
 
   const heroSlides = [
     {
-      kicker: 'Ananya Collection · Grand Couture Showcase',
-      kickerHi: 'अनन्य कलेक्शन · भव्य बुटीक कुटूर शोकेस',
+      kicker: 'Ananya Collection · Grand Festive & Wedding Showcase',
+      kickerHi: 'अनन्या कलेक्शन · भव्य उत्सव व वैवाहिक परिधान',
       title: 'Royal Anarkalis, Velvet & Pure Silk Designer Suits',
       titleHi: 'शाही अनारकली, वेलवेट व सिल्क डिजाइनर सूट सेट्स',
       desc: 'Step into royal elegance with handcrafted Russian silk, georgette shararas, and rich velvet party wear suits curated in Rohini, Delhi.',
       descHi: 'शाही रशियन सिल्क, जॉर्जेट और रिच वेलवेट पर जरी व रेशम की मनमोहक कारीगरी। रोहिणी फ्लैगशिप बुटीक से पूरे भारत में डिलीवरी।',
-      image: '/hero/hero-grand-collection.png',
+      image: '/hero/hero-ethnic-kurtas.png',
       category: 'salwar-suits',
-      ctaText: 'Explore Grand Collection',
-      position: 'object-[75%_center] sm:object-[68%_center] md:object-center',
+      ctaText: 'Explore Royal Showcase',
+      position: 'object-[78%_center] sm:object-[72%_center] md:object-[68%_center] lg:object-[65%_center]',
     },
     {
       kicker: 'Couture Elegance · Navy & Fuchsia Edition',
@@ -218,10 +219,10 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
       titleHi: 'हर अवसर के लिए आरामदायक और स्टाइलिश कुर्ती सेट्स',
       desc: 'Effortless elegance tailored for daily sophistication and festive gatherings with premium fabrics and modern cuts.',
       descHi: 'प्रीमियम हवादार फैब्रिक और कंटेम्पररी कट्स। ऑफिस, पूजा और पारिवारिक मिलन के लिए उत्तम।',
-      image: '/hero/hero-ethnic-kurtas.png',
+      image: '/hero/hero-grand-collection.png',
       category: 'salwar-suits',
       ctaText: 'Shop Daily Couture',
-      position: 'object-[75%_center] sm:object-[65%_center] md:object-center',
+      position: 'object-[75%_center] sm:object-[68%_center] md:object-center',
     },
     {
       kicker: 'Temple Courtyard · Divine Handcrafted Silks',
@@ -295,17 +296,33 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
       .sort((a, b) => b.count - a.count);
   }, [products]);
 
-  const availableColors = useMemo(() => {
-    const colorMap: Record<string, number> = {};
+  const availableFabrics = useMemo(() => {
+    const fabricMap: Record<string, number> = {};
     products.forEach((p) => {
-      if (p.status !== 'paused' && p.colors) {
-        p.colors.forEach((c) => {
-          colorMap[c] = (colorMap[c] || 0) + 1;
-        });
+      if (p.status !== 'paused') {
+        const rawFabric = (
+          p.specs?.['Fabric'] ||
+          p.specs?.['Top Fabric'] ||
+          p.specs?.['Lehenga Fabric'] ||
+          ''
+        ).toLowerCase();
+
+        let key = '';
+        if (rawFabric.includes('russian silk')) key = 'Russian Silk';
+        else if (rawFabric.includes('soft silk') || rawFabric.includes('pure silk') || rawFabric.includes('raw silk')) key = 'Pure Handloom Silk';
+        else if (rawFabric.includes('georgette')) key = 'Pure Georgette';
+        else if (rawFabric.includes('organza')) key = 'Organza Silk';
+        else if (rawFabric.includes('chanderi')) key = 'Chanderi Silk';
+        else if (rawFabric.includes('velvet')) key = 'Micro Velvet';
+        else if (rawFabric.includes('cotton')) key = 'Breathable Cotton';
+
+        if (key) {
+          fabricMap[key] = (fabricMap[key] || 0) + 1;
+        }
       }
     });
-    return Object.entries(colorMap)
-      .map(([color, count]) => ({ color, count }))
+    return Object.entries(fabricMap)
+      .map(([fabric, count]) => ({ fabric, count }))
       .sort((a, b) => b.count - a.count);
   }, [products]);
 
@@ -343,10 +360,10 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
 
     // 3. Price Preset & Max Price
     let matchesPricePreset = true;
-    if (pricePreset === 'under1000') matchesPricePreset = p.price < 1000;
-    else if (pricePreset === '1000-2500') matchesPricePreset = p.price >= 1000 && p.price <= 2500;
-    else if (pricePreset === '2500-5000') matchesPricePreset = p.price >= 2500 && p.price <= 5000;
-    else if (pricePreset === 'above5000') matchesPricePreset = p.price > 5000;
+    if (pricePreset === 'under3500') matchesPricePreset = p.price < 3500;
+    else if (pricePreset === '3500-5000') matchesPricePreset = p.price >= 3500 && p.price <= 5000;
+    else if (pricePreset === '5000-10000') matchesPricePreset = p.price >= 5000 && p.price <= 10000;
+    else if (pricePreset === 'above10000') matchesPricePreset = p.price > 10000;
 
     const matchesPrice = p.price <= maxPrice;
 
@@ -362,10 +379,32 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
       selectedSizes.length === 0 ||
       (p.sizes && p.sizes.some((s) => selectedSizes.includes(s)));
 
-    // 7. Color Multi-select
-    const matchesColor =
-      selectedColors.length === 0 ||
-      (p.colors && p.colors.some((c) => selectedColors.includes(c)));
+    // 7. Fabric Multi-select
+    const matchesFabric =
+      selectedFabrics.length === 0 ||
+      selectedFabrics.some((f) => {
+        const raw = `${p.specs?.['Fabric'] || ''} ${p.specs?.['Top Fabric'] || ''} ${p.specs?.['Lehenga Fabric'] || ''} ${p.title} ${p.description}`.toLowerCase();
+        if (f === 'Russian Silk') return raw.includes('russian silk');
+        if (f === 'Pure Handloom Silk') return raw.includes('soft silk') || raw.includes('pure silk') || raw.includes('raw silk') || raw.includes('kanjeevaram');
+        if (f === 'Pure Georgette') return raw.includes('georgette');
+        if (f === 'Organza Silk') return raw.includes('organza');
+        if (f === 'Chanderi Silk') return raw.includes('chanderi');
+        if (f === 'Micro Velvet') return raw.includes('velvet');
+        if (f === 'Breathable Cotton') return raw.includes('cotton');
+        return false;
+      });
+
+    // 8. Occasion Multi-select
+    const matchesOccasion =
+      selectedOccasions.length === 0 ||
+      selectedOccasions.some((occ) => {
+        const textToSearch = `${p.tags?.join(' ') || ''} ${p.specs?.['Occasion'] || ''} ${p.title} ${p.description}`.toLowerCase();
+        if (occ === 'wedding') return textToSearch.includes('wedding') || textToSearch.includes('bridal') || textToSearch.includes('reception') || textToSearch.includes('zardozi');
+        if (occ === 'festive') return textToSearch.includes('festive') || textToSearch.includes('festival') || textToSearch.includes('puja') || textToSearch.includes('diwali') || textToSearch.includes('karwa');
+        if (occ === 'party') return textToSearch.includes('party') || textToSearch.includes('sangeet') || textToSearch.includes('cocktail') || textToSearch.includes('mehendi');
+        if (occ === 'daily') return textToSearch.includes('daily') || textToSearch.includes('comfort') || textToSearch.includes('casual');
+        return true;
+      });
 
     return (
       matchesSearch &&
@@ -377,7 +416,8 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
       matchesStock &&
       matchesBrand &&
       matchesSize &&
-      matchesColor &&
+      matchesFabric &&
+      matchesOccasion &&
       p.status !== 'paused'
     );
   });
@@ -398,23 +438,25 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
     selectedCategory !== 'all' ||
     Boolean(selectedSubcategory) ||
     pricePreset !== 'all' ||
-    maxPrice < 10000 ||
+    maxPrice < 30000 ||
     minRating > 0 ||
     inStockOnly ||
     selectedBrands.length > 0 ||
     selectedSizes.length > 0 ||
-    selectedColors.length > 0;
+    selectedFabrics.length > 0 ||
+    selectedOccasions.length > 0;
 
   const handleClearAllFilters = () => {
     onSelectCategory('all');
     if (onSelectSubcategory) onSelectSubcategory('');
     setPricePreset('all');
-    setMaxPrice(10000);
+    setMaxPrice(30000);
     setMinRating(0);
     setInStockOnly(false);
     setSelectedBrands([]);
     setSelectedSizes([]);
-    setSelectedColors([]);
+    setSelectedFabrics([]);
+    setSelectedOccasions([]);
   };
 
   const toggleBrand = (brand: string) => {
@@ -429,9 +471,15 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
     );
   };
 
-  const toggleColor = (color: string) => {
-    setSelectedColors((prev) =>
-      prev.includes(color) ? prev.filter((c) => c !== color) : [...prev, color]
+  const toggleFabric = (fabric: string) => {
+    setSelectedFabrics((prev) =>
+      prev.includes(fabric) ? prev.filter((f) => f !== fabric) : [...prev, fabric]
+    );
+  };
+
+  const toggleOccasion = (occ: string) => {
+    setSelectedOccasions((prev) =>
+      prev.includes(occ) ? prev.filter((o) => o !== occ) : [...prev, occ]
     );
   };
 
@@ -850,21 +898,21 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
             {pricePreset !== 'all' && (
               <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 text-[11px] font-semibold text-emerald-700 dark:text-emerald-300">
                 <span>
-                  {pricePreset === 'under1000' && '< ₹1,000'}
-                  {pricePreset === '1000-2500' && '₹1,000 - ₹2,500'}
-                  {pricePreset === '2500-5000' && '₹2,500 - ₹5,000'}
-                  {pricePreset === 'above5000' && '> ₹5,000'}
+                  {pricePreset === 'under3500' && '< ₹3,500'}
+                  {pricePreset === '3500-5000' && '₹3,500 - ₹5,000'}
+                  {pricePreset === '5000-10000' && '₹5,000 - ₹10,000'}
+                  {pricePreset === 'above10000' && 'Luxury > ₹10,000'}
                 </span>
-                <button type="button" onClick={() => setPricePreset('all')} className="hover:text-emerald-900">
+                <button type="button" onClick={() => setPricePreset('all')} className="hover:text-emerald-900 cursor-pointer">
                   <X className="w-3 h-3" />
                 </button>
               </span>
             )}
 
-            {maxPrice < 10000 && (
+            {maxPrice < 30000 && (
               <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 text-[11px] font-semibold text-slate-700 dark:text-slate-200">
                 <span>Max: {formatINR(maxPrice)}</span>
-                <button type="button" onClick={() => setMaxPrice(10000)} className="hover:text-slate-900">
+                <button type="button" onClick={() => setMaxPrice(30000)} className="hover:text-slate-900 cursor-pointer">
                   <X className="w-3 h-3" />
                 </button>
               </span>
@@ -912,17 +960,35 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
               </span>
             ))}
 
-            {selectedColors.map((color) => (
+            {selectedFabrics.map((fabric) => (
               <span
-                key={color}
-                className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-rose-50 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-800 text-[11px] font-semibold text-rose-700 dark:text-rose-300"
+                key={fabric}
+                className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800 text-[11px] font-semibold text-amber-800 dark:text-amber-300"
               >
-                <span>Color: {color}</span>
-                <button type="button" onClick={() => toggleColor(color)} className="hover:text-rose-900">
+                <span>Fabric: {fabric}</span>
+                <button type="button" onClick={() => toggleFabric(fabric)} className="hover:text-amber-950">
                   <X className="w-3 h-3" />
                 </button>
               </span>
             ))}
+
+            {selectedOccasions.map((occ) => {
+              const label =
+                occ === 'wedding' ? 'Wedding & Bridal' :
+                occ === 'festive' ? 'Festive & Puja' :
+                occ === 'party' ? 'Party & Sangeet' : 'Daily Couture';
+              return (
+                <span
+                  key={occ}
+                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-rose-50 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-800 text-[11px] font-semibold text-rose-800 dark:text-rose-300"
+                >
+                  <span>Occasion: {label}</span>
+                  <button type="button" onClick={() => toggleOccasion(occ)} className="hover:text-rose-950">
+                    <X className="w-3 h-3" />
+                  </button>
+                </span>
+              );
+            })}
 
             <button
               type="button"
@@ -1060,72 +1126,72 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
                   <button
                     type="button"
                     onClick={() => {
-                      setPricePreset(pricePreset === 'under1000' ? 'all' : 'under1000');
+                      setPricePreset(pricePreset === 'under3500' ? 'all' : 'under3500');
                     }}
-                    className={`text-[11px] py-1 px-2 rounded-md border text-center transition-colors ${
-                      pricePreset === 'under1000'
-                        ? 'bg-indigo-600 text-white border-indigo-600 font-bold'
+                    className={`text-[11px] py-1 px-2 rounded-md border text-center transition-colors cursor-pointer ${
+                      pricePreset === 'under3500'
+                        ? 'bg-[#B8860B] text-white border-[#B8860B] font-bold shadow-xs'
                         : 'bg-slate-50 dark:bg-slate-700/50 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100'
                     }`}
                   >
-                    Under ₹1,000
+                    Under ₹3,500
                   </button>
                   <button
                     type="button"
                     onClick={() => {
-                      setPricePreset(pricePreset === '1000-2500' ? 'all' : '1000-2500');
+                      setPricePreset(pricePreset === '3500-5000' ? 'all' : '3500-5000');
                     }}
-                    className={`text-[11px] py-1 px-2 rounded-md border text-center transition-colors ${
-                      pricePreset === '1000-2500'
-                        ? 'bg-indigo-600 text-white border-indigo-600 font-bold'
+                    className={`text-[11px] py-1 px-2 rounded-md border text-center transition-colors cursor-pointer ${
+                      pricePreset === '3500-5000'
+                        ? 'bg-[#B8860B] text-white border-[#B8860B] font-bold shadow-xs'
                         : 'bg-slate-50 dark:bg-slate-700/50 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100'
                     }`}
                   >
-                    ₹1,000 - ₹2,500
+                    ₹3,500 - ₹5,000
                   </button>
                   <button
                     type="button"
                     onClick={() => {
-                      setPricePreset(pricePreset === '2500-5000' ? 'all' : '2500-5000');
+                      setPricePreset(pricePreset === '5000-10000' ? 'all' : '5000-10000');
                     }}
-                    className={`text-[11px] py-1 px-2 rounded-md border text-center transition-colors ${
-                      pricePreset === '2500-5000'
-                        ? 'bg-indigo-600 text-white border-indigo-600 font-bold'
+                    className={`text-[11px] py-1 px-2 rounded-md border text-center transition-colors cursor-pointer ${
+                      pricePreset === '5000-10000'
+                        ? 'bg-[#B8860B] text-white border-[#B8860B] font-bold shadow-xs'
                         : 'bg-slate-50 dark:bg-slate-700/50 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100'
                     }`}
                   >
-                    ₹2,500 - ₹5,000
+                    ₹5,000 - ₹10,000
                   </button>
                   <button
                     type="button"
                     onClick={() => {
-                      setPricePreset(pricePreset === 'above5000' ? 'all' : 'above5000');
+                      setPricePreset(pricePreset === 'above10000' ? 'all' : 'above10000');
                     }}
-                    className={`text-[11px] py-1 px-2 rounded-md border text-center transition-colors ${
-                      pricePreset === 'above5000'
-                        ? 'bg-indigo-600 text-white border-indigo-600 font-bold'
+                    className={`text-[11px] py-1 px-2 rounded-md border text-center transition-colors cursor-pointer ${
+                      pricePreset === 'above10000'
+                        ? 'bg-[#B8860B] text-white border-[#B8860B] font-bold shadow-xs'
                         : 'bg-slate-50 dark:bg-slate-700/50 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100'
                     }`}
                   >
-                    Over ₹5,000
+                    Luxury ₹10,000+
                   </button>
                 </div>
 
                 <input
                   type="range"
-                  min={500}
-                  max={10000}
-                  step={250}
+                  min={1000}
+                  max={30000}
+                  step={500}
                   value={maxPrice}
                   onChange={(e) => {
                     setMaxPrice(Number(e.target.value));
                     setPricePreset('all');
                   }}
-                  className="w-full accent-indigo-600 cursor-pointer"
+                  className="w-full accent-[#B8860B] cursor-pointer"
                 />
                 <div className="flex justify-between text-[10px] text-slate-400 font-mono mt-1">
-                  <span>₹500</span>
-                  <span>₹10,000+</span>
+                  <span>₹1,000</span>
+                  <span>₹30,000+</span>
                 </div>
               </div>
 
@@ -1140,7 +1206,7 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
                       <button
                         type="button"
                         onClick={() => setSelectedBrands([])}
-                        className="text-[10px] text-indigo-600 hover:underline"
+                        className="text-[10px] text-[#B8860B] hover:underline cursor-pointer font-semibold"
                       >
                         Clear
                       </button>
@@ -1159,9 +1225,9 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
                               type="checkbox"
                               checked={isSelected}
                               onChange={() => toggleBrand(brand)}
-                              className="w-3.5 h-3.5 text-indigo-600 rounded cursor-pointer"
+                              className="w-3.5 h-3.5 accent-[#B8860B] rounded cursor-pointer"
                             />
-                            <span className={`truncate ${isSelected ? 'font-bold text-indigo-600 dark:text-indigo-400' : ''}`}>
+                            <span className={`truncate ${isSelected ? 'font-bold text-[#B8860B] dark:text-amber-400' : ''}`}>
                               {brand}
                             </span>
                           </span>
@@ -1186,7 +1252,7 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
                       <button
                         type="button"
                         onClick={() => setSelectedSizes([])}
-                        className="text-[10px] text-indigo-600 hover:underline"
+                        className="text-[10px] text-[#B8860B] hover:underline cursor-pointer font-semibold"
                       >
                         Clear
                       </button>
@@ -1200,9 +1266,9 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
                           key={size}
                           type="button"
                           onClick={() => toggleSize(size)}
-                          className={`text-[11px] px-2 py-1 rounded-md border transition-colors ${
+                          className={`text-[11px] px-2 py-1 rounded-md border transition-colors cursor-pointer ${
                             isSelected
-                              ? 'bg-indigo-600 text-white border-indigo-600 font-bold'
+                              ? 'bg-[#B8860B] text-white border-[#B8860B] font-bold shadow-xs'
                               : 'bg-slate-50 dark:bg-slate-700/50 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100'
                           }`}
                         >
@@ -1214,60 +1280,99 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
                 </div>
               )}
 
-              {/* 6. Color Filter */}
-              {availableColors.length > 0 && (
+              {/* 5. Fabric & Craft Filter (Curated for Ethnic Couture) */}
+              {availableFabrics.length > 0 && (
                 <div className="pt-3 border-t border-slate-100 dark:border-slate-700">
                   <div className="flex items-center justify-between mb-2">
-                    <h4 className="text-xs font-bold text-slate-700 dark:text-slate-300">
-                      Color Palette
+                    <h4 className="text-xs font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                      <Layers className="w-3.5 h-3.5 text-[#B8860B]" />
+                      <span>Fabric & Weave</span>
                     </h4>
-                    {selectedColors.length > 0 && (
+                    {selectedFabrics.length > 0 && (
                       <button
                         type="button"
-                        onClick={() => setSelectedColors([])}
-                        className="text-[10px] text-indigo-600 hover:underline"
+                        onClick={() => setSelectedFabrics([])}
+                        className="text-[10px] text-[#B8860B] hover:underline cursor-pointer font-semibold"
                       >
                         Clear
                       </button>
                     )}
                   </div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {availableColors.map(({ color }) => {
-                      const isSelected = selectedColors.includes(color);
+                  <div className="space-y-1.5 max-h-48 overflow-y-auto pr-1">
+                    {availableFabrics.map(({ fabric, count }) => {
+                      const isSelected = selectedFabrics.includes(fabric);
                       return (
-                        <button
-                          key={color}
-                          type="button"
-                          onClick={() => toggleColor(color)}
-                          className={`text-[11px] px-2 py-1 rounded-md border flex items-center gap-1.5 transition-colors ${
-                            isSelected
-                              ? 'bg-indigo-50 dark:bg-indigo-950/50 border-indigo-500 text-indigo-700 dark:text-indigo-300 font-bold'
-                              : 'bg-slate-50 dark:bg-slate-700/50 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100'
-                          }`}
+                        <label
+                          key={fabric}
+                          className="flex items-center justify-between text-xs text-slate-600 dark:text-slate-400 cursor-pointer hover:text-slate-900 dark:hover:text-slate-200"
                         >
-                          <span
-                            className="w-2.5 h-2.5 rounded-full border border-black/10 shrink-0"
-                            style={{
-                              backgroundColor:
-                                color.toLowerCase().includes('gold') ? '#D97706' :
-                                color.toLowerCase().includes('red') || color.toLowerCase().includes('ruby') || color.toLowerCase().includes('maroon') ? '#DC2626' :
-                                color.toLowerCase().includes('green') || color.toLowerCase().includes('emerald') ? '#059669' :
-                                color.toLowerCase().includes('blue') || color.toLowerCase().includes('navy') ? '#2563EB' :
-                                color.toLowerCase().includes('black') || color.toLowerCase().includes('obsidian') ? '#1E293B' :
-                                color.toLowerCase().includes('white') || color.toLowerCase().includes('ivory') ? '#F8FAFC' :
-                                color.toLowerCase().includes('silver') || color.toLowerCase().includes('grey') ? '#94A3B8' :
-                                color.toLowerCase().includes('brass') || color.toLowerCase().includes('yellow') ? '#EAB308' :
-                                color.toLowerCase().includes('orange') || color.toLowerCase().includes('saffron') ? '#EA580C' :
-                                '#6366F1'
-                            }}
-                          />
-                          <span>{color}</span>
-                        </button>
+                          <span className="flex items-center gap-2 truncate">
+                            <input
+                              type="checkbox"
+                              checked={isSelected}
+                              onChange={() => toggleFabric(fabric)}
+                              className="w-3.5 h-3.5 accent-[#B8860B] rounded cursor-pointer"
+                            />
+                            <span className={`truncate ${isSelected ? 'font-bold text-[#B8860B] dark:text-amber-400' : ''}`}>
+                              {fabric}
+                            </span>
+                          </span>
+                          <span className="text-[10px] text-slate-400 shrink-0 ml-1">
+                            {count}
+                          </span>
+                        </label>
                       );
                     })}
                   </div>
                 </div>
               )}
+
+              {/* 6. Occasion Filter */}
+              <div className="pt-3 border-t border-slate-100 dark:border-slate-700">
+                <div className="flex items-center justify-between mb-2">
+                  <h4 className="text-xs font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                    <span>Occasion & Styling</span>
+                  </h4>
+                  {selectedOccasions.length > 0 && (
+                    <button
+                      type="button"
+                      onClick={() => setSelectedOccasions([])}
+                      className="text-[10px] text-[#B8860B] hover:underline cursor-pointer font-semibold"
+                    >
+                      Clear
+                    </button>
+                  )}
+                </div>
+                <div className="space-y-1.5">
+                  {[
+                    { label: 'Wedding & Bridal Reception', key: 'wedding' },
+                    { label: 'Festive, Diwali & Puja', key: 'festive' },
+                    { label: 'Party Wear & Sangeet', key: 'party' },
+                    { label: 'Daily & Casual Couture', key: 'daily' },
+                  ].map(({ label, key }) => {
+                    const isSelected = selectedOccasions.includes(key);
+                    return (
+                      <label
+                        key={key}
+                        className="flex items-center justify-between text-xs text-slate-600 dark:text-slate-400 cursor-pointer hover:text-slate-900 dark:hover:text-slate-200"
+                      >
+                        <span className="flex items-center gap-2 truncate">
+                          <input
+                            type="checkbox"
+                            checked={isSelected}
+                            onChange={() => toggleOccasion(key)}
+                            className="w-3.5 h-3.5 accent-[#B8860B] rounded cursor-pointer"
+                          />
+                          <span className={`truncate ${isSelected ? 'font-bold text-[#B8860B] dark:text-amber-400' : ''}`}>
+                            {label}
+                          </span>
+                        </span>
+                      </label>
+                    );
+                  })}
+                </div>
+              </div>
 
               {/* 7. Customer Rating Filter */}
               <div className="pt-3 border-t border-slate-100 dark:border-slate-700">
