@@ -140,6 +140,18 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
 
   const heroSlides = [
     {
+      kicker: 'Ananya Collection · Grand Couture Showcase',
+      kickerHi: 'अनन्य कलेक्शन · भव्य बुटीक कुटूर शोकेस',
+      title: 'Royal Anarkalis, Velvet & Pure Silk Designer Suits',
+      titleHi: 'शाही अनारकली, वेलवेट व सिल्क डिजाइनर सूट सेट्स',
+      desc: 'Step into royal elegance with handcrafted Russian silk, georgette shararas, and rich velvet party wear suits curated in Rohini, Delhi.',
+      descHi: 'शाही रशियन सिल्क, जॉर्जेट और रिच वेलवेट पर जरी व रेशम की मनमोहक कारीगरी। रोहिणी फ्लैगशिप बुटीक से पूरे भारत में डिलीवरी।',
+      image: '/hero/hero-grand-collection.png',
+      category: 'salwar-suits',
+      ctaText: 'Explore Grand Collection',
+      position: 'object-[78%_center] sm:object-[68%_center] md:object-center',
+    },
+    {
       kicker: 'Ananya Collection · Rohini Flagship Boutique',
       kickerHi: 'अनन्य कलेक्शन · फ्लैगशिप बुटीक रोहिणी, दिल्ली',
       title: 'Handcrafted Designer Couture & Festive Luxury',
