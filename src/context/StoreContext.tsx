@@ -226,9 +226,13 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   // Data States
   const [products, setProducts] = useState<Product[]>(() => {
     try {
-      const saved = localStorage.getItem('ananya_products_v6');
+      const saved = localStorage.getItem('ananya_products_v7');
       if (saved) {
-        return JSON.parse(saved);
+        const parsed: Product[] = JSON.parse(saved);
+        // Ensure all new INITIAL_PRODUCTS are included even if older version was cached
+        const existingIds = new Set(parsed.map(p => p.id));
+        const missing = INITIAL_PRODUCTS.filter(p => !existingIds.has(p.id));
+        return missing.length > 0 ? [...parsed, ...missing] : parsed;
       }
       return INITIAL_PRODUCTS;
     } catch {
@@ -384,7 +388,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   useEffect(() => {
     try {
-      localStorage.setItem('ananya_products_v6', JSON.stringify(products));
+      localStorage.setItem('ananya_products_v7', JSON.stringify(products));
     } catch {
       // ignore
     }

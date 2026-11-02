@@ -309,7 +309,9 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
 
         let key = '';
         if (rawFabric.includes('russian silk')) key = 'Russian Silk';
-        else if (rawFabric.includes('soft silk') || rawFabric.includes('pure silk') || rawFabric.includes('raw silk')) key = 'Pure Handloom Silk';
+        else if (rawFabric.includes('soft silk') || rawFabric.includes('pure silk') || rawFabric.includes('raw silk') || rawFabric.includes('katan')) key = 'Pure Handloom Silk';
+        else if (rawFabric.includes('satin')) key = 'Lustrous Satin Silk';
+        else if (rawFabric.includes('tussar')) key = 'Handloom Tussar Silk';
         else if (rawFabric.includes('georgette')) key = 'Pure Georgette';
         else if (rawFabric.includes('organza')) key = 'Organza Silk';
         else if (rawFabric.includes('chanderi')) key = 'Chanderi Silk';
@@ -385,7 +387,9 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
       selectedFabrics.some((f) => {
         const raw = `${p.specs?.['Fabric'] || ''} ${p.specs?.['Top Fabric'] || ''} ${p.specs?.['Lehenga Fabric'] || ''} ${p.title} ${p.description}`.toLowerCase();
         if (f === 'Russian Silk') return raw.includes('russian silk');
-        if (f === 'Pure Handloom Silk') return raw.includes('soft silk') || raw.includes('pure silk') || raw.includes('raw silk') || raw.includes('kanjeevaram');
+        if (f === 'Pure Handloom Silk') return raw.includes('soft silk') || raw.includes('pure silk') || raw.includes('raw silk') || raw.includes('kanjeevaram') || raw.includes('katan');
+        if (f === 'Lustrous Satin Silk') return raw.includes('satin');
+        if (f === 'Handloom Tussar Silk') return raw.includes('tussar');
         if (f === 'Pure Georgette') return raw.includes('georgette');
         if (f === 'Organza Silk') return raw.includes('organza');
         if (f === 'Chanderi Silk') return raw.includes('chanderi');
