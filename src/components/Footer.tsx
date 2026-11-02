@@ -57,9 +57,9 @@ export const Footer: React.FC = () => {
             </p>
 
             <div className="space-y-2 text-stone-400 text-xs pt-1">
-              <div className="flex items-center gap-2.5">
-                <MapPin className="w-3.5 h-3.5 text-amber-400/90 shrink-0" />
-                <span>Sector 7 / 8, Rohini, New Delhi, Delhi 110085</span>
+              <div className="flex items-start gap-2.5">
+                <MapPin className="w-3.5 h-3.5 text-amber-400/90 shrink-0 mt-0.5" />
+                <span>40 Feet Road, Near SBI ATM, Block D, Rama Vihar, Rohini, New Delhi, Delhi, 110081</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Clock className="w-3.5 h-3.5 text-amber-400/90 shrink-0" />
@@ -67,7 +67,14 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-3.5 h-3.5 text-amber-400/90 shrink-0" />
-                <span>Client Concierge: +91 98711 22334 (WhatsApp & Call)</span>
+                <a
+                  href="https://wa.me/919667417843"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-amber-300 transition-colors"
+                >
+                  Client Concierge: +91 96674 17843 (WhatsApp & Call)
+                </a>
               </div>
             </div>
 

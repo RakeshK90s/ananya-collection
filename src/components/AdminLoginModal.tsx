@@ -38,10 +38,10 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ isOpen, onClos
           id: 'usr-admin-1',
           name: 'Ananya Verma (Store Owner)',
           email: 'admin@ananyacollection.com',
-          mobile: '9871122334',
-          city: 'Rohini, New Delhi',
+          mobile: '9667417843',
+          city: 'Rama Vihar, Rohini, New Delhi',
           state: 'Delhi',
-          pincode: '110085',
+          pincode: '110081',
           role: 'super_admin',
           isLoggedIn: true,
         });

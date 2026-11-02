@@ -214,10 +214,10 @@ export const Header: React.FC<HeaderProps> = ({
                 <Youtube className="w-3.5 h-3.5" />
               </a>
               <a
-                href="https://wa.me/919871122334?text=Hello%20Ananya%20Collection%20Rohini%2C%20I%20have%20an%20enquiry"
+                href="https://wa.me/919667417843?text=Hello%20Ananya%20Collection%2C%20I%20have%20an%20enquiry"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="WhatsApp Concierge"
+                title="WhatsApp Concierge: +91 96674 17843"
                 className="hover:text-emerald-400 transition-colors cursor-pointer p-0.5"
               >
                 <Phone className="w-3.5 h-3.5 text-emerald-400" />
@@ -228,7 +228,14 @@ export const Header: React.FC<HeaderProps> = ({
 
             <div className="hidden sm:flex items-center gap-1.5 text-stone-400 text-[11px]">
               <MapPin className="w-3 h-3 text-amber-400 shrink-0" />
-              <span>Rohini, Delhi · Studio: +91 98711 22334</span>
+              <a
+                href="https://wa.me/919667417843"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-amber-300 transition-colors"
+              >
+                40 Feet Rd, Rama Vihar, Rohini · Call: +91 96674 17843
+              </a>
             </div>
           </div>
 

@@ -75,13 +75,64 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
 
   // Deals Horizontal Carousel Ref & Controls
   const dealsScrollRef = React.useRef<HTMLDivElement>(null);
+  const isDraggingDeals = React.useRef(false);
+  const startXDeals = React.useRef(0);
+  const scrollLeftDeals = React.useRef(0);
+
   const scrollDeals = (direction: 'left' | 'right') => {
     if (dealsScrollRef.current) {
+      const containerWidth = dealsScrollRef.current.clientWidth;
+      const scrollAmount = Math.max(280, Math.round(containerWidth * 0.75));
       dealsScrollRef.current.scrollBy({
-        left: direction === 'left' ? -300 : 300,
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth',
       });
     }
+  };
+
+  // Enable mouse wheel horizontal scrolling over deals section
+  useEffect(() => {
+    const el = dealsScrollRef.current;
+    if (!el) return;
+
+    const onWheel = (e: WheelEvent) => {
+      if (Math.abs(e.deltaY) > 0 || Math.abs(e.deltaX) > 0) {
+        const delta = Math.abs(e.deltaY) >= Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+        e.preventDefault();
+        el.scrollBy({
+          left: delta * 1.5,
+          behavior: 'auto',
+        });
+      }
+    };
+
+    el.addEventListener('wheel', onWheel, { passive: false });
+    return () => {
+      el.removeEventListener('wheel', onWheel);
+    };
+  }, []);
+
+  const handleDealsMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!dealsScrollRef.current) return;
+    isDraggingDeals.current = true;
+    startXDeals.current = e.pageX - dealsScrollRef.current.offsetLeft;
+    scrollLeftDeals.current = dealsScrollRef.current.scrollLeft;
+  };
+
+  const handleDealsMouseLeave = () => {
+    isDraggingDeals.current = false;
+  };
+
+  const handleDealsMouseUp = () => {
+    isDraggingDeals.current = false;
+  };
+
+  const handleDealsMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!isDraggingDeals.current || !dealsScrollRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - dealsScrollRef.current.offsetLeft;
+    const walk = (x - startXDeals.current) * 1.5;
+    dealsScrollRef.current.scrollLeft = scrollLeftDeals.current - walk;
   };
 
   // Hero Carousel State
@@ -592,19 +643,47 @@ export const StorefrontView: React.FC<StorefrontViewProps> = ({
               </div>
             </div>
 
-            {/* Horizontal Scrolling Carousel (Swipe on Mobile, Arrows on Desktop) */}
-            <div
-              ref={dealsScrollRef}
-              className="flex gap-3.5 sm:gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory pb-3 pt-1 -mx-2 px-2"
-            >
-              {dealProducts.map((product) => (
-                <div
-                  key={product.id}
-                  className="w-[210px] sm:w-[250px] md:w-[270px] shrink-0 snap-start"
-                >
-                  <ProductCard product={product} />
-                </div>
-              ))}
+            {/* Horizontal Scrolling Carousel with Prominent Left & Right Slider Arrows */}
+            <div className="relative group/deals px-1">
+              {/* Prominent Floating Left Slider Arrow */}
+              <button
+                type="button"
+                onClick={() => scrollDeals('left')}
+                className="absolute -left-2 sm:-left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white dark:bg-stone-900 border-2 border-stone-200 dark:border-stone-700 text-stone-800 dark:text-stone-200 shadow-2xl backdrop-blur-md flex items-center justify-center hover:bg-[#B8860B] hover:text-white hover:border-[#B8860B] transition-all cursor-pointer hover:scale-110 active:scale-95"
+                aria-label="Previous Deals"
+                title="Scroll Left"
+              >
+                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+              </button>
+
+              {/* Prominent Floating Right Slider Arrow */}
+              <button
+                type="button"
+                onClick={() => scrollDeals('right')}
+                className="absolute -right-2 sm:-right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white dark:bg-stone-900 border-2 border-stone-200 dark:border-stone-700 text-stone-800 dark:text-stone-200 shadow-2xl backdrop-blur-md flex items-center justify-center hover:bg-[#B8860B] hover:text-white hover:border-[#B8860B] transition-all cursor-pointer hover:scale-110 active:scale-95"
+                aria-label="Next Deals"
+                title="Scroll Right"
+              >
+                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+              </button>
+
+              <div
+                ref={dealsScrollRef}
+                onMouseDown={handleDealsMouseDown}
+                onMouseLeave={handleDealsMouseLeave}
+                onMouseUp={handleDealsMouseUp}
+                onMouseMove={handleDealsMouseMove}
+                className="flex gap-3.5 sm:gap-4 overflow-x-auto no-scrollbar scroll-smooth pb-3 pt-1 -mx-2 px-2 cursor-grab active:cursor-grabbing select-none"
+              >
+                {dealProducts.map((product) => (
+                  <div
+                    key={product.id}
+                    className="w-[210px] sm:w-[250px] md:w-[270px] shrink-0"
+                  >
+                    <ProductCard product={product} />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
