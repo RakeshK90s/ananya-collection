@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Outfit:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary": "#7e3000", "surface-container-high": "#e2e7ff", "primary-fixed": "#e2dfff", "on-tertiary-fixed-variant": "#7b2f00", "surface-tint": "#4d44e3", "outline-variant": "#c7c4d8", "inverse-on-surface": "#eef0ff", "on-secondary": "#ffffff", "on-primary-container": "#dad7ff", "surface-container-lowest": "#ffffff", "on-surface": "#131b2e", "outline": "#777587", "secondary-fixed-dim": "#ffb690", "surface-dim": "#d2d9f4", "error-container": "#ffdad6", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#783200", "error": "#ba1a1a", "inverse-primary": "#c3c0ff", "primary": "#3525cd", "surface-container": "#eaedff", "primary-fixed-dim": "#c3c0ff", "on-primary-fixed-variant": "#3323cc", "surface-container-highest": "#dae2fd", "secondary": "#9d4300", "tertiary-container": "#a44100", "on-secondary-fixed": "#341100", "surface-container-low": "#f2f3ff", "on-surface-variant": "#464555", "tertiary-fixed": "#ffdbcc", "surface-bright": "#faf8ff", "on-tertiary-container": "#ffd2be", "secondary-container": "#fd761a", "on-tertiary-fixed": "#351000", "on-background": "#131b2e", "background": "#faf8ff", "on-tertiary": "#ffffff", "surface-variant": "#dae2fd", "surface": "#faf8ff", "tertiary-fixed-dim": "#ffb695", "on-error-container": "#93000a", "inverse-surface": "#283044", "on-primary-fixed": "#0f0069", "on-error": "#ffffff", "on-secondary-container": "#5c2400", "primary-container": "#4f46e5", "secondary-fixed": "#ffdbca" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1rem", "space-md": "1rem", "margin": "2rem", "gutter": "1.5rem", "gutter-mobile": "0.75rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem" }, "fontFamily": { "body-lg": ["Inter"], "headline-md": ["Outfit"], "headline-lg": ["Outfit"], "label-sm": ["Inter"], "headline-sm": ["Outfit"], "label-md": ["Inter"], "body-sm": ["Inter"], "headline-xl": ["Outfit"], "headline-xl-mobile": ["Outfit"], "display-lg-mobile": ["Outfit"], "body-md": ["Inter"], "label-lg": ["Inter"], "display-lg": ["Outfit"] }, "fontSize": { "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-surface font-body-md text-on-surface min-h-full flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-14 px-margin-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md tracking-tight font-bold text-on-surface">Luxe<span class="text-primary-container">Cart</span></span><div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-[13px] text-primary-container">public</span><span>US · $</span></div></div><div class="flex items-center gap-1"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container active:scale-95 transition-all" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Notifications" class="w-11 h-11 relative flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container active:scale-95 transition-all" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary-container"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-20 bg-surface"><div class="flex flex-col w-full pb-16">
+<!-- Top Bar: Search Keyword & Quick Controls -->
+<section class="px-margin-mobile pt-space-sm pb-space-xs flex flex-col gap-space-sm">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Category Showcase</span>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile font-bold text-on-surface">Audiophile</h1>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container font-label-md text-label-md text-on-surface-variant shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>42 Results</span>
+</div>
+</div>
+<!-- Filter & Sort Action Strip -->
+<div class="flex items-center justify-between gap-2 pt-1">
+<div class="flex items-center gap-2 flex-1">
+<!-- Filter Button with Active Badge -->
+<button class="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md active:scale-95 transition-all shadow-sm" id="open-filter-btn" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary-container">tune</span>
+<span>Filters</span>
+<span class="ml-0.5 px-1.5 py-0.2 rounded-full bg-primary-container text-on-primary font-label-sm text-[10px] leading-tight font-bold">2</span>
+</button>
+<!-- Sort Pill Dropdown -->
+<button class="flex items-center justify-between gap-2 px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md active:scale-95 transition-all flex-1 shadow-sm" id="sort-trigger-btn" type="button">
+<span class="truncate text-on-surface-variant">Sort: <strong class="text-on-surface font-semibold">Popularity</strong></span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+</div>
+<!-- Grid density switch -->
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container-low text-on-surface-variant active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">view_agenda</span>
+</button>
+</div>
+</section>
+<!-- Active Filter Pills (Horizontal Scroll) -->
+<section class="w-full overflow-x-auto no-scrollbar py-2 px-margin-mobile flex items-center gap-2">
+<div class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm whitespace-nowrap shadow-sm group cursor-pointer hover:bg-surface-container-high transition-colors">
+<span>Over-Ear</span>
+<span class="material-symbols-outlined text-[14px] text-outline group-hover:text-error transition-colors">close</span>
+</div>
+<div class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm whitespace-nowrap shadow-sm group cursor-pointer hover:bg-surface-container-high transition-colors">
+<span>Under ₹25,000</span>
+<span class="material-symbols-outlined text-[14px] text-outline group-hover:text-error transition-colors">close</span>
+</div>
+<div class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm whitespace-nowrap shadow-sm group cursor-pointer hover:bg-surface-container-high transition-colors">
+<span>Wireless</span>
+<span class="material-symbols-outlined text-[14px] text-outline group-hover:text-error transition-colors">close</span>
+</div>
+<button class="font-label-sm text-label-sm text-secondary-container hover:text-secondary whitespace-nowrap px-2 font-semibold active:scale-95 transition-transform" type="button">
+      Clear All
+    </button>
+</section>
+<!-- 2-Column Responsive Product Grid -->
+<section class="px-margin-mobile pt-space-xs grid grid-cols-2 gap-gutter-mobile">
+<!-- Product 1: Apex Studio Pro Wireless -->
+<div class="group relative flex flex-col rounded-xl bg-surface-container-lowest p-2 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.06)] hover:shadow-md transition-all">
+<!-- Image Canvas & Overlays -->
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Close-up commercial shot of matte black minimalist audiophile over-ear headphones with polished aluminum accents, plush memory foam earcups, subtle indigo ambient rim lighting, hyper-detailed high-end industrial product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDStKD6rGXv-p4mofPH5kdw1hGSCExsQuPr6hG8TzSsFqJHyQ32jjkaH7RJ5Cq0_rgVO09TLAbp0ZWnWlEZWEKt9E8PnVStYtm10zN25w5Vdr7NFfgSDsTUaGUQTQyyz4pr1y2PpfCRywfj618E2h1ivzMsA1frPbhZKLv-9YZQx-75rYu1g8PNAiwRnbvYuTKz73_SM0xJ6bf4QMYq3fels6ybT6tR5OJHPFBnJ8TUBJkl1ySwWuBN"/>
+<!-- Urgency Deal Badge -->
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary font-label-sm text-[10px] font-bold tracking-tight shadow-sm">
+          35% OFF
+        </span>
+<!-- Wishlist Toggle -->
+<button aria-label="Add to wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/85 backdrop-blur-md flex items-center justify-center text-on-surface-variant active:scale-75 transition-transform shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-error" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<!-- Item Meta & Details -->
+<div class="flex flex-col flex-1 pt-2">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[13px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">4.9</span>
+<span class="font-body-sm text-[10px] text-outline">(142)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface line-clamp-1 leading-snug">
+          Apex Studio Pro Wireless
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Hi-Res ANC, 60h Playtime</p>
+<!-- Pricing & Quick CTA -->
+<div class="flex items-end justify-between mt-auto pt-2">
+<div class="flex flex-col">
+<span class="font-body-sm text-[11px] text-outline line-through">₹22,999</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">₹14,999</span>
+</div>
+<button aria-label="Add Apex Studio Pro to cart" class="add-to-cart-btn w-8 h-8 rounded-lg bg-secondary-container text-on-secondary flex items-center justify-center active:scale-90 hover:brightness-105 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2: Chronos Monolith MK.IV -->
+<div class="group relative flex flex-col rounded-xl bg-surface-container-lowest p-2 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.06)] hover:shadow-md transition-all">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Luxury planar magnetic open-back audiophile headphones crafted from machined dark titanium and genuine leather, dramatic architectural studio lighting with subtle gold and indigo reflections, ultra-high resolution audio gear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPr073HTavOTZ4KYbYIYeyvYEg_c1NdnulFaZAZztbLthdG4Piqn08iUxjTjb7ez1_676GI7xv1caoFi-AQhQV6GknHsuN-rWDg-pqYf2x73KRj9s27FEMfhL_NcECW8Op8IEmK0XwD1KCy9qpiATiYn_VJmChcHXymgQMph9KMtpLK3Rir-t2wVEDaYQoYLLFA8ys5eX9Y3JnuIjeyoaY9S3nnzEXP3QsXENdL_sEpmI5q0RSvOjS"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-[10px] font-bold shadow-sm">
+          Bestseller
+        </span>
+<button aria-label="Add to wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/85 backdrop-blur-md flex items-center justify-center text-on-surface-variant active:scale-75 transition-transform shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col flex-1 pt-2">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[13px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">4.8</span>
+<span class="font-body-sm text-[10px] text-outline">(89)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface line-clamp-1 leading-snug">
+          Chronos Monolith MK.IV
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Planar Magnetic Driver</p>
+<div class="flex items-end justify-between mt-auto pt-2">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] font-semibold text-primary uppercase tracking-wide">Flagship</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">₹82,000</span>
+</div>
+<button aria-label="Add Chronos Monolith to cart" class="add-to-cart-btn w-8 h-8 rounded-lg bg-secondary-container text-on-secondary flex items-center justify-center active:scale-90 hover:brightness-105 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 3: Acoustic Teak Wood Horn -->
+<div class="group relative flex flex-col rounded-xl bg-surface-container-lowest p-2 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.06)] hover:shadow-md transition-all">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Artisanal hand-carved teak wood acoustic passive amplifier horn for desktop audiophiles, warm golden natural grain, smooth lacquer finish on marble stand, natural sunlit boutique studio backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeID17JhBb-MYYbATMDIb7_22PEI1e4JPn3G1NmhX8JenycRrRPm5QzmpUPgv22MH6oJcZc6nTVWOuyhDDTEoUgZtGgNPIqLK8iXWcCpofyfbQNWreycul6K-8NNCUhjBqc_39T9pwz82wOupMHfKld_Xa3Ju6IH5xWLGJBuygsIcxq2hoLfN9z8D3zzhmOkReR6kf36AitvXnF_U-Ulf29Pl4K1sQhJThF_85SRSLMpFdAY5FFcfC"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[10px] font-bold shadow-sm">
+          Artisan Craft
+        </span>
+<button aria-label="Add to wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/85 backdrop-blur-md flex items-center justify-center text-on-surface-variant active:scale-75 transition-transform shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col flex-1 pt-2">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[13px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">4.9</span>
+<span class="font-body-sm text-[10px] text-outline">(64)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface line-clamp-1 leading-snug">
+          Acoustic Teak Horn
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Natural Resonant Wood</p>
+<div class="flex items-end justify-between mt-auto pt-2">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] font-semibold text-tertiary uppercase tracking-wide">Sculpted</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">₹19,500</span>
+</div>
+<button aria-label="Add Acoustic Horn to cart" class="add-to-cart-btn w-8 h-8 rounded-lg bg-secondary-container text-on-secondary flex items-center justify-center active:scale-90 hover:brightness-105 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 4: Balanced 4.4mm Silver Cable -->
+<div class="group relative flex flex-col rounded-xl bg-surface-container-lowest p-2 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.06)] hover:shadow-md transition-all">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="High purity monocrystalline silver braided headphone audio cable with gold plated 4.4mm balanced connector, coiled with surgical precision against clean slate texture, premium electronics packaging." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcrfEtWEOQdq25JrmHn9g40guTILcqQvQIelJp_GLGlJvD0NgnvmyIBKFNj2_ouqYGgIFoydx79cav6YWCHDCghvHLdIJFS5iE1AW-vZt3MMZZmB6OUxyeJIXkGAnm-B-QsquW-Ai2sJOANMWs7HcMIVI0IsIjaxNXZRFpVYbTFvsVirH8Gbp86f2xfWb9snsWeHIhkDQ0HTe4nahE19tD2rXVTPLEUyw-WgQXxqTqZopU7msbjXf1"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary font-label-sm text-[10px] font-bold shadow-sm">
+          24% OFF
+        </span>
+<button aria-label="Add to wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/85 backdrop-blur-md flex items-center justify-center text-on-surface-variant active:scale-75 transition-transform shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col flex-1 pt-2">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[13px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">4.8</span>
+<span class="font-body-sm text-[10px] text-outline">(89)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface line-clamp-1 leading-snug">
+          Balanced Silver Cable
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">4.4mm Pentaconn, 8-Core</p>
+<div class="flex items-end justify-between mt-auto pt-2">
+<div class="flex flex-col">
+<span class="font-body-sm text-[11px] text-outline line-through">₹2,499</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">₹1,899</span>
+</div>
+<button aria-label="Add Silver Cable to cart" class="add-to-cart-btn w-8 h-8 rounded-lg bg-secondary-container text-on-secondary flex items-center justify-center active:scale-90 hover:brightness-105 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 5: Vedic Handwoven Cashmere Ear Cushions -->
+<div class="group relative flex flex-col rounded-xl bg-surface-container-lowest p-2 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.06)] hover:shadow-md transition-all">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Pair of ultra-soft handcrafted deep charcoal cashmere replacement earpads for premium headphones, soft textile texture details, resting on raw linen fabric in soft morning light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXWlJINhfIEKMoiL4Oo8SB_CiQPrAyiNdrEE7bU_a3g8sX7s1QLIwwTe8Ov2Za0of1vhpdogSPpsggIq7l1yY_-ir-4K0eNx5jDQN3n3kztxxAHAW0EqTHvja8Uc6JEcR7JkFt7by_Qrrxd_9_6qZj5bGd7aTbS_zFdEc8pygtSjBcDFn41RX9D6bVt7gDk1dOuL1Vo0UNP7K_EbJo98TYJWnn6B-PZfseGA64WD9gsjzV34P3LELi"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-bold shadow-sm">
+          Limited Stock
+        </span>
+<button aria-label="Add to wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/85 backdrop-blur-md flex items-center justify-center text-on-surface-variant active:scale-75 transition-transform shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col flex-1 pt-2">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[13px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">4.9</span>
+<span class="font-body-sm text-[10px] text-outline">(31)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface line-clamp-1 leading-snug">
+          Vedic Cashmere Pads
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Breathable Artisanal Weave</p>
+<div class="flex items-end justify-between mt-auto pt-2">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] font-semibold text-secondary uppercase tracking-wide">3 left</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">₹12,400</span>
+</div>
+<button aria-label="Add Cashmere Pads to cart" class="add-to-cart-btn w-8 h-8 rounded-lg bg-secondary-container text-on-secondary flex items-center justify-center active:scale-90 hover:brightness-105 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 6: Titanium Studio IEMs (Out of Stock) -->
+<div class="group relative flex flex-col rounded-xl bg-surface-container-lowest p-2 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.06)] opacity-90">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover grayscale-[30%]" data-alt="Futuristic raw titanium in-ear monitor IEM earphones with transparent faceplates showing delicate micro balanced armature armatures, professional studio audio gear on dark matte pedestal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNEMlXa7div4pqI9lv33NFjwcf149nyJD6k5R7iAoppYD5-fuTJfm77I1zMh9T3QG7SxOanS3tM6RuJw_qbbrgXNmcBRnxWI_KxC4iIAiQUudalCTUSZlQAAuOmU8vOTtdb_0xB_c46N67OMdDuByNaixjdny3wik14RFd2D8XWejIXaWE_LEpfdSpCatHA8Lc9Jwsjm5b5qu-75J72ins-jIel1p21Z2Tpo4b-nmc-nA_CcOJiHXZ"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-[10px] font-bold shadow-sm">
+          Out of Stock
+        </span>
+<button aria-label="Add to wishlist" class="wishlist-btn absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/85 backdrop-blur-md flex items-center justify-center text-on-surface-variant active:scale-75 transition-transform shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col flex-1 pt-2">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[13px] text-outline">star</span>
+<span class="font-label-sm text-label-sm font-semibold text-outline">5.0</span>
+<span class="font-body-sm text-[10px] text-outline">(18)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface line-clamp-1 leading-snug">
+          Titanium Studio IEMs
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Triple Armature Hybrid</p>
+<div class="flex items-end justify-between mt-auto pt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-outline">₹32,000</span>
+</div>
+<button class="notify-btn px-2.5 py-1.5 rounded-lg bg-surface-container-high text-primary font-label-sm text-[11px] font-semibold flex items-center gap-1 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[14px]">notifications</span>
+<span>Notify</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Curated Collection Carousel Snippet (Visual Delight) -->
+<section class="mt-space-lg px-margin-mobile">
+<div class="rounded-xl bg-gradient-to-br from-primary to-primary-container p-4 text-on-primary flex items-center justify-between shadow-md relative overflow-hidden">
+<div class="relative z-10 flex flex-col gap-1 max-w-[70%]">
+<span class="font-label-sm text-label-sm text-on-primary-container tracking-wider uppercase">Luxe Masterclass</span>
+<h4 class="font-headline-md text-headline-md font-bold leading-tight">Mastering High-Res Fidelity</h4>
+<p class="font-body-sm text-body-sm text-primary-fixed-dim line-clamp-2">Understand DACs, amps, and lossless bitrates in 5 minutes.</p>
+</div>
+<div class="relative z-10">
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center active:scale-90 transition-transform shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+<!-- Background Ambient Ring -->
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-white/10 blur-xl pointer-events-none"></div>
+</div>
+</section>
+<!-- Bottom Floating Filter / Sort Pill for Thumb Usability -->
+<aside class="fixed bottom-20 inset-x-0 flex justify-center z-40 pointer-events-none px-margin-mobile">
+<div class="pointer-events-auto inline-flex items-center gap-3 px-4 py-2 rounded-full bg-inverse-surface/90 backdrop-blur-md text-inverse-on-surface shadow-[0_8px_20px_rgba(0,0,0,0.18)] active:scale-95 transition-all">
+<button class="flex items-center gap-1.5 font-label-md text-label-md hover:text-primary-fixed transition-colors" id="floating-filter" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Filter (2)</span>
+</button>
+<span class="w-[1px] h-3.5 bg-outline/40"></span>
+<button class="flex items-center gap-1.5 font-label-md text-label-md hover:text-primary-fixed transition-colors" id="floating-sort" type="button">
+<span class="material-symbols-outlined text-[18px]">swap_vert</span>
+<span>Sort</span>
+</button>
+</div>
+</aside>
+<!-- Interactive Toast Notification Element -->
+<div class="fixed top-16 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 scale-90 transition-all duration-300 flex items-center gap-2 px-4 py-2 rounded-full bg-on-surface text-surface font-label-md text-label-md shadow-lg" id="toast-pill">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">check_circle</span>
+<span id="toast-message">Added to your bag!</span>
+</div>
+</div>
+<script>
+  (function() {
+    // Micro-interactions for buttons
+    const toast = document.getElementById('toast-pill');
+    const toastMsg = document.getElementById('toast-message');
+    let toastTimeout;
+
+    function showToast(text) {
+      if (!toast) return;
+      toastMsg.textContent = text;
+      toast.classList.remove('opacity-0', 'scale-90');
+      toast.classList.add('opacity-100', 'scale-100');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'scale-100');
+        toast.classList.add('opacity-0', 'scale-90');
+      }, 2000);
+    }
+
+    // Cart Button Click
+    document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showToast('Added to luxury bag (+1)');
+      });
+    });
+
+    // Notify Me Button
+    document.querySelectorAll('.notify-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        btn.classList.toggle('bg-primary');
+        btn.classList.toggle('text-on-primary');
+        const isNotified = btn.classList.contains('bg-primary');
+        btn.querySelector('span:last-child').textContent = isNotified ? 'Subscribed' : 'Notify';
+        showToast(isNotified ? 'Alert set for back in stock!' : 'Alert cancelled');
+      });
+    });
+
+    // Wishlist Toggles
+    document.querySelectorAll('.wishlist-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const icon = btn.querySelector('.material-symbols-outlined');
+        const isFilled = icon.style.fontVariationSettings && icon.style.fontVariationSettings.includes("'FILL' 1");
+        if (isFilled) {
+          icon.style.fontVariationSettings = "'FILL' 0";
+          icon.classList.remove('text-error');
+          showToast('Removed from Wishlist');
+        } else {
+          icon.style.fontVariationSettings = "'FILL' 1";
+          icon.classList.add('text-error');
+          showToast('Saved to Wishlist');
+        }
+      });
+    });
+
+    // Filter Trigger Toggles
+    const openFilter = document.getElementById('open-filter-btn');
+    const floatFilter = document.getElementById('floating-filter');
+    const triggerSort = document.getElementById('sort-trigger-btn');
+    const floatSort = document.getElementById('floating-sort');
+
+    const handleFilterClick = () => showToast('Opening Filter Matrix...');
+    const handleSortClick = () => showToast('Displaying Sort Options...');
+
+    if (openFilter) openFilter.addEventListener('click', handleFilterClick);
+    if (floatFilter) floatFilter.addEventListener('click', handleFilterClick);
+    if (triggerSort) triggerSort.addEventListener('click', handleSortClick);
+    if (floatSort) floatSort.addEventListener('click', handleSortClick);
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-between items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center flex-1 min-w-[56px] h-full text-on-surface-variant transition-colors hover:text-on-surface group" data-path="home" href="#"><span class="material-symbols-outlined text-[24px] mb-0.5 group-active:scale-90 transition-transform">home</span><span class="font-label-sm text-label-sm">Home</span></a><a aria-current="page" class="flex flex-col items-center justify-center flex-1 min-w-[56px] h-full transition-colors group text-primary-container font-semibold" data-path="categories" href="#"><span class="material-symbols-outlined text-[24px] mb-0.5 group-active:scale-90 transition-transform">grid_view</span><span class="font-label-sm text-label-sm">Categories</span></a><a class="flex flex-col items-center justify-center flex-1 min-w-[56px] h-full text-on-surface-variant transition-colors hover:text-on-surface group" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[24px] mb-0.5 group-active:scale-90 transition-transform">favorite</span><span class="font-label-sm text-label-sm">Wishlist</span></a><a class="flex flex-col items-center justify-center flex-1 min-w-[56px] h-full relative text-on-surface-variant transition-colors hover:text-on-surface group" data-path="cart" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px] mb-0.5 group-active:scale-90 transition-transform">shopping_bag</span><span class="absolute -top-1 -right-2 px-1.5 py-0.2 rounded-full bg-secondary-container text-on-secondary font-label-sm text-[10px] leading-tight font-bold shadow-sm">3</span></div><span class="font-label-sm text-label-sm">Cart</span></a><a class="flex flex-col items-center justify-center flex-1 min-w-[56px] h-full text-on-surface-variant transition-colors hover:text-on-surface group" data-path="account" href="#"><span class="material-symbols-outlined text-[24px] mb-0.5 group-active:scale-90 transition-transform">person</span><span class="font-label-sm text-label-sm">Account</span></a></div></nav></body></html>

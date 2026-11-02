@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Outfit:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary": "#7e3000", "surface-container-high": "#e2e7ff", "primary-fixed": "#e2dfff", "on-tertiary-fixed-variant": "#7b2f00", "surface-tint": "#4d44e3", "outline-variant": "#c7c4d8", "inverse-on-surface": "#eef0ff", "on-secondary": "#ffffff", "on-primary-container": "#dad7ff", "surface-container-lowest": "#ffffff", "on-surface": "#131b2e", "outline": "#777587", "secondary-fixed-dim": "#ffb690", "surface-dim": "#d2d9f4", "error-container": "#ffdad6", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#783200", "error": "#ba1a1a", "inverse-primary": "#c3c0ff", "primary": "#3525cd", "surface-container": "#eaedff", "primary-fixed-dim": "#c3c0ff", "on-primary-fixed-variant": "#3323cc", "surface-container-highest": "#dae2fd", "secondary": "#9d4300", "tertiary-container": "#a44100", "on-secondary-fixed": "#341100", "surface-container-low": "#f2f3ff", "on-surface-variant": "#464555", "tertiary-fixed": "#ffdbcc", "surface-bright": "#faf8ff", "on-tertiary-container": "#ffd2be", "secondary-container": "#fd761a", "on-tertiary-fixed": "#351000", "on-background": "#131b2e", "background": "#faf8ff", "on-tertiary": "#ffffff", "surface-variant": "#dae2fd", "surface": "#faf8ff", "tertiary-fixed-dim": "#ffb695", "on-error-container": "#93000a", "inverse-surface": "#283044", "on-primary-fixed": "#0f0069", "on-error": "#ffffff", "on-secondary-container": "#5c2400", "primary-container": "#4f46e5", "secondary-fixed": "#ffdbca" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1rem", "space-md": "1rem", "margin": "2rem", "gutter": "1.5rem", "gutter-mobile": "0.75rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem" }, "fontFamily": { "body-lg": ["Inter"], "headline-md": ["Outfit"], "headline-lg": ["Outfit"], "label-sm": ["Inter"], "headline-sm": ["Outfit"], "label-md": ["Inter"], "body-sm": ["Inter"], "headline-xl": ["Outfit"], "headline-xl-mobile": ["Outfit"], "display-lg-mobile": ["Outfit"], "body-md": ["Inter"], "label-lg": ["Inter"], "display-lg": ["Outfit"] }, "fontSize": { "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-surface font-body-md text-on-surface min-h-full flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-14 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 -ml-2 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:scale-95 transition-all" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1">Product Details</h1></div><div class="flex items-center gap-1"><button aria-label="Share" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container active:scale-95 transition-all" type="button"><span class="material-symbols-outlined text-[22px]">share</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-safe bg-surface"><div class="flex flex-col w-full pb-36">
+<!-- Top Utility Ribbon / Merchant Endorsement -->
+<div class="px-margin-mobile py-space-xs flex items-center justify-between bg-surface-container-low text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Aura Acoustics Official Store</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-medium">Fast Dispatch</span>
+</div>
+<!-- Interactive Image Gallery Carousel with Swipe Simulation -->
+<div class="relative w-full overflow-hidden bg-surface-container-lowest">
+<div class="flex transition-transform duration-300 ease-out" id="carouselTrack" style="transform: translateX(0%);">
+<!-- Slide 1: Hero Angle -->
+<div class="w-full flex-shrink-0 relative aspect-square bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Editorial close-up of matte black luxury over-ear headphones floating on pure luminous studio background with subtle soft indigo gradient reflections and soft cast shadow, sleek industrial metallic hinge detailing, 4k ultra-detailed commercial product photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_rTjM8XgRGxQhq33_HtZc3ruDWai1ahkTsGbhWdmzgEAfMA3gATL0Zph30XjrTndEbdmXVrstTOzennCobawskgoXkfnO-gkJjBh18_7MhDqlgjPLsXME0m6s468lJHKeTxOrga89SECY-YAwb5Ma2uTS5avHvirnWgeu6NbgYx4W6cKf57Wwg0IqCSckiTXKi0zEHAUnVJRcwc_x8NSR_QrKY5T3kHW7ob0bFpfCw1jbrTW3fu_Q"/>
+</div>
+<!-- Slide 2: Angled Earcups & Craftsmanship -->
+<div class="w-full flex-shrink-0 relative aspect-square bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Macro angle shot of obsidian black wireless over-ear headphone earcups showing ultra-plush memory foam leatherette cushions, micro-perforated acoustic mesh, brushed titanium swivel arms, dramatic minimal rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOSVRoPe4nz3jG9wckYS5o_U4rR2ib-HOTqM7qcKxXOrFA8qVVNmkaRza7mNNnghARYPiK9lAVK1JvyrS0uCsQe93emvCMa-DlwNvLhvVrB-igmLej40PK7NkofSZNa9D76wwZ242SiyIEtAIUSc4Li0wCEKQBKeyC-0vuRD92R20cWAssQqiXDjGr3N46fFEMq3UGEuOzBHXUA2spV5chJLe3jiDSyBKuSZbckSMGnhLSSGcTvL3t"/>
+</div>
+<!-- Slide 3: Lifestyle / Headphone on Base -->
+<div class="w-full flex-shrink-0 relative aspect-square bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Minimalist luxury desk setup featuring obsidian wireless headphones resting cleanly on an anodized aluminum headphone stand beside a modern mechanical keyboard and warm ambient desk lamp glowing softly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW4DSlZRsXE1OWAsuoGNJkE2knGjQpA-pfpstWKtq6imYFD7VED-t8uBLW4a8cK2N4SvHtRc_8FaquS-dovaopUrackPEb29TPouv5jboywRrD0iUKBrghOyfl_NeUUjufkg0F_zZdvMjrkAZhoiWpKbttdXeC-T8nzoZZjMDZ5uEItjSf6lUURYLxHFkh9oLONFyta6fX_yxi4ewQLJBK8FfpVB_kHGiK2ePBE0hQF5WQ9ydNCy1A"/>
+</div>
+<!-- Slide 4: Folded Case View -->
+<div class="w-full flex-shrink-0 relative aspect-square bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Compact premium hard-shell travel case open showing folded wireless headphones nestled in sculpted velour interior, accompanied by braided audio cable and gold-plated adapter, overhead minimalist shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7hqoK-3Pm55kapotFiUZuuTbhdZbm2DFXSixwfZizFwZ4L28NQoK-1lcFuX1epz4Mc_qz92Y5YqLoGStdBzNut_8z29ajjr1awLzJg1HW5Wj9b8xY9hjGv4lmDCsyPVupaX9Y_QedbA-5XJoSqyL-CYizxyKqyvXdfLXtXCXG3UMTOK_zMBau0T06M5CT5RsYaLDHKNzHvtDhOlVlcYKXJbpkVGkJ9JN3-N-IQVL5A-43RDTQS9WV"/>
+</div>
+<!-- Slide 5: Exploded Acoustic Driver Render -->
+<div class="w-full flex-shrink-0 relative aspect-square bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Exploded technical render showing internal custom 45mm biocellulose audio drivers, dual-chamber acoustic seals, neodymium magnetic ring, clean indigo and titanium technical aesthetic on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBu_uA1v9qMpXoUzD9ynXCSVISvTct31Jd7KbiZ8twmpyXiCNbecyhkcmylaepBveHMhBVWYHWZI8FVJtv2LoOinYHyxfEWbXfD_JK7vSxvV3gB4axlG6x7vEEEaxS25ZQXXo9pvHfzMJElUKIb6BQiIOMVREPAMkJ5P9Q8vTkliQdXnMM4hZWeymS2yhPpMiFamENhIJTD-c4BQZ-KRClZ_TyqhDk7bghiOUCvFXVeurQAyd4A4qs"/>
+</div>
+</div>
+<!-- Floating Badges on Image -->
+<div class="absolute top-3 left-3 flex flex-col gap-1.5 pointer-events-none">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary font-label-sm text-label-sm shadow-sm font-semibold tracking-wide flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span> 35% OFF
+      </span>
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm font-medium">
+        LuxeChoice
+      </span>
+</div>
+<!-- Heart / Wishlist Floating Toggle -->
+<button aria-label="Save to Wishlist" class="absolute top-3 right-3 w-10 h-10 rounded-full bg-surface/90 backdrop-blur-md shadow-md flex items-center justify-center text-on-surface-variant hover:text-error active:scale-90 transition-all" id="wishlistBtn" onclick="toggleWishlist()">
+<span class="material-symbols-outlined text-[22px]" id="wishlistIcon">favorite</span>
+</button>
+<!-- Carousel Indicator Overlay Pill -->
+<div class="absolute bottom-3 right-3 px-2.5 py-1 rounded-full bg-on-surface/75 text-inverse-on-surface font-label-sm text-label-sm backdrop-blur-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">photo_camera</span>
+<span id="slideCounter">1 / 5</span>
+</div>
+<!-- Swipe Dots Navigation -->
+<div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 p-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm">
+<button class="w-2 h-2 rounded-full bg-primary transition-all dot-indicator" data-index="0" onclick="goToSlide(0)"></button>
+<button class="w-1.5 h-1.5 rounded-full bg-outline-variant transition-all dot-indicator" data-index="1" onclick="goToSlide(1)"></button>
+<button class="w-1.5 h-1.5 rounded-full bg-outline-variant transition-all dot-indicator" data-index="2" onclick="goToSlide(2)"></button>
+<button class="w-1.5 h-1.5 rounded-full bg-outline-variant transition-all dot-indicator" data-index="3" onclick="goToSlide(3)"></button>
+<button class="w-1.5 h-1.5 rounded-full bg-outline-variant transition-all dot-indicator" data-index="4" onclick="goToSlide(4)"></button>
+</div>
+</div>
+<!-- Main Product Information Box -->
+<div class="px-margin-mobile pt-4 flex flex-col gap-3">
+<!-- Brand & Ratings Bar -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Aura Acoustics</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Model APX-9</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded-lg bg-surface-container-high">
+<span class="material-symbols-outlined text-[15px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">4.9</span>
+<span class="font-label-sm text-label-sm text-outline">(1,842)</span>
+</div>
+</div>
+<!-- Product Title -->
+<h2 class="font-headline-lg text-headline-lg text-on-surface leading-snug">
+      Apex Studio Pro Wireless ANC Headphones
+    </h2>
+<!-- Price Stack -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-baseline gap-2.5">
+<span class="font-headline-xl-mobile text-headline-xl-mobile font-bold text-on-surface">₹14,999</span>
+<span class="font-body-md text-body-md line-through text-outline">₹22,999</span>
+<span class="font-label-md text-label-md px-2 py-0.5 rounded bg-secondary text-on-secondary font-bold">Save ₹8,000</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Inclusive of all federal &amp; GST taxes</p>
+<div class="pt-2 mt-1 flex items-center justify-between bg-surface-container-lowest p-2.5 rounded-lg shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">credit_card</span>
+<span class="font-label-md text-label-md text-on-surface">EMI from <strong class="text-primary font-bold">₹1,250/mo</strong></span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center">
+          No Cost EMI Plans
+          <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</span>
+</div>
+</div>
+<!-- Value Propositions -->
+<div class="grid grid-cols-3 gap-2 text-center pt-1">
+<div class="p-2.5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[22px]">verified_user</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">2 Yr Warranty</span>
+<span class="font-body-sm text-body-sm text-outline">Doorstep Pickup</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[22px]">published_with_changes</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">7 Days Return</span>
+<span class="font-body-sm text-body-sm text-outline">Hassle-Free</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[22px]">local_shipping</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Express Care</span>
+<span class="font-body-sm text-body-sm text-outline">Free Delivery</span>
+</div>
+</div>
+<!-- Color Variant Selector -->
+<div class="pt-2 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface">Color: <strong class="text-primary" id="selectedColorLabel">Midnight Obsidian</strong></span>
+<span class="font-label-sm text-label-sm text-outline">3 Finishes Available</span>
+</div>
+<div class="flex items-center gap-3">
+<!-- Obsidian Chip -->
+<button class="color-btn relative flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container-lowest shadow-md transition-all" onclick="selectColor('Midnight Obsidian', this)">
+<span class="w-5 h-5 rounded-full bg-slate-900 flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-white">check</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Obsidian</span>
+</button>
+<!-- Raw Titanium Chip -->
+<button class="color-btn relative flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container-lowest opacity-70 shadow-sm transition-all" onclick="selectColor('Raw Titanium', this)">
+<span class="w-5 h-5 rounded-full bg-slate-400 flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-transparent">check</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Titanium</span>
+</button>
+<!-- Matte Brass Chip -->
+<button class="color-btn relative flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container-lowest opacity-70 shadow-sm transition-all" onclick="selectColor('Matte Brass', this)">
+<span class="w-5 h-5 rounded-full bg-amber-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-transparent">check</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Brass</span>
+</button>
+</div>
+</div>
+<!-- Tuning Profile Selector -->
+<div class="pt-2 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface">Factory DSP Tuning</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">Reconfigurable via App</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button class="tuning-chip p-2.5 rounded-xl bg-primary text-on-primary shadow-sm flex flex-col items-center justify-center gap-0.5 transition-all text-center" onclick="selectTuning(this, 'Studio Reference')">
+<span class="material-symbols-outlined text-[18px]">graphic_eq</span>
+<span class="font-label-sm text-label-sm font-semibold">Reference</span>
+<span class="font-label-sm text-[10px] opacity-80">Flat Balanced</span>
+</button>
+<button class="tuning-chip p-2.5 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm flex flex-col items-center justify-center gap-0.5 transition-all text-center" onclick="selectTuning(this, 'Bass Enhanced')">
+<span class="material-symbols-outlined text-[18px] text-outline">speaker</span>
+<span class="font-label-sm text-label-sm font-semibold">Bass Deep</span>
+<span class="font-label-sm text-[10px] text-outline">+6dB Sub-Bass</span>
+</button>
+<button class="tuning-chip p-2.5 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm flex flex-col items-center justify-center gap-0.5 transition-all text-center" onclick="selectTuning(this, 'Acoustic Stage')">
+<span class="material-symbols-outlined text-[18px] text-outline">spatial_audio_off</span>
+<span class="font-label-sm text-label-sm font-semibold">Acoustic</span>
+<span class="font-label-sm text-[10px] text-outline">Wide Soundstage</span>
+</button>
+</div>
+</div>
+<!-- Delivery Pincode Check Section -->
+<div class="mt-2 p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[20px] text-primary">pin_drop</span>
+<span class="font-label-md text-label-md font-semibold">Check Delivery &amp; Assembly</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Mumbai Metro</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="relative flex-1">
+<input class="w-full bg-surface-container-lowest rounded-lg py-2.5 pl-3 pr-8 font-label-md text-label-md text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-sm placeholder:text-outline" id="pincodeInput" maxlength="6" placeholder="Enter 6-digit Pincode" type="text" value="400001"/>
+<button class="absolute right-2.5 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface" onclick="clearPincode()">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<button class="px-4 py-2.5 bg-primary text-on-primary rounded-lg font-label-md text-label-md font-semibold shadow-sm active:scale-95 transition-transform flex items-center gap-1" id="pincodeCheckBtn" onclick="verifyPincode()">
+<span>Check</span>
+</button>
+</div>
+<div class="flex items-center gap-2 text-primary pt-1" id="pincodeStatus">
+<span class="material-symbols-outlined text-[18px] text-secondary">local_shipping</span>
+<span class="font-label-sm text-label-sm font-medium">Free Delivery by <strong class="font-bold text-on-surface">Tomorrow, 2:00 PM</strong></span>
+</div>
+</div>
+<!-- Key Highlights / Specs Accordion List -->
+<div class="mt-3 flex flex-col gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Technical Specifications</h3>
+<!-- Accordion Item 1: Acoustic Drivers -->
+<div class="rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm">
+<button class="w-full p-3.5 flex items-center justify-between text-left active:bg-surface-container-low transition-colors" onclick="toggleAccordion('acc-drivers', 'icon-drivers')">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">equalizer</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">45mm Graphene Planar Drivers</p>
+<p class="font-body-sm text-body-sm text-outline">Hi-Res Audio Certified &amp; LDAC ready</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="icon-drivers">expand_more</span>
+</button>
+<div class="px-4 pb-4 pt-1 hidden text-on-surface-variant font-body-sm text-body-sm bg-surface-container-lowest" id="acc-drivers">
+          Proprietary micro-milled acoustic chambers deliver ultra-low harmonic distortion (&lt;0.05% THD). Supports 24-bit/96kHz high-resolution wireless streaming with zero perceptible loss.
+        </div>
+</div>
+<!-- Accordion Item 2: Hybrid ANC -->
+<div class="rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm">
+<button class="w-full p-3.5 flex items-center justify-between text-left active:bg-surface-container-low transition-colors" onclick="toggleAccordion('acc-anc', 'icon-anc')">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">hearing</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Smart Adaptive Hybrid ANC</p>
+<p class="font-body-sm text-body-sm text-outline">Up to 48dB noise reduction</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="icon-anc">expand_more</span>
+</button>
+<div class="px-4 pb-4 pt-1 hidden text-on-surface-variant font-body-sm text-body-sm bg-surface-container-lowest" id="acc-anc">
+          Eight omnidirectional microphones continuously measure environmental rumble 38,000 times per second, dynamically tuning the attenuation curve for airplane cabin, commute, or cafe environments.
+        </div>
+</div>
+<!-- Accordion Item 3: Battery & Charging -->
+<div class="rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm">
+<button class="w-full p-3.5 flex items-center justify-between text-left active:bg-surface-container-low transition-colors" onclick="toggleAccordion('acc-battery', 'icon-battery')">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">battery_charging_full</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">45-Hour Relentless Playtime</p>
+<p class="font-body-sm text-body-sm text-outline">10 min charge gives 6 hours playback</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="icon-battery">expand_more</span>
+</button>
+<div class="px-4 pb-4 pt-1 hidden text-on-surface-variant font-body-sm text-body-sm bg-surface-container-lowest" id="acc-battery">
+          High-density lithium dual cells engineered with USB-PD fast recharge. Provides 45 hours with ANC engaged and up to 68 hours in standard reference mode.
+        </div>
+</div>
+</div>
+<!-- Verified Customer Review Highlight Pill -->
+<div class="mt-2 p-3 rounded-xl bg-surface-container-low flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-primary flex-shrink-0 flex items-center justify-center text-on-primary font-bold font-label-md">
+        RK
+      </div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Rohan K.</span>
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm text-outline">Verified Buyer</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">"The sound stage rivals my open-back wired setup. Best ANC headset I have tested under ₹25k."</p>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Buy & Cart Dock (Fixed Over App Bottom Nav) -->
+<div class="fixed bottom-0 inset-x-0 z-40 bg-surface/95 backdrop-blur-xl shadow-[0_-8px_24px_rgba(19,27,46,0.08)] px-margin-mobile pt-3 pb-safe">
+<div class="max-w-md mx-auto flex flex-col gap-2">
+<!-- Quick Info Strip -->
+<div class="flex items-center justify-between text-on-surface px-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">₹14,999</span>
+<span class="font-body-sm text-body-sm line-through text-outline">₹22,999</span>
+</div>
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[15px]">timer</span> Only 4 Units Left
+        </div>
+</div>
+<!-- Action Buttons Row -->
+<div class="flex items-center gap-2.5 pb-2">
+<!-- Add To Cart (Indigo Secondary Pill) -->
+<button class="flex-1 py-3 px-3 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 active:scale-95 transition-all shadow-sm" id="addToCartBtn" onclick="handleAddToCart()">
+<span class="material-symbols-outlined text-[20px]" id="cartIcon">shopping_bag</span>
+<span id="cartText">Add to Cart</span>
+</button>
+<!-- Buy Now Warm Orange CTA (#F97316) -->
+<button class="flex-1 py-3 px-3 rounded-xl bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg font-bold flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-all" id="buyNowBtn" onclick="handleBuyNow()">
+<span class="material-symbols-outlined text-[20px]">flash_on</span>
+<span>1-Click UPI</span>
+</button>
+</div>
+<!-- Standard Luxe Bottom Navigation Bar -->
+<div class="h-12 border-t-0 bg-surface-container-lowest/80 rounded-2xl flex items-center justify-around mb-1 px-1">
+<button class="flex flex-col items-center justify-center text-outline hover:text-primary">
+<span class="material-symbols-outlined text-[20px]">home</span>
+<span class="font-label-sm text-[10px]">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-outline hover:text-primary">
+<span class="material-symbols-outlined text-[20px]">category</span>
+<span class="font-label-sm text-[10px]">Categories</span>
+</button>
+<button class="flex flex-col items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">headphones</span>
+<span class="font-label-sm text-[10px] font-bold">Product</span>
+</button>
+<button class="flex flex-col items-center justify-center relative text-outline hover:text-primary">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+<span class="absolute -top-1 right-2 w-4 h-4 rounded-full bg-secondary-container text-on-secondary text-[9px] font-bold flex items-center justify-center" id="cartBadgeCount">1</span>
+<span class="font-label-sm text-[10px]">Cart</span>
+</button>
+<button class="flex flex-col items-center justify-center text-outline hover:text-primary">
+<span class="material-symbols-outlined text-[20px]">person</span>
+<span class="font-label-sm text-[10px]">Account</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Toast Notification Modal for Micro-Interaction Feedback -->
+<div class="fixed top-16 inset-x-4 z-50 transform -translate-y-24 opacity-0 pointer-events-none transition-all duration-300 flex items-center justify-center" id="toastNotification">
+<div class="bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-xl flex items-center gap-2.5 max-w-sm w-full">
+<span class="material-symbols-outlined text-secondary-container text-[22px]" id="toastIcon">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold" id="toastTitle">Added to Cart!</span>
+<span class="font-body-sm text-body-sm text-outline-variant" id="toastSubtitle">Aura Apex Studio Pro is in your bag</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple Carousel Controller
+  let currentSlide = 0;
+  const totalSlides = 5;
+  const carouselTrack = document.getElementById('carouselTrack');
+  const slideCounter = document.getElementById('slideCounter');
+  const dots = document.querySelectorAll('.dot-indicator');
+
+  function updateCarousel() {
+    if (!carouselTrack) return;
+    carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+    if (slideCounter) slideCounter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+    
+    dots.forEach((dot, idx) => {
+      if (idx === currentSlide) {
+        dot.classList.remove('bg-outline-variant', 'w-1.5', 'h-1.5');
+        dot.classList.add('bg-primary', 'w-2', 'h-2');
+      } else {
+        dot.classList.add('bg-outline-variant', 'w-1.5', 'h-1.5');
+        dot.classList.remove('bg-primary', 'w-2', 'h-2');
+      }
+    });
+  }
+
+  function goToSlide(index) {
+    currentSlide = index;
+    updateCarousel();
+  }
+
+  // Touch Swipe on Carousel
+  let startX = 0;
+  let endX = 0;
+  if (carouselTrack) {
+    carouselTrack.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+
+    carouselTrack.addEventListener('touchend', (e) => {
+      endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0 && currentSlide < totalSlides - 1) {
+          currentSlide++;
+        } else if (diff < 0 && currentSlide > 0) {
+          currentSlide--;
+        }
+        updateCarousel();
+      }
+    }, { passive: true });
+  }
+
+  // Wishlist Toggle
+  let isWishlisted = false;
+  function toggleWishlist() {
+    isWishlisted = !isWishlisted;
+    const icon = document.getElementById('wishlistIcon');
+    const btn = document.getElementById('wishlistBtn');
+    if (!icon || !btn) return;
+
+    if (isWishlisted) {
+      icon.style.fontVariationSettings = "'FILL' 1";
+      icon.classList.add('text-error');
+      showToast('Saved to Wishlist', 'Apex Studio Pro added to your favorites', 'favorite');
+    } else {
+      icon.style.fontVariationSettings = "'FILL' 0";
+      icon.classList.remove('text-error');
+      showToast('Removed', 'Item taken out of your wishlist', 'heart_broken');
+    }
+  }
+
+  // Color Selector
+  function selectColor(colorName, buttonElement) {
+    document.getElementById('selectedColorLabel').textContent = colorName;
+    document.querySelectorAll('.color-btn').forEach(btn => {
+      btn.classList.add('opacity-70');
+      btn.classList.remove('shadow-md');
+      const check = btn.querySelector('.material-symbols-outlined');
+      if (check) check.classList.replace('text-white', 'text-transparent');
+    });
+    buttonElement.classList.remove('opacity-70');
+    buttonElement.classList.add('shadow-md');
+    const activeCheck = buttonElement.querySelector('.material-symbols-outlined');
+    if (activeCheck) activeCheck.classList.replace('text-transparent', 'text-white');
+  }
+
+  // Tuning Profile Selector
+  function selectTuning(btnElement, profileName) {
+    document.querySelectorAll('.tuning-chip').forEach(chip => {
+      chip.classList.replace('bg-primary', 'bg-surface-container-lowest');
+      chip.classList.replace('text-on-primary', 'text-on-surface');
+      const icon = chip.querySelector('.material-symbols-outlined');
+      if (icon) icon.classList.add('text-outline');
+    });
+
+    btnElement.classList.replace('bg-surface-container-lowest', 'bg-primary');
+    btnElement.classList.replace('text-on-surface', 'text-on-primary');
+    const activeIcon = btnElement.querySelector('.material-symbols-outlined');
+    if (activeIcon) activeIcon.classList.remove('text-outline');
+    showToast('DSP Profile Set', profileName + ' applied as default startup', 'tune');
+  }
+
+  // Accordion Toggle
+  function toggleAccordion(contentId, iconId) {
+    const content = document.getElementById(contentId);
+    const icon = document.getElementById(iconId);
+    if (!content || !icon) return;
+
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      icon.classList.add('rotate-180');
+    } else {
+      content.classList.add('hidden');
+      icon.classList.remove('rotate-180');
+    }
+  }
+
+  // Pincode Verifier
+  function verifyPincode() {
+    const input = document.getElementById('pincodeInput');
+    const status = document.getElementById('pincodeStatus');
+    if (!input || !status) return;
+
+    if (input.value.trim().length === 6) {
+      status.innerHTML = `
+        <span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+        <span class="font-label-sm text-label-sm font-medium">Delivery to <strong class="font-bold text-on-surface">${input.value.trim()}</strong>: Tomorrow, 2:00 PM</span>
+      `;
+      showToast('Pincode Verified', 'Fast delivery available to ' + input.value.trim(), 'local_shipping');
+    } else {
+      status.innerHTML = `
+        <span class="material-symbols-outlined text-[18px] text-error">error</span>
+        <span class="font-label-sm text-label-sm text-error">Please enter a valid 6-digit postal code.</span>
+      `;
+    }
+  }
+
+  function clearPincode() {
+    const input = document.getElementById('pincodeInput');
+    if (input) {
+      input.value = '';
+      input.focus();
+    }
+  }
+
+  // Add to Cart Micro-interaction
+  let cartCount = 1;
+  function handleAddToCart() {
+    cartCount++;
+    const badge = document.getElementById('cartBadgeCount');
+    const btn = document.getElementById('addToCartBtn');
+    const cartText = document.getElementById('cartText');
+    const cartIcon = document.getElementById('cartIcon');
+
+    if (badge) badge.textContent = cartCount;
+    if (cartText) cartText.textContent = 'Added (1)';
+    if (cartIcon) cartIcon.textContent = 'done';
+
+    showToast('Added to Cart', 'Apex Studio Pro Wireless ANC placed in bag', 'shopping_bag');
+
+    setTimeout(() => {
+      if (cartText) cartText.textContent = 'Add to Cart';
+      if (cartIcon) cartIcon.textContent = 'shopping_bag';
+    }, 2000);
+  }
+
+  // Buy Now Trigger
+  function handleBuyNow() {
+    showToast('Redirecting to UPI Gateway', 'Initiating instant checkout for ₹14,999', 'bolt');
+  }
+
+  // Toast Notification Dispatcher
+  let toastTimer = null;
+  function showToast(title, subtitle, iconName = 'check_circle') {
+    const toast = document.getElementById('toastNotification');
+    const toastTitle = document.getElementById('toastTitle');
+    const toastSubtitle = document.getElementById('toastSubtitle');
+    const toastIcon = document.getElementById('toastIcon');
+
+    if (!toast) return;
+    if (toastTitle) toastTitle.textContent = title;
+    if (toastSubtitle) toastSubtitle.textContent = subtitle;
+    if (toastIcon) toastIcon.textContent = iconName;
+
+    toast.classList.remove('-translate-y-24', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.add('-translate-y-24', 'opacity-0', 'pointer-events-none');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 2800);
+  }
+</script></main></body></html>

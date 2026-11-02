@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Outfit:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary": "#7e3000", "surface-container-high": "#e2e7ff", "primary-fixed": "#e2dfff", "on-tertiary-fixed-variant": "#7b2f00", "surface-tint": "#4d44e3", "outline-variant": "#c7c4d8", "inverse-on-surface": "#eef0ff", "on-secondary": "#ffffff", "on-primary-container": "#dad7ff", "surface-container-lowest": "#ffffff", "on-surface": "#131b2e", "outline": "#777587", "secondary-fixed-dim": "#ffb690", "surface-dim": "#d2d9f4", "error-container": "#ffdad6", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#783200", "error": "#ba1a1a", "inverse-primary": "#c3c0ff", "primary": "#3525cd", "surface-container": "#eaedff", "primary-fixed-dim": "#c3c0ff", "on-primary-fixed-variant": "#3323cc", "surface-container-highest": "#dae2fd", "secondary": "#9d4300", "tertiary-container": "#a44100", "on-secondary-fixed": "#341100", "surface-container-low": "#f2f3ff", "on-surface-variant": "#464555", "tertiary-fixed": "#ffdbcc", "surface-bright": "#faf8ff", "on-tertiary-container": "#ffd2be", "secondary-container": "#fd761a", "on-tertiary-fixed": "#351000", "on-background": "#131b2e", "background": "#faf8ff", "on-tertiary": "#ffffff", "surface-variant": "#dae2fd", "surface": "#faf8ff", "tertiary-fixed-dim": "#ffb695", "on-error-container": "#93000a", "inverse-surface": "#283044", "on-primary-fixed": "#0f0069", "on-error": "#ffffff", "on-secondary-container": "#5c2400", "primary-container": "#4f46e5", "secondary-fixed": "#ffdbca" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1rem", "space-md": "1rem", "margin": "2rem", "gutter": "1.5rem", "gutter-mobile": "0.75rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem" }, "fontFamily": { "body-lg": ["Inter"], "headline-md": ["Outfit"], "headline-lg": ["Outfit"], "label-sm": ["Inter"], "headline-sm": ["Outfit"], "label-md": ["Inter"], "body-sm": ["Inter"], "headline-xl": ["Outfit"], "headline-xl-mobile": ["Outfit"], "display-lg-mobile": ["Outfit"], "body-md": ["Inter"], "label-lg": ["Inter"], "display-lg": ["Outfit"] }, "fontSize": { "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-surface font-body-md text-on-surface min-h-full flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-14 px-margin-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md tracking-tight font-bold text-on-surface">Luxe<span class="text-primary-container">Cart</span></span><div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-[13px] text-primary-container">public</span><span>US · $</span></div></div><div class="flex items-center gap-1"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container active:scale-95 transition-all" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Notifications" class="w-11 h-11 relative flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container active:scale-95 transition-all" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary-container"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-20 bg-surface"><div class="flex flex-col w-full pb-24">
+<!-- Cart Sub-Header & Delivery Location -->
+<section class="px-margin-mobile pt-3 pb-2 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-baseline gap-2">
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface">My Cart</h1>
+<span class="font-label-md text-label-md px-2 py-0.5 rounded-full bg-surface-container text-primary-container font-semibold" id="cart-item-badge">3 Items</span>
+</div>
+<button class="text-error flex items-center gap-1 font-label-sm text-label-sm active:opacity-70 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">delete_sweep</span>
+<span>Clear</span>
+</button>
+</div>
+<!-- Delivery Address Pill -->
+<button class="flex items-center gap-1.5 self-start py-1 px-2.5 rounded-full bg-surface-container-low text-on-surface-variant active:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-primary-container">location_on</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Deliver to: <strong class="font-semibold">Mumbai 400001</strong></span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+</section>
+<!-- Free Shipping Progress Milestone -->
+<section class="px-margin-mobile mt-2">
+<div class="p-3.5 rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-2 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container/15 flex items-center justify-center text-secondary-container shrink-0">
+<span class="material-symbols-outlined text-[17px]">local_shipping</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-medium">
+            🎉 <strong class="text-on-surface font-semibold">Free Express Shipping</strong> unlocked!
+          </p>
+</div>
+<span class="font-label-sm text-label-sm text-primary-container font-semibold">Saved ₹250</span>
+</div>
+<!-- Animated Milestone Track -->
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden relative">
+<div class="bg-gradient-to-r from-primary-container to-secondary-container h-full rounded-full transition-all duration-500" style="width: 100%;"></div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm pt-0.5">
+<span>Cart value: ₹18,197</span>
+<span class="text-outline">Threshold: ₹4,999</span>
+</div>
+</div>
+</section>
+<!-- Cart Item List -->
+<section class="px-margin-mobile mt-4 flex flex-col gap-3">
+<!-- Item 1: Apex Studio Pro Wireless -->
+<article class="p-3.5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3 transition-all duration-300" id="cart-item-1">
+<div class="flex gap-3">
+<!-- Thumbnail -->
+<div class="w-20 h-20 rounded-lg bg-surface-container-low shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="High-end studio grade wireless over-ear headphones in midnight obsidian matte finish with metallic accents resting on architectural stone slab, soft dramatic studio lighting, minimalist luxury aesthetics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd7vqH_B3VhoUselfN6P9J9NQR6k7Wl_hsfh68ConSWHYD4o6gLnr1u8W1g4ar-DjddOTv5dOZFFlE2VFykMTvnc2wBiKD7m2jzD7uDbk1c5F5il0mbNCgy9PhmP3gDwMF_C2CPcaSpL_PK7zZ_X251m9pmssBO7AbQAIIngaVMfjqp9XzV3n8HMvyuiLb2MKT626BMAyowxnoYLOHb35dDD-Sqf8aQ1eEmEjmbTojX_0RLMRTpEwv"/>
+<span class="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-primary-container/90 text-on-primary font-label-sm text-[9px] font-bold tracking-wider uppercase">Pro</span>
+</div>
+<!-- Details -->
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<div class="flex items-start justify-between gap-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">Apex Studio Pro Wireless</h2>
+<button aria-label="Remove item" class="text-outline hover:text-error active:scale-90 transition-transform p-0.5" onclick="removeItem('cart-item-1', 14999)" type="button">
+<span class="material-symbols-outlined text-[19px]">delete_outline</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span>Midnight Obsidian</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-primary-container font-medium">In Stock</span>
+</p>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">₹14,999</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹19,999</span>
+<span class="font-label-sm text-label-sm text-secondary-container font-semibold">25% OFF</span>
+</div>
+</div>
+</div>
+<!-- Action Row: Save for Later + Quantity -->
+<div class="flex items-center justify-between pt-2">
+<button class="inline-flex items-center gap-1.5 text-on-surface-variant hover:text-primary-container font-label-sm text-label-sm active:opacity-75 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span>
+<span>Save for later</span>
+</button>
+<!-- Stepper -->
+<div class="flex items-center bg-surface-container rounded-lg p-0.5 shadow-inner">
+<button aria-label="Decrease quantity" class="w-7 h-7 flex items-center justify-center rounded-md bg-surface-container-lowest text-on-surface hover:bg-surface-bright active:scale-90 transition-all shadow-xs" onclick="updateQty('qty-1', -1, 14999)" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="w-8 text-center font-headline-sm text-headline-sm text-on-surface font-semibold select-none" id="qty-1">1</span>
+<button aria-label="Increase quantity" class="w-7 h-7 flex items-center justify-center rounded-md bg-surface-container-lowest text-on-surface hover:bg-surface-bright active:scale-90 transition-all shadow-xs" onclick="updateQty('qty-1', 1, 14999)" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Item 2: Balanced 4.4mm Silver Cable -->
+<article class="p-3.5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3 transition-all duration-300" id="cart-item-2">
+<div class="flex gap-3">
+<!-- Thumbnail -->
+<div class="w-20 h-20 rounded-lg bg-surface-container-low shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="High fidelity silver-plated copper braided audio cable with 4.4mm gold plated balanced pentaconn plug coiled meticulously on neutral architectural backdrop, luxury audiophile accessory" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhPzCHGAPvS1T4niKXK2xdA_rHdMF1X0YYzZ1on8o7nVToR9L2DF7UqAU2z2XPbJBbTVqc3lIUpJFeJemFViNxH4hBWKkFhjZNeFRrUCXP3NHASdDsvzHdyRyNq28mfK4Bv5PPZErGK1BkJ9XjutwejCHFsbh_Gckmq3Jkz_ZA8uF6ZHw7K5jUle3JlngkQiYh9pwmAAquebr-yfmTKIAbHYxZfm-3EgROK6_Myfa_crNh6_5OZT_v"/>
+</div>
+<!-- Details -->
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<div class="flex items-start justify-between gap-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">Balanced 4.4mm Silver Cable</h2>
+<button aria-label="Remove item" class="text-outline hover:text-error active:scale-90 transition-transform p-0.5" onclick="removeItem('cart-item-2', 1899)" type="button">
+<span class="material-symbols-outlined text-[19px]">delete_outline</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span>Braid: 8-Core Monocrystalline</span>
+</p>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">₹1,899</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹2,499</span>
+</div>
+</div>
+</div>
+<!-- Action Row: Save for Later + Quantity -->
+<div class="flex items-center justify-between pt-2">
+<button class="inline-flex items-center gap-1.5 text-on-surface-variant hover:text-primary-container font-label-sm text-label-sm active:opacity-75 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span>
+<span>Save for later</span>
+</button>
+<!-- Stepper -->
+<div class="flex items-center bg-surface-container rounded-lg p-0.5 shadow-inner">
+<button aria-label="Decrease quantity" class="w-7 h-7 flex items-center justify-center rounded-md bg-surface-container-lowest text-on-surface hover:bg-surface-bright active:scale-90 transition-all shadow-xs" onclick="updateQty('qty-2', -1, 1899)" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="w-8 text-center font-headline-sm text-headline-sm text-on-surface font-semibold select-none" id="qty-2">1</span>
+<button aria-label="Increase quantity" class="w-7 h-7 flex items-center justify-center rounded-md bg-surface-container-lowest text-on-surface hover:bg-surface-bright active:scale-90 transition-all shadow-xs" onclick="updateQty('qty-2', 1, 1899)" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Item 3: Hard Shell EVA Travel Case -->
+<article class="p-3.5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3 transition-all duration-300" id="cart-item-3">
+<div class="flex gap-3">
+<!-- Thumbnail -->
+<div class="w-20 h-20 rounded-lg bg-surface-container-low shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Rugged EVA protective travel storage case for premium headphones with water resistant ballistic nylon texture and water-tight zipper, slate and charcoal tone studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1UMPZCqnFG40wDhW3oaxt5r5R6qPbpXGk2YWjoh5M2D4KkA5TYwoOsy_z-empQSUX9_VMgNJiLlI8ojtrQ4H3Q_R3UQ9--dcmbvsp8q_bNifPDeNie1Sp6z7aq3QXFiITyTYsJXzGu0llaQjAoLinBqS_kMO-jyiDLed8oouvgc54idXo8Ee81PdLUXiXoTpvgU2Hh-N3RRbjAOOSFzDbbhKVLCvdCgapoNctzYGXVo9dplYCIaZ1"/>
+</div>
+<!-- Details -->
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<div class="flex items-start justify-between gap-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">Hard Shell EVA Travel Case</h2>
+<button aria-label="Remove item" class="text-outline hover:text-error active:scale-90 transition-transform p-0.5" onclick="removeItem('cart-item-3', 1299)" type="button">
+<span class="material-symbols-outlined text-[19px]">delete_outline</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span>Weather-Resistant Matte</span>
+</p>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">₹1,299</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹1,799</span>
+</div>
+</div>
+</div>
+<!-- Action Row: Save for Later + Quantity -->
+<div class="flex items-center justify-between pt-2">
+<button class="inline-flex items-center gap-1.5 text-on-surface-variant hover:text-primary-container font-label-sm text-label-sm active:opacity-75 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span>
+<span>Save for later</span>
+</button>
+<!-- Stepper -->
+<div class="flex items-center bg-surface-container rounded-lg p-0.5 shadow-inner">
+<button aria-label="Decrease quantity" class="w-7 h-7 flex items-center justify-center rounded-md bg-surface-container-lowest text-on-surface hover:bg-surface-bright active:scale-90 transition-all shadow-xs" onclick="updateQty('qty-3', -1, 1299)" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="w-8 text-center font-headline-sm text-headline-sm text-on-surface font-semibold select-none" id="qty-3">1</span>
+<button aria-label="Increase quantity" class="w-7 h-7 flex items-center justify-center rounded-md bg-surface-container-lowest text-on-surface hover:bg-surface-bright active:scale-90 transition-all shadow-xs" onclick="updateQty('qty-3', 1, 1299)" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</article>
+</section>
+<!-- Coupon / Promo Code Section -->
+<section class="px-margin-mobile mt-4">
+<div class="p-3.5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">local_offer</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Coupons &amp; Offers</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary-container font-semibold">1 Applied</span>
+</div>
+<!-- Applied Coupon Pill -->
+<div class="p-2.5 rounded-lg bg-surface-container-high/60 flex items-center justify-between transition-all" id="coupon-pill">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-md bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[17px]">check</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm tracking-wider font-bold text-on-surface">LUXE10</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-secondary-container/20 text-secondary font-bold">-₹1,500</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">10% special member discount unlocked</span>
+</div>
+</div>
+<button aria-label="Remove coupon" class="text-outline hover:text-error active:scale-90 transition-all p-1" onclick="removeCoupon()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Enter alternate coupon toggle -->
+<div class="flex items-center justify-between pt-1">
+<button class="font-label-sm text-label-sm text-primary-container font-semibold hover:underline flex items-center gap-1" type="button">
+<span>View all available offers (4)</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Protection / Assurance Badge Rail -->
+<section class="px-margin-mobile mt-3">
+<div class="grid grid-cols-3 gap-2 text-center">
+<div class="p-2 rounded-lg bg-surface-container-low flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary-container text-[20px]">verified_user</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">100% Genuine</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary-container text-[20px]">published_with_changes</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">7-Day Return</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary-container text-[20px]">lock</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Safe Checkout</span>
+</div>
+</div>
+</section>
+<!-- Order Summary Breakdown Card -->
+<section class="px-margin-mobile mt-4">
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Order Summary</h3>
+<div class="flex flex-col gap-2 font-body-md text-body-md text-on-surface-variant">
+<div class="flex justify-between items-center">
+<span>Cart Subtotal</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface" id="summary-subtotal">₹18,197</span>
+</div>
+<div class="flex justify-between items-center text-secondary">
+<span class="flex items-center gap-1">
+<span>Coupon Discount</span>
+<span class="font-label-sm text-label-sm px-1 rounded bg-secondary-fixed text-on-secondary-fixed">LUXE10</span>
+</span>
+<span class="font-headline-sm text-headline-sm font-semibold" id="summary-discount">-₹1,500</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="flex items-center gap-1">
+<span>Express Delivery</span>
+<span class="material-symbols-outlined text-[15px] text-primary-container">bolt</span>
+</span>
+<div class="flex items-center gap-1.5">
+<span class="font-body-sm text-body-sm text-outline line-through">₹250</span>
+<span class="font-label-sm text-label-sm font-bold text-primary-container uppercase tracking-wide">FREE</span>
+</div>
+</div>
+<div class="flex justify-between items-center text-outline">
+<span class="flex items-center gap-1">
+<span>Estimated GST 18%</span>
+<span class="material-symbols-outlined text-[14px]">info</span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Included</span>
+</div>
+</div>
+<!-- Dotted Separation -->
+<div class="w-full h-px bg-surface-container my-1"></div>
+<!-- Total Payable -->
+<div class="flex justify-between items-baseline">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Total Payable</span>
+<p class="font-label-sm text-label-sm text-secondary font-medium">You are saving ₹3,250 on this order</p>
+</div>
+<span class="font-headline-md text-headline-md font-bold text-primary-container" id="summary-total">₹16,697</span>
+</div>
+</div>
+</section>
+<!-- Sticky Bottom Checkout Bar (Above Shell Navigation) -->
+<aside class="fixed bottom-16 inset-x-0 z-40 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_-4px_16px_rgba(0,0,0,0.06)] px-margin-mobile py-2.5">
+<div class="flex items-center justify-between gap-3 max-w-[430px] mx-auto">
+<!-- Price Snapshot -->
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface leading-tight" id="sticky-total">₹16,697</span>
+<button class="font-label-sm text-label-sm text-primary-container font-semibold underline text-left" onclick="document.querySelector('#summary-total').scrollIntoView({behavior: 'smooth'})" type="button">
+          View Details
+        </button>
+</div>
+<!-- Primary Transactional CTA Button -->
+<button class="flex-1 h-12 rounded-lg bg-secondary-container hover:opacity-95 active:scale-[0.98] transition-all flex items-center justify-center gap-2 text-on-secondary shadow-md" type="button">
+<span class="font-label-lg text-label-lg font-bold tracking-wide">Proceed to Checkout</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</aside>
+</div>
+<script>
+  let cartTotal = 16697;
+  let cartSubtotal = 18197;
+  let discount = 1500;
+  let itemCount = 3;
+
+  function formatINR(val) {
+    return '₹' + Math.max(0, val).toLocaleString('en-IN');
+  }
+
+  function updateQty(elementId, change, price) {
+    const el = document.getElementById(elementId);
+    let qty = parseInt(el.textContent) + change;
+    if (qty < 1) return;
+    el.textContent = qty;
+
+    cartSubtotal += change * price;
+    recalculateTotals();
+  }
+
+  function removeItem(itemId, price) {
+    const card = document.getElementById(itemId);
+    if (!card) return;
+    
+    // Read current quantity for accurate price deduction
+    const qtyEl = card.querySelector('[id^="qty-"]');
+    const qty = qtyEl ? parseInt(qtyEl.textContent) : 1;
+
+    card.classList.add('opacity-0', 'scale-95');
+    setTimeout(() => {
+      card.remove();
+      itemCount--;
+      cartSubtotal -= price * qty;
+      
+      const badge = document.getElementById('cart-item-badge');
+      if (badge) badge.textContent = `${itemCount} Items`;
+      
+      recalculateTotals();
+    }, 250);
+  }
+
+  function removeCoupon() {
+    const pill = document.getElementById('coupon-pill');
+    if (pill) {
+      pill.classList.add('opacity-0', 'scale-95');
+      setTimeout(() => {
+        pill.innerHTML = `
+          <div class="flex items-center justify-between w-full">
+            <span class="font-body-sm text-body-sm text-on-surface-variant">Coupon removed</span>
+            <button type="button" onclick="location.reload()" class="font-label-sm text-label-sm text-primary-container font-semibold">Undo</button>
+          </div>
+        `;
+        pill.classList.remove('opacity-0', 'scale-95');
+        discount = 0;
+        const discountRow = document.getElementById('summary-discount');
+        if (discountRow) discountRow.textContent = '₹0';
+        recalculateTotals();
+      }, 200);
+    }
+  }
+
+  function recalculateTotals() {
+    const subtotalEl = document.getElementById('summary-subtotal');
+    const totalEl = document.getElementById('summary-total');
+    const stickyEl = document.getElementById('sticky-total');
+
+    const total = Math.max(0, cartSubtotal - discount);
+    if (subtotalEl) subtotalEl.textContent = formatINR(cartSubtotal);
+    if (totalEl) totalEl.textContent = formatINR(total);
+    if (stickyEl) stickyEl.textContent = formatINR(total);
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-between items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center flex-1 min-w-[56px] h-full text-on-surface-variant transition-colors hover:text-on-surface group" data-path="home" href="#"><span class="material-symbols-outlined text-[24px] mb-0.5 group-active:scale-90 transition-transform">home</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center flex-1 min-w-[56px] h-full text-on-surface-variant transition-colors hover:text-on-surface group" data-path="categories" href="#"><span class="material-symbols-outlined text-[24px] mb-0.5 group-active:scale-90 transition-transform">grid_view</span><span class="font-label-sm text-label-sm">Categories</span></a><a class="flex flex-col items-center justify-center flex-1 min-w-[56px] h-full text-on-surface-variant transition-colors hover:text-on-surface group" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[24px] mb-0.5 group-active:scale-90 transition-transform">favorite</span><span class="font-label-sm text-label-sm">Wishlist</span></a><a aria-current="page" class="flex flex-col items-center justify-center flex-1 min-w-[56px] h-full relative transition-colors group text-primary-container font-semibold" data-path="cart" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px] mb-0.5 group-active:scale-90 transition-transform">shopping_bag</span><span class="absolute -top-1 -right-2 px-1.5 py-0.2 rounded-full bg-secondary-container text-on-secondary font-label-sm text-[10px] leading-tight font-bold shadow-sm">3</span></div><span class="font-label-sm text-label-sm">Cart</span></a><a class="flex flex-col items-center justify-center flex-1 min-w-[56px] h-full text-on-surface-variant transition-colors hover:text-on-surface group" data-path="account" href="#"><span class="material-symbols-outlined text-[24px] mb-0.5 group-active:scale-90 transition-transform">person</span><span class="font-label-sm text-label-sm">Account</span></a></div></nav></body></html>

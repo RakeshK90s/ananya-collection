@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>LuxeCart - Curated Digital Storefront</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#faf8ff", "primary-container": "#4f46e5", "background": "#faf8ff", "primary-fixed": "#e2dfff", "surface-tint": "#4d44e3", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "outline": "#777587", "tertiary-container": "#a44100", "on-secondary-fixed-variant": "#783200", "inverse-on-surface": "#eef0ff", "surface-variant": "#dae2fd", "on-primary-container": "#dad7ff", "on-secondary": "#ffffff", "on-secondary-fixed": "#341100", "on-primary-fixed-variant": "#3323cc", "secondary": "#9d4300", "surface-container-highest": "#dae2fd", "on-secondary-container": "#5c2400", "error": "#ba1a1a", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#351000", "on-error": "#ffffff", "on-error-container": "#93000a", "primary": "#3525cd", "surface-container": "#eaedff", "surface": "#faf8ff", "outline-variant": "#c7c4d8", "secondary-fixed": "#ffdbca", "error-container": "#ffdad6", "surface-container-low": "#f2f3ff", "secondary-fixed-dim": "#ffb690", "inverse-surface": "#283044", "secondary-container": "#fd761a", "tertiary": "#7e3000", "tertiary-fixed": "#ffdbcc", "on-tertiary-fixed-variant": "#7b2f00", "surface-dim": "#d2d9f4", "on-surface-variant": "#464555", "on-primary-fixed": "#0f0069", "primary-fixed-dim": "#c3c0ff", "surface-container-high": "#e2e7ff", "on-tertiary-container": "#ffd2be", "on-surface": "#131b2e", "inverse-primary": "#c3c0ff", "tertiary-fixed-dim": "#ffb695", "on-background": "#131b2e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem", "margin": "2rem" }, "fontFamily": { "label-sm": ["Inter"], "headline-xl": ["Outfit"], "headline-xl-mobile": ["Outfit"], "label-lg": ["Inter"], "display-lg": ["Outfit"], "body-lg": ["Inter"], "headline-lg": ["Outfit"], "headline-sm": ["Outfit"], "display-lg-mobile": ["Outfit"], "label-md": ["Inter"], "headline-md": ["Outfit"], "body-sm": ["Inter"], "body-md": ["Inter"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(15,23,42,0.04)]"><div class="h-28 max-w-[1440px] mx-auto px-margin flex flex-col justify-between"><div class="h-16 flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-sm"><img alt="LuxeCart Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK1Ey-A47kik0pHwYi3xLOw7HCKqxCSoJxAtN02xZdcvCQ-qXEOi9Ha_CguK97SXh4E1I-vjvsQW03dbKkTgMSSP8rz2Zs9iRuy2mxxAgEaPl1cIIRm6FU7zAJMGlqFrdB1RnrWTLmavpOGbted7rjJK8AF8pqBeeOnTn0k2nQrLKuO1L4-mm9RcdT6XrfIWrXyOh9_Cg_m2BSHCLJQweW7yQbSjk-nWFbzVNAjXsQPCxD32YFoPO2"/><span class="font-headline-md text-headline-md text-on-surface tracking-tight font-bold">LuxeCart</span></div><div class="hidden xl:flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface cursor-pointer py-1.5 px-2.5 rounded-lg transition-colors"><span class="material-symbols-outlined text-primary text-[20px]">location_on</span><div class="flex flex-col text-left"><span class="font-label-sm text-label-sm text-outline">Deliver to</span><span class="font-label-md text-label-md text-on-surface font-semibold">Mumbai 400001</span></div><span class="material-symbols-outlined text-outline text-[16px]">expand_more</span></div></div><div class="flex-1 max-w-2xl mx-space-sm"><div class="flex items-center w-full h-11 bg-surface-container-lowest rounded-lg border border-outline-variant shadow-[0_1px_3px_rgba(15,23,42,0.02)] focus-within:ring-2 focus-within:ring-primary focus-within:border-transparent transition-all overflow-hidden"><button class="h-full px-space-md bg-surface-container-low font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center gap-1 shrink-0 border-r border-outline-variant transition-colors" type="button"><span>All Categories</span><span class="material-symbols-outlined text-[18px]">arrow_drop_down</span></button><div class="relative flex-1 h-full"><input class="w-full h-full px-space-md bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" placeholder="Search for products, brands and luxury essentials..." type="text"/></div><button aria-label="Search" class="h-full px-space-lg bg-secondary-container text-on-secondary hover:bg-secondary flex items-center justify-center shrink-0 transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button></div></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden lg:flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface cursor-pointer px-2 py-1.5 rounded-lg transition-colors"><span class="material-symbols-outlined text-[20px]">language</span><span class="font-label-md text-label-md">EN</span><span class="material-symbols-outlined text-outline text-[16px]">expand_more</span></div><a aria-label="Wishlist" class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[24px]">favorite</span><span class="absolute top-1 right-1 w-4 h-4 bg-secondary-container text-on-secondary font-label-sm text-[10px] rounded-full flex items-center justify-center font-bold">5</span></a><a aria-label="Cart" class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="cart" href="#"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute top-1 right-1 w-4 h-4 bg-secondary-container text-on-secondary font-label-sm text-[10px] rounded-full flex items-center justify-center font-bold">3</span></a><div class="h-6 w-[1px] bg-outline-variant mx-1"></div><div class="flex items-center gap-space-sm pl-1 cursor-pointer py-1 px-2 rounded-lg hover:bg-surface-container-low transition-colors"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-highest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMIIGE1MoI7sro4Klg_CkTS3THCNDVD7cISAeLfifhT3xs_kPO8nW-X46MW529dnHRw7LzqtI5TB--_S-zXrTXgZuvqMjLFiWAz4KB8e5_n8ZWWt7pLdO0ilXgJhzXUwr2VsjFC9oLW1OW7fgwBiRWQxkNhqTg7ouIhkl4gz_oJKT1IxLvXvFgixRYkxJDykMsa6LVEl-0OQ2VDFWLOML01fKMc20m4-x5PBIv57vUAOX9WczIfP2I"/><div class="hidden sm:flex flex-col text-left"><span class="font-label-sm text-label-sm text-outline">Welcome,</span><span class="font-label-md text-label-md text-on-surface font-semibold">Rahul S.</span></div><span class="material-symbols-outlined text-outline text-[18px]">expand_more</span></div></div></div><div class="h-12 flex items-center justify-between border-t border-surface-container-high"><nav class="flex items-center gap-space-lg h-full" data-active-classes="text-primary font-semibold border-b-2 border-primary"><a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors pb-0.5" data-path="all-categories" href="#">All Categories</a><a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors pb-0.5" data-path="deals" href="#">Deals</a><a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors pb-0.5" data-path="new-arrivals" href="#">New Arrivals</a><a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors pb-0.5" data-path="luxury-edit" href="#">Luxury Edit</a><a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors pb-0.5" data-path="customer-care" href="#">Customer Care</a><a aria-current="page" class="h-full flex items-center transition-colors pb-0.5 text-primary font-semibold border-b-2 border-primary" data-path="cart" href="#">Cart</a></nav><div class="hidden md:flex items-center gap-space-md"><span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bolt</span>Flash Event: Extra 20% Off Select Curation</span></div></div></div></header><main class="w-full pt-28 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Utility Container -->
+<div class="max-w-[1440px] w-full mx-auto px-margin py-space-md">
+<!-- Top Navigation & Breadcrumb Hierarchy -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Electronics &amp; Audio</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-on-surface font-semibold">Shopping Cart</span>
+</nav>
+<!-- Cart Quick Controls -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5 px-3 py-1 bg-surface-container rounded-full text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>Bank-Grade Encryption</span>
+</div>
+<button class="flex items-center gap-1.5 text-primary hover:text-primary-container font-label-md text-label-md font-semibold transition-colors" id="toggle-mini-cart-btn">
+<span class="material-symbols-outlined text-[18px]">dock_to_left</span>
+<span>Preview Mini Cart Drawer</span>
+</button>
+</div>
+</div>
+<!-- Page Title & Micro Action -->
+<div class="flex items-baseline justify-between mb-space-md pb-space-sm border-b-0">
+<div class="flex items-baseline gap-space-sm">
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">Shopping Cart</h1>
+<span class="font-headline-sm text-headline-sm text-outline font-normal">(3 curated items)</span>
+</div>
+<div class="flex items-center gap-space-md">
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors underline cursor-pointer" id="switch-empty-state-btn">
+          Toggle Empty State View
+        </button>
+<span class="text-outline-variant">•</span>
+<button class="font-label-md text-label-md text-outline hover:text-error transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">delete_sweep</span>
+<span>Clear all</span>
+</button>
+</div>
+</div>
+<!-- Free Express Shipping Milestone Bar -->
+<div class="relative overflow-hidden w-full bg-surface-container-lowest p-space-md rounded-xl shadow-sm mb-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-2.5">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<p class="font-label-lg text-label-lg text-on-surface font-bold">
+              Add <span class="text-secondary-container">₹1,001</span> more to unlock <span class="text-primary font-extrabold uppercase tracking-wide">FREE Express Priority Delivery</span>!
+            </p>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Qualified items will ship via expedited courier with zero transit fee.</span>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end md:self-auto shrink-0">
+<span class="font-label-sm text-label-sm font-bold text-primary">₹3,999 / ₹5,000</span>
+<span class="px-2 py-0.5 bg-surface-container font-label-sm text-[11px] font-bold text-primary rounded-full">80% Achieved</span>
+</div>
+</div>
+<!-- Track Meter -->
+<div class="w-full h-2.5 bg-surface-container rounded-full overflow-hidden relative">
+<div class="h-full bg-gradient-to-r from-primary to-secondary-container rounded-full transition-all duration-700 ease-out" style="width: 80%"></div>
+</div>
+</div>
+<!-- ACTIVE STATE: Main 2-Column Checkout Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start" id="cart-active-state">
+<!-- LEFT COLUMN: Items List + Saved Items (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Cart Items Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Card Header & Mass Selection -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<label class="flex items-center gap-space-sm cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" type="checkbox"/>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Cart Items (3)</span>
+</label>
+<span class="font-label-sm text-label-sm text-outline">Price per unit shown in INR</span>
+</div>
+<!-- Product Item 1: Studio Pro ANC -->
+<div class="p-space-lg flex flex-col sm:flex-row gap-space-md relative hover:bg-surface-bright transition-colors">
+<div class="flex items-start gap-space-sm shrink-0">
+<input checked="" class="w-4 h-4 mt-2 rounded accent-primary cursor-pointer" type="checkbox"/>
+<div class="w-28 h-28 sm:w-32 sm:h-32 bg-surface-container-low rounded-xl overflow-hidden relative shrink-0">
+<img class="w-full h-full object-cover object-center" data-alt="Premium audiophile over-ear active noise cancelling headphones in midnight matte black finish with aerospace aluminum hinges and protein leather earcups on clean minimalist studio platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfakTL8svcBc3CL2KiI2a665Nkz0LRnnslh-KF4RRibDLX9twFbs00wtJNfttOS2_-MIartM6ZQlx0dGGCkqwRP6hVSwR3LtmcYnz5oYitdC1CB5bBewmGo-LSColSNIABp0wUx92FmEmj6X9GyP7PBKGlrvJ7Ct-RMbbDrzWNFPYgyOmZpeeJmqVGe65q9L1CcBovXRBhbgreF2W3EGGBkilE-HbNgaJbMGGIBrQveoPB9uKD7Lzg"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 bg-secondary-container text-on-secondary font-label-sm text-[10px] rounded font-bold">35% OFF</span>
+</div>
+</div>
+<!-- Details & Actions -->
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div>
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Acoustic Engineering</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold hover:text-primary transition-colors cursor-pointer truncate">
+                      Apex Wireless Studio Pro ANC Headset
+                    </h2>
+</div>
+<!-- Desktop Inline Price -->
+<div class="text-right shrink-0">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">₹14,999</div>
+<div class="font-body-sm text-body-sm text-outline line-through">₹22,999</div>
+</div>
+</div>
+<div class="mt-1 flex flex-wrap items-center gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<span>Variant: <strong class="text-on-surface font-medium">Midnight Obsidian</strong></span>
+<span class="text-outline-variant">•</span>
+<span>Edition: <strong class="text-on-surface font-medium">Audiophile Package</strong></span>
+</div>
+<!-- Stock & Fast Delivery Badge -->
+<div class="mt-2.5 flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary inline-block"></span>
+<span>In Stock (Only 4 units left)</span>
+</div>
+<div class="flex items-center gap-1 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Free Next-Day Delivery by Tomorrow, 2 PM</span>
+</div>
+</div>
+</div>
+<!-- Quantity & Actions Rail -->
+<div class="mt-space-md pt-space-sm flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low/40 p-2.5 rounded-lg">
+<!-- Quantity Stepper -->
+<div class="flex items-center bg-surface-container-lowest rounded-lg shadow-xs">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-l-lg transition-colors">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="w-10 text-center font-label-md text-label-md text-on-surface font-semibold">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-r-lg transition-colors">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<!-- Secondary Micro Links -->
+<div class="flex items-center gap-space-md font-label-md text-label-md">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+<span>Save for Later</span>
+</button>
+<span class="text-outline-variant">|</span>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">compare_arrows</span>
+<span>Compare</span>
+</button>
+<span class="text-outline-variant">|</span>
+<button class="flex items-center gap-1 text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+<span>Remove</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Item 2: Audiophile Cable -->
+<div class="p-space-lg flex flex-col sm:flex-row gap-space-md relative hover:bg-surface-bright transition-colors bg-surface-container-lowest">
+<div class="flex items-start gap-space-sm shrink-0">
+<input checked="" class="w-4 h-4 mt-2 rounded accent-primary cursor-pointer" type="checkbox"/>
+<div class="w-28 h-28 sm:w-32 sm:h-32 bg-surface-container-low rounded-xl overflow-hidden relative shrink-0">
+<img class="w-full h-full object-cover object-center" data-alt="Braided audiophile balanced headphone cable made with pure crystal oxygen free copper wire and heavy duty 4.4mm gold plated Pentaconn jack on soft neutral linen surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDyzKjRRsIs5BjKf-jNIlqBdkhg4NgD_wHPAMapUGN9B5RqTgTTnqyiNnIN_o0mzcnahSKe9xlCM8mBHdnmYIZS6aE545kRyA2QgfYwaqWWIfouCZPPRg7e4yc8QcGS8Ik3gEodolllZoXNSeF3aWAGuuOHetSwT7fzBqm7sf6uRjuAR0E_2j5vjPxqP8nZfiDPp35_uU0WTP6Q7v-atBD6_fNuxd6nIMLU3OpnePbOLWUa45DNUv6"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 bg-secondary-container text-on-secondary font-label-sm text-[10px] rounded font-bold">24% OFF</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div>
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Hi-Fi Interconnect</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold hover:text-primary transition-colors cursor-pointer truncate">
+                      Balanced 4.4mm Audiophile Cable (OCC Copper)
+                    </h2>
+</div>
+<div class="text-right shrink-0">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">₹1,899</div>
+<div class="font-body-sm text-body-sm text-outline line-through">₹2,499</div>
+</div>
+</div>
+<div class="mt-1 flex flex-wrap items-center gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<span>Spec: <strong class="text-on-surface font-medium">1.5m Length</strong></span>
+<span class="text-outline-variant">•</span>
+<span>Connector: <strong class="text-on-surface font-medium">4.4mm Pentaconn TRRRS</strong></span>
+</div>
+<div class="mt-2.5 flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary inline-block"></span>
+<span>In Stock</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span>Ships within 24 hours</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low/40 p-2.5 rounded-lg">
+<div class="flex items-center bg-surface-container-lowest rounded-lg shadow-xs">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-l-lg transition-colors">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="w-10 text-center font-label-md text-label-md text-on-surface font-semibold">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-r-lg transition-colors">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<div class="flex items-center gap-space-md font-label-md text-label-md">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+<span>Save for Later</span>
+</button>
+<span class="text-outline-variant">|</span>
+<button class="flex items-center gap-1 text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+<span>Remove</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Item 3: Travel Armor Case -->
+<div class="p-space-lg flex flex-col sm:flex-row gap-space-md relative hover:bg-surface-bright transition-colors bg-surface-container-lowest">
+<div class="flex items-start gap-space-sm shrink-0">
+<input checked="" class="w-4 h-4 mt-2 rounded accent-primary cursor-pointer" type="checkbox"/>
+<div class="w-28 h-28 sm:w-32 sm:h-32 bg-surface-container-low rounded-xl overflow-hidden relative shrink-0">
+<img class="w-full h-full object-cover object-center" data-alt="Durable hard shell protective travel case with woven carbon texture exterior, waterproof zipper, and tailored molded foam interior compartments on clean stone background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzuK2RIWzG48sVSlYvVqF3Z97HGs8PirU4ch18faz8iU2B6Y8DbXD7xXZ3QbVxZ1leBDFt7b1pdeY5vqOw7KXQsffbZjltzPBjcAm4IBPKgRDr4bkmEJUV-5fxu4K5NkDCm795qTATvHzzFO-9D-Jb5QVHXz4acFfKpkllsYq8Jl0JHDkS6s_q1RjmQ6rDlRiGFlw7sN1J4RVVMMwyonKWp-ijM411HLoRPxYQ_lkyl7TbAFJhuE2H"/>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div>
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Armor &amp; Protection</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold hover:text-primary transition-colors cursor-pointer truncate">
+                      Hard Shell EVA Travel Armor Case
+                    </h2>
+</div>
+<div class="text-right shrink-0">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">₹1,299</div>
+<div class="font-body-sm text-body-sm text-outline line-through">₹1,799</div>
+</div>
+</div>
+<div class="mt-1 flex flex-wrap items-center gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<span>Finish: <strong class="text-on-surface font-medium">Matte Carbon Weave</strong></span>
+<span class="text-outline-variant">•</span>
+<span>Fit: <strong class="text-on-surface font-medium">Universal Studio Fit</strong></span>
+</div>
+<div class="mt-2.5 flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary inline-block"></span>
+<span>In Stock</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">local_shipping</span>
+<span>Delivered in 2 business days</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low/40 p-2.5 rounded-lg">
+<div class="flex items-center bg-surface-container-lowest rounded-lg shadow-xs">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-l-lg transition-colors">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="w-10 text-center font-label-md text-label-md text-on-surface font-semibold">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-r-lg transition-colors">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<div class="flex items-center gap-space-md font-label-md text-label-md">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+<span>Save for Later</span>
+</button>
+<span class="text-outline-variant">|</span>
+<button class="flex items-center gap-1 text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+<span>Remove</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Saved For Later Accordion Module -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="p-space-md bg-surface-container-low flex items-center justify-between cursor-pointer" onclick="document.getElementById('saved-later-body').classList.toggle('hidden'); document.getElementById('saved-arrow').classList.toggle('rotate-180');">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">bookmarks</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Saved for Later</span>
+<span class="px-2 py-0.5 bg-primary-fixed text-primary font-label-sm text-label-sm rounded-full font-bold">2 items</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="saved-arrow">expand_more</span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-lg" id="saved-later-body">
+<!-- Saved Item 1 -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pb-space-md bg-surface-bright p-space-md rounded-xl">
+<div class="flex items-center gap-space-md w-full sm:w-auto">
+<div class="w-20 h-20 bg-surface-container rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Handcrafted solid American walnut wood headphone stand with sculpted curve and brushed brass weighted pedestal base in soft warm studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeGuIvlpVNmVtb7xggnsa4tUViwEpl0Vb13JubV-W3fG5pSFzDOJPc4j2EggMjiQ84x6IhMsXsuGlmNFhLtGH8uecNgmyU7N96Fx__iQeEOglCvxYq3gs1RB0NpKfbTwX-BMYjeW4AA5ooUOv-ERIQfjsHi7PF86TzywcSJ8AbwdiJ1qeo2FvtvpBbPdhLurlB1bwOopq6_T9tN5J_JO4Qo4hvoL1UadwhLJp_SEB5b-yzoWA_-UgH"/>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Luxe Solid Walnut Headphone Stand</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Natural Walnut &amp; Brass Weighted Base</p>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">₹2,499</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<button class="px-space-md py-2 bg-primary text-on-primary font-label-md text-label-md font-semibold rounded-lg hover:bg-primary-container transition-colors shadow-sm">
+                  Move to Cart
+                </button>
+<button class="p-2 text-outline hover:text-error transition-colors rounded-lg hover:bg-surface-container">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Saved Item 2 -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-bright p-space-md rounded-xl">
+<div class="flex items-center gap-space-md w-full sm:w-auto">
+<div class="w-20 h-20 bg-surface-container rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Compact portable high-resolution DAC headphone amplifier in precision CNC machined aluminum enclosure with OLED screen and volume dial on slate surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCrdu7h9ITfiSUiF1RiIxIa7zhinoCgqypw7JcwbcyP14TTM53oBqOOIn2W2sjjSDEH_58LMs0OG2rRt1cLJjjt0F_O2juLrBcRL-KMFkgfER-Ag1PUlad6jxO-9Te84GEIOfP4HVbI6xKJ-WglTc_c5aS3YJ0IWkNFmMQz6A47VvYxN4aPquM_wg5E4ozj-jJHU0KEiFaXg_RyMgEPIF9_sDZAfhCXpeFEVw-FV3Y87b7xIA2oFeh"/>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Hi-Res Portable Audio DAC &amp; Amp</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dual ES9038Q2M | Balanced Output</p>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">₹6,499</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<button class="px-space-md py-2 bg-primary text-on-primary font-label-md text-label-md font-semibold rounded-lg hover:bg-primary-container transition-colors shadow-sm">
+                  Move to Cart
+                </button>
+<button class="p-2 text-outline hover:text-error transition-colors rounded-lg hover:bg-surface-container">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Order Summary & Checkout Panel (4 Cols - Sticky) -->
+<div class="lg:col-span-4 sticky top-32 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-space-md">
+            Order Summary
+          </h2>
+<!-- Promo Code Input & Snippets -->
+<div class="mb-space-md">
+<label class="font-label-md text-label-md text-on-surface-variant font-semibold block mb-1.5">Apply Exclusive Voucher</label>
+<div class="flex items-center gap-space-xs">
+<div class="relative flex-1">
+<input class="w-full h-11 px-3 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Enter promo code" type="text" value="LUXE20"/>
+</div>
+<button class="h-11 px-4 bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md font-semibold rounded-lg transition-colors shrink-0">
+                Applied
+              </button>
+</div>
+<!-- Active Tag -->
+<div class="mt-2.5 flex items-center justify-between p-2 bg-secondary-fixed/50 rounded-lg text-on-secondary-fixed-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span>Code <strong>LUXE20</strong> applied (-₹500.00)</span>
+</div>
+<button class="material-symbols-outlined text-[16px] text-outline hover:text-error cursor-pointer">close</button>
+</div>
+<!-- Quick Suggestions -->
+<div class="mt-2 flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline">Available:</span>
+<button class="px-2 py-0.5 bg-surface-container rounded font-label-sm text-label-sm text-primary hover:bg-primary-fixed transition-colors">SAVE10</button>
+<button class="px-2 py-0.5 bg-surface-container rounded font-label-sm text-label-sm text-primary hover:bg-primary-fixed transition-colors">FESTIVE</button>
+</div>
+</div>
+<!-- Price Calculations Rail -->
+<div class="flex flex-col gap-space-sm pt-space-sm pb-space-md">
+<div class="flex items-center justify-between font-body-md text-body-md text-on-surface-variant">
+<span>Subtotal (3 items)</span>
+<span class="text-on-surface font-semibold">₹18,197</span>
+</div>
+<div class="flex items-center justify-between font-body-md text-body-md text-secondary">
+<span class="flex items-center gap-1">
+                Retail Discount
+                <span class="material-symbols-outlined text-[14px]">info</span>
+</span>
+<span class="font-semibold">-₹9,098</span>
+</div>
+<div class="flex items-center justify-between font-body-md text-body-md text-secondary">
+<span>Promo Coupon (LUXE20)</span>
+<span class="font-semibold">-₹500</span>
+</div>
+<div class="flex items-center justify-between font-body-md text-body-md text-on-surface-variant">
+<span>Estimated GST (18% included)</span>
+<span class="text-on-surface">₹2,776</span>
+</div>
+<div class="flex items-center justify-between font-body-md text-body-md text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span>Express Delivery</span>
+<span class="px-1.5 py-0.2 bg-primary-fixed text-primary font-label-sm text-[10px] rounded font-bold">PROMO</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="line-through text-outline font-body-sm text-body-sm">₹249</span>
+<span class="text-secondary font-bold font-label-md text-label-md">FREE</span>
+</div>
+</div>
+</div>
+<!-- Total Calculation Module -->
+<div class="pt-space-md bg-surface-container-low p-space-md rounded-xl mb-space-md">
+<div class="flex items-baseline justify-between mb-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Total Payable</span>
+<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight">₹17,697</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Inclusive of all local duties &amp; taxes</span>
+<span class="px-2 py-0.5 bg-secondary-container/15 text-secondary-container font-label-sm text-label-sm font-bold rounded">
+                You save ₹9,598
+              </span>
+</div>
+</div>
+<!-- Conversion Trigger Button (Warm Orange CTA) -->
+<button class="w-full py-4 bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg font-bold rounded-lg transition-all duration-200 shadow-md flex items-center justify-center gap-2 cursor-pointer hover:shadow-lg active:scale-[0.99]">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+<span>Proceed to Checkout</span>
+</button>
+<p class="mt-2 text-center font-label-sm text-label-sm text-outline flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span>Secure 256-Bit SSL Checkout with Escrow Release</span>
+</p>
+<!-- Safe Payment Methods Bar -->
+<div class="mt-space-md pt-space-md flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-2">Supported Payment Gateways</span>
+<div class="flex flex-wrap items-center justify-center gap-2">
+<span class="px-2.5 py-1 bg-surface-container font-label-sm text-[11px] font-bold rounded text-on-surface-variant">UPI (GPay / PhonePe)</span>
+<span class="px-2.5 py-1 bg-surface-container font-label-sm text-[11px] font-bold rounded text-on-surface-variant">RuPay</span>
+<span class="px-2.5 py-1 bg-surface-container font-label-sm text-[11px] font-bold rounded text-on-surface-variant">Visa</span>
+<span class="px-2.5 py-1 bg-surface-container font-label-sm text-[11px] font-bold rounded text-on-surface-variant">Mastercard</span>
+<span class="px-2.5 py-1 bg-surface-container font-label-sm text-[11px] font-bold rounded text-on-surface-variant">No-Cost EMI</span>
+</div>
+</div>
+<!-- Trust Badges List -->
+<div class="mt-space-md pt-space-md flex flex-col gap-2">
+<div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>100% Certified Genuine Luxury Audio</span>
+</div>
+<div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">cached</span>
+<span>7-Day Hassle-Free Returns &amp; Concierge Pick-up</span>
+</div>
+</div>
+</div>
+<!-- Help & Concierge Snippet -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-xs flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Have questions on audio match?</p>
+<span class="font-body-sm text-body-sm text-outline">Audio specialist online to assist</span>
+</div>
+</div>
+<button class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high rounded-lg text-primary font-label-sm text-label-sm font-bold transition-colors">
+            Chat Now
+          </button>
+</div>
+</div>
+</div>
+<!-- ALTERNATIVE STATE: Empty Cart State Modular Preview -->
+<div class="hidden flex-col items-center justify-center py-space-xl px-space-md bg-surface-container-lowest rounded-xl shadow-sm text-center" id="cart-empty-state">
+<div class="w-24 h-24 rounded-full bg-surface-container flex items-center justify-center text-outline mb-space-md">
+<span class="material-symbols-outlined text-[48px] text-primary">shopping_basket</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-space-xs">
+        Your LuxeCart is empty
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-space-lg">
+        Looks like you haven't added any luxury pieces to your cart yet. Explore our handcrafted editions and limited seasonal drops.
+      </p>
+<a class="px-space-xl py-3.5 bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg font-bold rounded-lg transition-all shadow-md inline-flex items-center gap-2 mb-space-xl" href="#">
+<span>Explore Trending Collections</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<!-- Quick Category Jump Chips -->
+<div class="w-full max-w-2xl pt-space-lg">
+<span class="font-label-md text-label-md text-outline block mb-space-sm uppercase tracking-wider">Popular Departments</span>
+<div class="flex flex-wrap items-center justify-center gap-space-sm">
+<a class="px-4 py-2 bg-surface-container hover:bg-surface-container-high rounded-full font-label-md text-label-md text-on-surface font-semibold transition-colors" href="#">
+            Over-Ear Studio ANC
+          </a>
+<a class="px-4 py-2 bg-surface-container hover:bg-surface-container-high rounded-full font-label-md text-label-md text-on-surface font-semibold transition-colors" href="#">
+            Audiophile DACs
+          </a>
+<a class="px-4 py-2 bg-surface-container hover:bg-surface-container-high rounded-full font-label-md text-label-md text-on-surface font-semibold transition-colors" href="#">
+            Custom IEM Cables
+          </a>
+<a class="px-4 py-2 bg-surface-container hover:bg-surface-container-high rounded-full font-label-md text-label-md text-on-surface font-semibold transition-colors" href="#">
+            Solid Walnut Accessories
+          </a>
+</div>
+</div>
+</div>
+</div>
+<!-- SLIDE-IN MINI CART DRAWER COMPONENT (MODAL / OVERLAY COMPONENT) -->
+<div aria-labelledby="slide-over-title" aria-modal="true" class="fixed inset-0 z-50 overflow-hidden hidden" id="mini-cart-drawer" role="dialog">
+<!-- Scrim -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-xs transition-opacity duration-300" id="drawer-backdrop"></div>
+<div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+<div class="w-screen max-w-md bg-surface-container-lowest shadow-2xl flex flex-col justify-between">
+<!-- Drawer Header -->
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">shopping_bag</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold" id="slide-over-title">Quick Cart Drawer</h3>
+<span class="px-2 py-0.5 bg-primary-fixed text-primary font-label-sm text-label-sm font-bold rounded-full">3</span>
+</div>
+<button class="p-1 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors" id="close-mini-cart-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Drawer Body: List of Quick Items -->
+<div class="flex-1 overflow-y-auto p-space-lg flex flex-col gap-space-md">
+<div class="p-2.5 bg-secondary-fixed/40 rounded-lg text-on-secondary-fixed-variant font-label-sm text-label-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">local_shipping</span>
+<span>Free Express Shipping unlocked!</span>
+</div>
+<!-- Drawer Item 1 -->
+<div class="flex items-start gap-space-sm pb-space-sm">
+<div class="w-16 h-16 bg-surface-container rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Apex Wireless Studio Pro headphones angled front shot in pitch black matte finish on clean illuminated showcase pedestal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkUhhrK9oUmBMhmYVzphBLojXequDSi_T63ATCPHE21toDsNgBt7jK2fnryfbx0o4sWSJOJUDdwVl75VxQnRl0pQr9qkQZWYx1bzM4vMJHLn2xGrxvVpOOCobehsB4lLdyzFVJcAYCG4EZqdmhjJDUYtKxwAezTfhhRERL_TYemZYXadveVwOskecgHvQhawwqVM5UXQA-u3Wx5nYycjM98Yh9OUC0_cD6BHIBUsYHJ9C2V5jGjqZa"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-label-md text-label-md text-on-surface font-bold truncate">Apex Wireless Studio Pro ANC</h4>
+<p class="font-body-sm text-[11px] text-outline">Midnight Obsidian</p>
+<div class="flex items-center justify-between mt-2">
+<div class="flex items-center bg-surface-container-low rounded">
+<button class="px-2 py-0.5 text-on-surface-variant hover:text-on-surface">-</button>
+<span class="px-2 text-[12px] font-semibold text-on-surface">1</span>
+<button class="px-2 py-0.5 text-on-surface-variant hover:text-on-surface">+</button>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">₹14,999</span>
+</div>
+</div>
+</div>
+<!-- Drawer Item 2 -->
+<div class="flex items-start gap-space-sm pb-space-sm">
+<div class="w-16 h-16 bg-surface-container rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close up of 4.4mm Pentaconn high end headphone jack with braided copper wires on sleek metal surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvIcf2CvfX0Zju8OAn_A-9sTNOwUZbbckuFyfQDw1u4_1wgMYUWX4B_Cy-D47WE4kgWS89VRkT1qNvPC5NUsuyc9SepkiPUe1GwS-6OfEm78Q8CwYRyyZB8s82xKtNOM6HpGnUxD01u6dCtij4iO70u0PnLuM2rHH9PCLSsV7EDIA28UJOiF3KHrGrwI-WZ2ooGynXVEXwNxrGdAGHWA9Y167d6gpG101rcXzxEuYMSnP0Bx8iQvSJ"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-label-md text-label-md text-on-surface font-bold truncate">Balanced 4.4mm Audiophile Cable</h4>
+<p class="font-body-sm text-[11px] text-outline">1.5m Length</p>
+<div class="flex items-center justify-between mt-2">
+<div class="flex items-center bg-surface-container-low rounded">
+<button class="px-2 py-0.5 text-on-surface-variant hover:text-on-surface">-</button>
+<span class="px-2 text-[12px] font-semibold text-on-surface">1</span>
+<button class="px-2 py-0.5 text-on-surface-variant hover:text-on-surface">+</button>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">₹1,899</span>
+</div>
+</div>
+</div>
+<!-- Drawer Item 3 -->
+<div class="flex items-start gap-space-sm pb-space-sm">
+<div class="w-16 h-16 bg-surface-container rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Hard shell black molded EVA protective headphone travel case on crisp studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy3ykaNngkvbtsgGRd7mhN8N-uQDOicr79bqFCT1EAoThaBeqjMCBlOXARTxDCSApH7dQw00bJPpIkMTH_D7EWJNC2s32NlSsli2EIMeBd3bZa-o6Ta_wXqcCixQuBOEG_bq7vXIY0AMdPLJjljurTSYLRxPBw6m87ksq5YkcKZ5T_9YhoalhD0n1f7eA-94jxU9uyzECjQ5TdWOf_R88wJ-nC4X1tdeqPASWUZQnRBmdivgVrWwF2"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-label-md text-label-md text-on-surface font-bold truncate">Hard Shell EVA Travel Armor Case</h4>
+<p class="font-body-sm text-[11px] text-outline">Matte Carbon</p>
+<div class="flex items-center justify-between mt-2">
+<div class="flex items-center bg-surface-container-low rounded">
+<button class="px-2 py-0.5 text-on-surface-variant hover:text-on-surface">-</button>
+<span class="px-2 text-[12px] font-semibold text-on-surface">1</span>
+<button class="px-2 py-0.5 text-on-surface-variant hover:text-on-surface">+</button>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">₹1,299</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Drawer Footer & Action -->
+<div class="p-space-lg bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-outline">Cart Subtotal</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">₹17,697</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm mt-1">
+<button class="w-full py-2.5 bg-surface-container-lowest hover:bg-surface-container text-primary font-label-md text-label-md font-bold rounded-lg transition-colors" id="view-full-cart-btn">
+              Full Cart View
+            </button>
+<button class="w-full py-2.5 bg-secondary-container hover:bg-secondary text-on-secondary font-label-md text-label-md font-bold rounded-lg transition-colors shadow-sm">
+              Checkout
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Micro-Interactions Script -->
+<script>
+    (function () {
+      const miniDrawer = document.getElementById('mini-cart-drawer');
+      const toggleMiniCartBtn = document.getElementById('toggle-mini-cart-btn');
+      const closeMiniCartBtn = document.getElementById('close-mini-cart-btn');
+      const drawerBackdrop = document.getElementById('drawer-backdrop');
+      const viewFullCartBtn = document.getElementById('view-full-cart-btn');
+
+      const switchEmptyStateBtn = document.getElementById('switch-empty-state-btn');
+      const activeState = document.getElementById('cart-active-state');
+      const emptyState = document.getElementById('cart-empty-state');
+
+      function openDrawer() {
+        miniDrawer.classList.remove('hidden');
+      }
+
+      function closeDrawer() {
+        miniDrawer.classList.add('hidden');
+      }
+
+      if (toggleMiniCartBtn) toggleMiniCartBtn.addEventListener('click', openDrawer);
+      if (closeMiniCartBtn) closeMiniCartBtn.addEventListener('click', closeDrawer);
+      if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
+      if (viewFullCartBtn) viewFullCartBtn.addEventListener('click', closeDrawer);
+
+      if (switchEmptyStateBtn) {
+        switchEmptyStateBtn.addEventListener('click', function () {
+          const isCurrentlyActive = !activeState.classList.contains('hidden');
+          if (isCurrentlyActive) {
+            activeState.classList.add('hidden');
+            emptyState.classList.remove('hidden');
+            emptyState.classList.add('flex');
+            switchEmptyStateBtn.textContent = 'Restore 3 Active Items';
+          } else {
+            activeState.classList.remove('hidden');
+            emptyState.classList.add('hidden');
+            emptyState.classList.remove('flex');
+            switchEmptyStateBtn.textContent = 'Toggle Empty State View';
+          }
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/50 pt-space-xl pb-space-lg text-on-surface mt-space-xl"><div class="max-w-[1440px] mx-auto px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter pb-space-xl border-b border-surface-container-high"><div class="lg:col-span-4 pr-space-lg"><div class="flex items-center gap-space-sm mb-space-md"><img alt="LuxeCart Brand Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK1Ey-A47kik0pHwYi3xLOw7HCKqxCSoJxAtN02xZdcvCQ-qXEOi9Ha_CguK97SXh4E1I-vjvsQW03dbKkTgMSSP8rz2Zs9iRuy2mxxAgEaPl1cIIRm6FU7zAJMGlqFrdB1RnrWTLmavpOGbted7rjJK8AF8pqBeeOnTn0k2nQrLKuO1L4-mm9RcdT6XrfIWrXyOh9_Cg_m2BSHCLJQweW7yQbSjk-nWFbzVNAjXsQPCxD32YFoPO2"/><span class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface">LuxeCart</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-space-lg">Curating refined global craftsmanship, authentic luxury labels, and effortless elevated commerce with expedited nationwide delivery.</p><div class="flex flex-col gap-space-xs"><span class="font-label-md text-label-md text-on-surface font-semibold">Follow LuxeCart</span><div class="flex items-center gap-space-sm mt-1"><a aria-label="Explore" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a><a aria-label="Connect" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">chat</span></a><a aria-label="Media" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a><a aria-label="Channel" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">play_circle</span></a></div></div></div><div class="lg:col-span-2"><span class="font-label-lg text-label-lg text-on-surface block mb-space-md">Company</span><ul class="flex flex-col gap-space-xs"><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">About Us</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">Sustainability</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">Artisans &amp; Partners</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">Careers</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">Press &amp; Media</li></ul></div><div class="lg:col-span-2"><span class="font-label-lg text-label-lg text-on-surface block mb-space-md">Customer Service</span><ul class="flex flex-col gap-space-xs"><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">Help Center &amp; FAQs</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">Track Your Order</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">Returns &amp; Exchanges</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">Shipping &amp; Handling</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">Contact Concierge</li></ul></div><div class="lg:col-span-4"><span class="font-label-lg text-label-lg text-on-surface block mb-space-md">Stay in Touch</span><p class="font-body-md text-body-md text-on-surface-variant mb-space-md">Receive exclusive access to private vaults, early seasonal sales, and tailored edits.</p><form class="flex flex-col gap-space-xs w-full" onsubmit="return false;"><div class="flex items-center gap-space-xs w-full"><input class="flex-1 min-w-0 h-11 px-3 bg-surface-container-low border border-outline-variant rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary shadow-xs transition-all" placeholder="Enter your email address" type="email"/><button class="h-11 px-space-md bg-secondary-container text-on-secondary hover:bg-secondary font-label-md text-label-md font-semibold rounded-lg transition-all shadow-sm shrink-0 inline-flex items-center justify-center cursor-pointer" type="submit">Subscribe</button></div><span class="font-body-sm text-body-sm text-outline">Zero spam. Opt out anytime.</span></form></div></div><div class="pt-space-lg flex flex-col lg:flex-row items-center justify-between gap-space-md"><div class="flex flex-wrap items-center gap-space-md text-outline font-body-sm text-body-sm"><span class="text-on-surface">© 2025 LuxeCart Retail Private Ltd. All rights reserved.</span><span>•</span><a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a><span>•</span><a class="hover:text-on-surface transition-colors" href="#">Terms of Service</a><span>•</span><a class="hover:text-on-surface transition-colors" href="#">Security &amp; Trust</a></div><div class="flex items-center gap-space-sm"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider mr-1">Accepted Payments</span><div class="flex items-center gap-1.5 text-on-surface-variant"><span class="px-2 py-1 bg-surface-container-low border border-outline-variant/60 rounded font-label-sm text-[11px] font-bold">VISA</span><span class="px-2 py-1 bg-surface-container-low border border-outline-variant/60 rounded font-label-sm text-[11px] font-bold">Mastercard</span><span class="px-2 py-1 bg-surface-container-low border border-outline-variant/60 rounded font-label-sm text-[11px] font-bold">UPI</span><span class="px-2 py-1 bg-surface-container-low border border-outline-variant/60 rounded font-label-sm text-[11px] font-bold">RuPay</span><span class="px-2 py-1 bg-surface-container-low border border-outline-variant/60 rounded font-label-sm text-[11px] font-bold">NetBanking</span></div></div></div></div></footer></body></html>

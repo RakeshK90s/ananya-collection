@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Outfit:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-error-container":"#93000a","tertiary-fixed":"#ffdbcc","surface":"#faf8ff","on-surface":"#131b2e","on-tertiary":"#ffffff","surface-container-low":"#f2f3ff","on-secondary-container":"#5c2400","inverse-surface":"#283044","primary-fixed":"#e2dfff","outline-variant":"#c7c4d8","secondary":"#9d4300","on-surface-variant":"#464555","surface-container":"#eaedff","secondary-container":"#fd761a","surface-dim":"#d2d9f4","surface-container-highest":"#dae2fd","on-tertiary-container":"#ffd2be","tertiary-fixed-dim":"#ffb695","surface-variant":"#dae2fd","surface-container-lowest":"#ffffff","secondary-fixed-dim":"#ffb690","on-primary-fixed-variant":"#3323cc","on-secondary-fixed-variant":"#783200","primary-fixed-dim":"#c3c0ff","on-primary-fixed":"#0f0069","outline":"#777587","error-container":"#ffdad6","on-primary-container":"#dad7ff","on-tertiary-fixed-variant":"#7b2f00","background":"#faf8ff","surface-bright":"#faf8ff","error":"#ba1a1a","on-secondary-fixed":"#341100","tertiary-container":"#a44100","inverse-on-surface":"#eef0ff","on-error":"#ffffff","on-tertiary-fixed":"#351000","surface-tint":"#4d44e3","on-primary":"#ffffff","surface-container-high":"#e2e7ff","inverse-primary":"#c3c0ff","tertiary":"#7e3000","primary":"#3525cd","on-background":"#131b2e","secondary-fixed":"#ffdbca","primary-container":"#4f46e5","on-secondary":"#ffffff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"2rem","space-lg":"1.5rem","space-xl":"2.5rem","gutter-mobile":"0.75rem","space-sm":"0.5rem","margin-mobile":"1rem","gutter":"1.5rem","space-md":"1rem","space-xs":"0.25rem"},"fontFamily":{"headline-md":["Outfit"],"display-lg-mobile":["Outfit"],"body-sm":["Inter"],"headline-xl-mobile":["Outfit"],"headline-xl":["Outfit"],"body-lg":["Inter"],"display-lg":["Outfit"],"label-lg":["Inter"],"headline-sm":["Outfit"],"label-md":["Inter"],"headline-lg":["Outfit"],"body-md":["Inter"],"label-sm":["Inter"]},"fontSize":{"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-xl-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-max"><a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-sm py-space-xs rounded-lg transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">arrow_back</span>Back to Seller Admin</a><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-sm text-headline-sm">L</div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">LuxeCart</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant uppercase tracking-wider">Customizer</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary-container"></span><span>Aura Acoustics Flagship Store</span><span class="opacity-40">•</span><span>Live Theme: Velvet Obsidian v2.4</span></div><div class="hidden 2xl:inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm shadow-[0_1px_4px_rgba(0,0,0,0.03)]"><span class="material-symbols-outlined text-[14px] text-primary">check_circle</span>Draft auto-saved 1m ago</div></div><div class="hidden lg:flex items-center gap-space-sm bg-surface-container-low p-1 rounded-xl shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><div class="flex items-center p-0.5 bg-surface-container-lowest rounded-lg gap-0.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><button class="p-1.5 rounded-md bg-primary-container text-on-primary" title="Desktop Viewport (1440px)" type="button"><span class="material-symbols-outlined text-[18px]">desktop_windows</span></button><button class="p-1.5 rounded-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container" title="Tablet Viewport (768px)" type="button"><span class="material-symbols-outlined text-[18px]">tablet_mac</span></button><button class="p-1.5 rounded-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container" title="Mobile Viewport (375px)" type="button"><span class="material-symbols-outlined text-[18px]">smartphone</span></button></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container-lowest font-label-md text-label-md text-on-surface-variant shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><span>100%</span><span class="material-symbols-outlined text-[16px]">expand_more</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container-lowest font-label-md text-label-md text-on-surface shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[16px] text-primary">web</span><span>Page: Homepage (Storefront)</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div></div><div class="flex items-center gap-space-xs min-w-max"><div class="flex items-center"><button class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Undo (Ctrl+Z)" type="button"><span class="material-symbols-outlined text-[20px]">undo</span></button><button class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Redo (Ctrl+Y)" type="button"><span class="material-symbols-outlined text-[20px]">redo</span></button></div><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low font-label-md text-label-md text-on-surface-variant"><span>Presets: Luxe Minimalist</span><span class="material-symbols-outlined text-[16px]">expand_more</span></div><button class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-sm py-1.5 rounded-lg hover:bg-surface-container transition-colors" type="button">Discard</button><button class="font-label-md text-label-md text-primary bg-primary-fixed hover:bg-primary-fixed-dim px-space-md py-1.5 rounded-lg transition-colors" type="button">Save Draft</button><button class="font-label-lg text-label-lg text-on-secondary bg-secondary-container hover:bg-secondary px-space-md py-1.5 rounded-lg shadow-[0_2px_8px_-2px_rgba(253,118,26,0.4)] transition-all flex items-center gap-space-xs" type="button"><span>Publish to Storefront</span><span class="material-symbols-outlined text-[18px]">rocket_launch</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-96 bg-surface-container-lowest shadow-[1px_0_12px_rgba(0,0,0,0.03)] z-40 flex flex-col"><div class="p-space-md bg-surface-container-low/70 flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px]">tune</span><span class="font-headline-sm text-headline-sm text-on-surface">Theme Architecture</span></div><span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-space-xs py-0.5 rounded-full">14 Sections</span></div><nav class="px-space-md py-space-sm flex items-center gap-space-xs overflow-x-auto bg-surface-container-lowest" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg"><a aria-current="page" class="px-space-sm py-1.5 transition-colors whitespace-nowrap bg-primary-container text-on-primary font-label-md rounded-lg" data-path="sections-builder" href="#">Sections</a><a class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors whitespace-nowrap" data-path="global-styles" href="#">Global Styles</a><a class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors whitespace-nowrap" data-path="typography-colors" href="#">Typography &amp; Colors</a><a class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors whitespace-nowrap" data-path="app-embeds" href="#">App Embeds</a></nav><div class="flex-1 overflow-y-auto p-space-md flex flex-col gap-space-sm"><div class="flex items-center justify-between px-space-sm py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Template Canvas Hierarchy</span><button class="text-primary hover:text-on-primary-fixed-variant font-label-sm text-label-sm flex items-center gap-0.5" type="button"><span class="material-symbols-outlined text-[16px]">add</span>Add Section</button></div><div class="space-y-space-xs"><div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between cursor-pointer"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">drag_indicator</span><span class="material-symbols-outlined text-primary text-[18px]">view_day</span><span class="font-label-md text-label-md text-on-surface">Announcement Bar</span></div><div class="flex items-center gap-1 text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">visibility</span><span class="material-symbols-outlined text-[16px]">chevron_right</span></div></div><div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between cursor-pointer"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">drag_indicator</span><span class="material-symbols-outlined text-primary text-[18px]">web_stories</span><span class="font-label-md text-label-md text-on-surface">Header &amp; Navigation</span></div><div class="flex items-center gap-1 text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">visibility</span><span class="material-symbols-outlined text-[16px]">chevron_right</span></div></div><div class="p-space-sm rounded-xl bg-surface-container-high text-on-surface flex items-center justify-between cursor-pointer shadow-[0_1px_4px_rgba(0,0,0,0.03)]"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">drag_indicator</span><span class="material-symbols-outlined text-secondary-container text-[18px]">photo_camera_back</span><span class="font-label-md text-label-md text-on-surface">Hero Banner Showcase</span></div><div class="flex items-center gap-1 text-on-surface"><span class="material-symbols-outlined text-[16px]">visibility</span><span class="material-symbols-outlined text-[16px]">expand_more</span></div></div><div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between cursor-pointer"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">drag_indicator</span><span class="material-symbols-outlined text-primary text-[18px]">grid_view</span><span class="font-label-md text-label-md text-on-surface">Curated Category Grid</span></div><div class="flex items-center gap-1 text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">visibility</span><span class="material-symbols-outlined text-[16px]">chevron_right</span></div></div><div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between cursor-pointer"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">drag_indicator</span><span class="material-symbols-outlined text-primary text-[18px]">loyalty</span><span class="font-label-md text-label-md text-on-surface">Flash Deals Carousel</span></div><div class="flex items-center gap-1 text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">visibility</span><span class="material-symbols-outlined text-[16px]">chevron_right</span></div></div><div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between cursor-pointer"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">drag_indicator</span><span class="material-symbols-outlined text-primary text-[18px]">space_dashboard</span><span class="font-label-md text-label-md text-on-surface">Featured Products Rail</span></div><div class="flex items-center gap-1 text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">visibility</span><span class="material-symbols-outlined text-[16px]">chevron_right</span></div></div><div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between cursor-pointer"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">drag_indicator</span><span class="material-symbols-outlined text-primary text-[18px]">reviews</span><span class="font-label-md text-label-md text-on-surface">Testimonials &amp; Trust</span></div><div class="flex items-center gap-1 text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">visibility</span><span class="material-symbols-outlined text-[16px]">chevron_right</span></div></div><div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between cursor-pointer"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">drag_indicator</span><span class="material-symbols-outlined text-primary text-[18px]">call_to_action</span><span class="font-label-md text-label-md text-on-surface">Footer &amp; Legal Links</span></div><div class="flex items-center gap-1 text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">visibility</span><span class="material-symbols-outlined text-[16px]">chevron_right</span></div></div></div></div><div class="p-space-md bg-surface-container-lowest shadow-[0_-1px_6px_rgba(0,0,0,0.02)] flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">palette</span>Theme CSS: 42KB</span><a class="text-primary hover:text-on-primary-fixed-variant flex items-center gap-0.5" href="#">Edit Code &lt;/&gt;</a></div></aside><div class="pl-96"><main class="relative pt-16 min-h-screen bg-surface-dim/40 p-gutter"><div class="w-full max-w-6xl mx-auto flex flex-col items-center"><div class="w-full bg-surface-container-lowest rounded-t-2xl shadow-[0_2px_12px_rgba(0,0,0,0.05)] px-space-md py-space-sm flex items-center justify-between gap-space-md"><div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div><div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div><div class="w-3 h-3 rounded-full bg-[#27c93f]"></div></div><div class="flex-1 max-w-xl mx-auto bg-surface-container-low rounded-lg px-space-md py-1 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-xs overflow-hidden text-ellipsis whitespace-nowrap"><span class="material-symbols-outlined text-[14px] text-primary">lock</span><span>https://aura-acoustics.store.luxecart.io/</span></div><span class="material-symbols-outlined text-[14px]">refresh</span></div><div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-[18px]">open_in_new</span></div></div><div class="w-full bg-surface-container-lowest rounded-b-2xl shadow-[0_12px_32px_-8px_rgba(15,23,42,0.08)] overflow-hidden min-h-[calc(100vh-140px)] flex flex-col"><div class="flex flex-col w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0 w-full min-h-[calc(100vh-140px)] bg-surface">
+<!-- LEFT CONTROL PANEL (Customization Workbench Settings) -->
+<div class="lg:col-span-4 xl:col-span-4 bg-surface-container-lowest p-space-md lg:p-space-lg flex flex-col gap-space-md overflow-y-auto max-h-[calc(100vh-140px)] shadow-sm">
+<!-- Panel Header & Quick Search -->
+<div class="flex flex-col gap-space-sm pb-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Store Customizer</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-md bg-surface-container text-primary font-semibold">Theme Engine v2.4</span>
+</div>
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-9 pr-8 py-2 rounded-lg outline-none focus:bg-surface-container transition-all" placeholder="Filter controls or sections... (⌘F)" type="text"/>
+<span class="absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] font-mono text-on-surface-variant bg-surface-container-high px-1 py-0.5 rounded">⌘K</span>
+</div>
+<!-- Quick Tabs -->
+<div class="grid grid-cols-3 gap-1 p-1 bg-surface-container-low rounded-lg text-center">
+<button class="py-1.5 px-2 rounded-md bg-primary-container text-on-primary font-label-sm text-label-sm shadow-sm transition-all" type="button">Sections</button>
+<button class="py-1.5 px-2 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" type="button">Settings</button>
+<button class="py-1.5 px-2 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all flex items-center justify-center gap-1" type="button">
+<span>Embeds</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+</button>
+</div>
+</div>
+<!-- Collapsible Sections Container -->
+<div class="flex flex-col gap-space-sm">
+<!-- SECTION A: Branding & Assets -->
+<details class="group bg-surface-container-low rounded-xl overflow-hidden transition-all" open="">
+<summary class="list-none flex items-center justify-between p-space-sm cursor-pointer hover:bg-surface-container select-none">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Branding &amp; Identity</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform text-[18px]">expand_more</span>
+</summary>
+<div class="p-space-sm pt-0 flex flex-col gap-space-sm text-on-surface">
+<!-- Store Display Name -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Store Display Name</label>
+<input class="w-full bg-surface-container-lowest px-3 py-1.5 rounded-lg font-body-sm text-body-sm text-on-surface outline-none focus:bg-surface-container-high" type="text" value="Aura Acoustics"/>
+</div>
+<!-- Logo Upload & Specs -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Primary Brandmark (Logo)</label>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Max 400×120px</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-md bg-inverse-surface flex items-center justify-center text-primary-fixed font-headline-sm text-headline-sm flex-shrink-0">
+                    AA
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface truncate">aura-logo-vector.svg</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant">Vector SVG • 18 KB</span>
+</div>
+</div>
+<div class="flex items-center gap-1 flex-shrink-0">
+<button class="px-2 py-1 rounded bg-surface-container font-label-sm text-label-sm text-primary hover:bg-surface-container-high" type="button">Replace</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-error hover:bg-error-container/20" type="button">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Logo Width Slider -->
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-[11px] text-on-surface-variant">Display Scale: 160px</span>
+<input class="w-28 accent-primary h-1 rounded cursor-pointer" max="240" min="100" type="range" value="160"/>
+</div>
+</div>
+<!-- Favicon Upload -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-xs px-space-sm rounded-lg">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded bg-primary flex items-center justify-center text-on-primary text-[10px] font-bold">A</div>
+<span class="font-label-sm text-label-sm text-on-surface">Storefront Favicon (32×32)</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:underline" type="button">Change</button>
+</div>
+</div>
+</details>
+<!-- SECTION B: Colours & Theme Palettes -->
+<details class="group bg-surface-container-low rounded-xl overflow-hidden transition-all" open="">
+<summary class="list-none flex items-center justify-between p-space-sm cursor-pointer hover:bg-surface-container select-none">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">palette</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Color Palettes &amp; Tones</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform text-[18px]">expand_more</span>
+</summary>
+<div class="p-space-sm pt-0 flex flex-col gap-space-sm">
+<span class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-wider">Curated Luxury Presets</span>
+<!-- 4 Quick Palette Swatches -->
+<div class="grid grid-cols-2 gap-2">
+<!-- Selected: Luxe Obsidian -->
+<div class="p-2 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-1.5 cursor-pointer ring-2 ring-primary">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Luxe Obsidian</span>
+<span class="material-symbols-outlined text-primary text-[14px]">check_circle</span>
+</div>
+<div class="flex h-3 w-full rounded overflow-hidden">
+<div class="w-1/3 bg-primary-container"></div>
+<div class="w-1/3 bg-inverse-surface"></div>
+<div class="w-1/3 bg-secondary-container"></div>
+</div>
+</div>
+<!-- Royal Velvet -->
+<div class="p-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container flex flex-col gap-1.5 cursor-pointer transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Royal Velvet</span>
+</div>
+<div class="flex h-3 w-full rounded overflow-hidden">
+<div class="w-1/3 bg-primary"></div>
+<div class="w-1/3 bg-primary-fixed-dim"></div>
+<div class="w-1/3 bg-tertiary-container"></div>
+</div>
+</div>
+<!-- Emerald Prestige -->
+<div class="p-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container flex flex-col gap-1.5 cursor-pointer transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Emerald Studio</span>
+</div>
+<div class="flex h-3 w-full rounded overflow-hidden">
+<div class="w-1/3 bg-on-secondary-fixed"></div>
+<div class="w-1/3 bg-tertiary"></div>
+<div class="w-1/3 bg-secondary"></div>
+</div>
+</div>
+<!-- Warm Sunset -->
+<div class="p-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container flex flex-col gap-1.5 cursor-pointer transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Warm Amber</span>
+</div>
+<div class="flex h-3 w-full rounded overflow-hidden">
+<div class="w-1/3 bg-secondary-container"></div>
+<div class="w-1/3 bg-secondary"></div>
+<div class="w-1/3 bg-tertiary-fixed-dim"></div>
+</div>
+</div>
+</div>
+<!-- Custom Color Hex Inputs -->
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between bg-surface-container-lowest p-1.5 px-2.5 rounded-lg">
+<span class="font-body-sm text-body-sm text-on-surface">Primary Brand Accent</span>
+<div class="flex items-center gap-1.5">
+<span class="w-4 h-4 rounded bg-[#4F46E5] shadow-xs"></span>
+<span class="font-mono text-label-sm text-on-surface-variant">#4F46E5</span>
+</div>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest p-1.5 px-2.5 rounded-lg">
+<span class="font-body-sm text-body-sm text-on-surface">CTA &amp; Conversion Trigger</span>
+<div class="flex items-center gap-1.5">
+<span class="w-4 h-4 rounded bg-[#F97316] shadow-xs"></span>
+<span class="font-mono text-label-sm text-on-surface-variant">#F97316</span>
+</div>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest p-1.5 px-2.5 rounded-lg">
+<span class="font-body-sm text-body-sm text-on-surface">Surface Cards &amp; Base</span>
+<div class="flex items-center gap-1.5">
+<span class="w-4 h-4 rounded bg-[#FFFFFF] shadow-xs"></span>
+<span class="font-mono text-label-sm text-on-surface-variant">#FFFFFF</span>
+</div>
+</div>
+</div>
+</div>
+</details>
+<!-- SECTION C: Typography & Text Hierarchy -->
+<details class="group bg-surface-container-low rounded-xl overflow-hidden transition-all">
+<summary class="list-none flex items-center justify-between p-space-sm cursor-pointer hover:bg-surface-container select-none">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">match_case</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Typography Engine</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform text-[18px]">expand_more</span>
+</summary>
+<div class="p-space-sm pt-0 flex flex-col gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Display / Headings Font Family</label>
+<div class="bg-surface-container-lowest px-3 py-1.5 rounded-lg flex items-center justify-between cursor-pointer">
+<span class="font-headline-sm text-headline-sm text-on-surface">Outfit &amp; Plus Jakarta</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">unfold_more</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight px-1">"The Art of Pure Sound"</span>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Body Font &amp; Weight</label>
+<div class="bg-surface-container-lowest px-3 py-1.5 rounded-lg flex items-center justify-between cursor-pointer">
+<span class="font-body-md text-body-md text-on-surface">Inter (Regular 400 / Medium 500)</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">unfold_more</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-[11px] text-on-surface-variant">Base Size: 16px (1.0x)</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Letter Spacing: -0.015em</span>
+</div>
+</div>
+</details>
+<!-- SECTION D: Layout & Component Styles -->
+<details class="group bg-surface-container-low rounded-xl overflow-hidden transition-all" open="">
+<summary class="list-none flex items-center justify-between p-space-sm cursor-pointer hover:bg-surface-container select-none">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">view_quilt</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Layout &amp; Card Geometry</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform text-[18px]">expand_more</span>
+</summary>
+<div class="p-space-sm pt-0 flex flex-col gap-space-sm">
+<!-- Header Mode -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Store Header Architecture</span>
+<div class="grid grid-cols-3 gap-1.5 text-center">
+<div class="p-2 rounded-lg bg-surface-container-lowest ring-2 ring-primary cursor-pointer flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[18px]">blur_on</span>
+<span class="font-label-sm text-[10px] text-on-surface font-semibold">Glassmorphism</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container cursor-pointer flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">crop_square</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Solid White</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container cursor-pointer flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">opacity</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Transparent</span>
+</div>
+</div>
+</div>
+<!-- Card Elevation & Radius -->
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-[11px] text-on-surface">Product Radius: 12px (Cards)</span>
+<span class="font-body-sm text-[11px] text-on-surface">Grid: 4-Col Desktop</span>
+</div>
+</div>
+</details>
+<!-- SECTION E: Homepage Sections Hierarchy (Drag & Visibility) -->
+<details class="group bg-surface-container-low rounded-xl overflow-hidden transition-all" open="">
+<summary class="list-none flex items-center justify-between p-space-sm cursor-pointer hover:bg-surface-container select-none">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">reorder</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Homepage Canvas Order</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-[10px] bg-surface-container-high px-1.5 py-0.5 rounded text-on-surface-variant">8 Visible</span>
+<span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform text-[18px]">expand_more</span>
+</div>
+</summary>
+<div class="p-space-sm pt-0 flex flex-col gap-1.5">
+<p class="font-body-sm text-[11px] text-on-surface-variant pb-1">Drag handles to re-order components on the live storefront.</p>
+<!-- Section 1 -->
+<div class="p-2 rounded-lg bg-surface-container-lowest shadow-xs flex items-center justify-between hover:bg-surface-container transition-all cursor-move">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">drag_indicator</span>
+<span class="material-symbols-outlined text-primary text-[16px]">campaign</span>
+<span class="font-label-sm text-label-sm text-on-surface">Announcement Ribbon</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">visibility</span>
+<span class="material-symbols-outlined text-[16px] hover:text-on-surface">settings</span>
+</div>
+</div>
+<!-- Section 2 (Active editing) -->
+<div class="p-2 rounded-lg bg-surface-container-high shadow-xs flex items-center justify-between ring-1 ring-primary/40 cursor-move">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">drag_indicator</span>
+<span class="material-symbols-outlined text-secondary-container text-[16px]">view_carousel</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Hero Showcase Slider</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-[9px] uppercase px-1 py-0.5 bg-primary text-on-primary rounded font-mono">Active</span>
+<span class="material-symbols-outlined text-[16px] text-primary">visibility</span>
+</div>
+</div>
+<!-- Section 3 -->
+<div class="p-2 rounded-lg bg-surface-container-lowest shadow-xs flex items-center justify-between hover:bg-surface-container transition-all cursor-move">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">drag_indicator</span>
+<span class="material-symbols-outlined text-primary text-[16px]">category</span>
+<span class="font-label-sm text-label-sm text-on-surface">Curated Categories</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">visibility</span>
+<span class="material-symbols-outlined text-[16px] hover:text-on-surface">settings</span>
+</div>
+</div>
+<!-- Section 4 -->
+<div class="p-2 rounded-lg bg-surface-container-lowest shadow-xs flex items-center justify-between hover:bg-surface-container transition-all cursor-move">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">drag_indicator</span>
+<span class="material-symbols-outlined text-secondary-container text-[16px]">timer</span>
+<span class="font-label-sm text-label-sm text-on-surface">Flash Deals &amp; Countdown</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">visibility</span>
+<span class="material-symbols-outlined text-[16px] hover:text-on-surface">settings</span>
+</div>
+</div>
+<!-- Section 5 -->
+<div class="p-2 rounded-lg bg-surface-container-lowest shadow-xs flex items-center justify-between hover:bg-surface-container transition-all cursor-move">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">drag_indicator</span>
+<span class="material-symbols-outlined text-primary text-[16px]">star</span>
+<span class="font-label-sm text-label-sm text-on-surface">Audiophile Bestsellers</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">visibility</span>
+<span class="material-symbols-outlined text-[16px] hover:text-on-surface">settings</span>
+</div>
+</div>
+<!-- Section 6 (Hidden) -->
+<div class="p-2 rounded-lg bg-surface-container-lowest/60 opacity-60 flex items-center justify-between hover:opacity-100 transition-all cursor-move">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">drag_indicator</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">play_circle</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant line-through">Acoustic Craft Video</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">visibility_off</span>
+<span class="material-symbols-outlined text-[16px]">settings</span>
+</div>
+</div>
+<!-- Section 7 -->
+<div class="p-2 rounded-lg bg-surface-container-lowest shadow-xs flex items-center justify-between hover:bg-surface-container transition-all cursor-move">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">drag_indicator</span>
+<span class="material-symbols-outlined text-primary text-[16px]">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface">Trust &amp; Authenticity Strip</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">visibility</span>
+<span class="material-symbols-outlined text-[16px] hover:text-on-surface">settings</span>
+</div>
+</div>
+<button class="w-full mt-2 py-2 rounded-lg border-2 border-dashed border-primary-container/30 hover:border-primary-container text-primary font-label-sm text-label-sm flex items-center justify-center gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>Add Custom Section Block</span>
+</button>
+</div>
+</details>
+<!-- SECTION F: Micro-Interactions & Physics -->
+<details class="group bg-surface-container-low rounded-xl overflow-hidden transition-all">
+<summary class="list-none flex items-center justify-between p-space-sm cursor-pointer hover:bg-surface-container select-none">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">auto_awesome</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Motion &amp; 60fps Microphysics</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform text-[18px]">expand_more</span>
+</summary>
+<div class="p-space-sm pt-0 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface">Storefront Hover Parallax</span>
+<span class="w-8 h-4 rounded-full bg-primary-container relative inline-flex items-center justify-end px-0.5 cursor-pointer">
+<span class="w-3 h-3 rounded-full bg-on-primary"></span>
+</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface">Card Elevate &amp; Soft Glow</span>
+<span class="w-8 h-4 rounded-full bg-primary-container relative inline-flex items-center justify-end px-0.5 cursor-pointer">
+<span class="w-3 h-3 rounded-full bg-on-primary"></span>
+</span>
+</div>
+</div>
+</details>
+</div>
+</div>
+<!-- RIGHT MAIN CANVAS (Live Interactive Storefront Viewport) -->
+<div class="lg:col-span-8 xl:col-span-8 bg-surface-dim/30 p-space-sm lg:p-space-md flex flex-col items-center justify-start gap-space-sm overflow-hidden">
+<!-- Canvas Status Indicator & Scale Tool -->
+<div class="w-full flex items-center justify-between px-space-xs text-on-surface-variant font-label-sm text-[11px]">
+<div class="flex items-center gap-2">
+<span class="flex items-center gap-1 font-mono"><span class="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse"></span>Live Render Synced</span>
+<span class="opacity-30">•</span>
+<span>Viewport: 1440 × 900 (Desktop Ultra-Wide)</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="hover:text-primary transition-colors flex items-center gap-0.5" type="button">
+<span class="material-symbols-outlined text-[14px]">share</span>Share Preview
+          </button>
+<button class="hover:text-primary transition-colors flex items-center gap-0.5 font-semibold text-primary" type="button">
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>New Tab
+          </button>
+</div>
+</div>
+<!-- STOREFRONT MOCK CONTAINER -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-2xl overflow-hidden flex flex-col relative max-w-5xl transition-all">
+<!-- Live Edit Overlay Tooltip Pin -->
+<div class="absolute top-28 right-6 z-30 bg-primary-container/95 backdrop-blur-md text-on-primary px-3 py-1.5 rounded-full shadow-lg flex items-center gap-2 animate-bounce cursor-pointer">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">edit_document</span>
+<span class="font-label-sm text-label-sm tracking-tight">Active: Hero Banner Carousel • Click to Configure</span>
+</div>
+<!-- 1. Storefront Announcement Bar -->
+<div class="w-full bg-primary px-space-md py-1.5 text-center text-on-primary font-label-sm text-label-sm flex items-center justify-center gap-2 shadow-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">local_shipping</span>
+<span>Complimentary Express Delivery &amp; 3-Year Audiophile Warranty on orders above ₹4,999</span>
+<a class="underline font-semibold hover:text-secondary-fixed ml-1" href="#">Claim Offer</a>
+</div>
+<!-- 2. Storefront Sticky Glass Navigation Bar -->
+<div class="w-full bg-surface-container-lowest/90 backdrop-blur-md px-space-md py-3 flex items-center justify-between gap-space-md shadow-xs">
+<!-- Logo -->
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-inverse-surface flex items-center justify-center text-primary-fixed font-headline-sm text-headline-sm font-bold shadow-xs">
+              A
+            </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none font-bold">AURA ACOUSTICS</span>
+<span class="font-label-sm text-[9px] text-on-surface-variant tracking-widest uppercase">Mastered Sound</span>
+</div>
+</div>
+<!-- Nav Links -->
+<nav class="hidden md:flex items-center gap-space-md font-label-md text-label-md text-on-surface-variant">
+<a class="text-primary font-semibold hover:text-primary transition-colors" href="#">Headphones</a>
+<a class="hover:text-on-surface transition-colors" href="#">Audiophile DACs</a>
+<a class="hover:text-on-surface transition-colors" href="#">Monitors</a>
+<a class="hover:text-on-surface transition-colors" href="#">Custom Cables</a>
+<a class="hover:text-on-surface transition-colors text-secondary-container font-semibold" href="#">Clearance</a>
+</nav>
+<!-- Search & Cart Utilities -->
+<div class="flex items-center gap-space-sm">
+<div class="relative hidden sm:block">
+<input class="bg-surface-container-low text-on-surface font-body-sm text-[12px] pl-7 pr-3 py-1.5 rounded-full outline-none w-44 focus:w-56 transition-all" placeholder="Search reference grade gear..." type="text"/>
+<span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-on-surface-variant text-[14px]">search</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-full hover:bg-surface-container text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<button class="relative p-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-secondary-container text-on-secondary font-label-sm text-[10px] flex items-center justify-center font-bold">3</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 3. STOREFRONT HERO SHOWCASE BANNER -->
+<div class="relative w-full bg-inverse-surface text-on-primary overflow-hidden py-space-xl px-space-lg flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<!-- Ambient Glow Orb -->
+<div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-primary-container/30 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 right-0 w-80 h-80 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-sm max-w-md">
+<span class="font-label-sm text-[11px] uppercase tracking-widest text-secondary-fixed bg-secondary-container/30 px-2.5 py-1 rounded-full w-max">
+              Flagship Studio Engineering
+            </span>
+<h1 class="font-display-lg text-headline-xl text-white font-bold leading-tight">
+              Apex Studio Pro Wireless.
+            </h1>
+<p class="font-body-md text-body-md text-surface-container-high/90">
+              Hand-tuned 50mm dynamic beryllium drivers delivering 4Hz to 48kHz frequency resolution with zero transient distortion.
+            </p>
+<div class="flex items-center gap-space-sm pt-2">
+<button class="px-space-md py-2.5 rounded-lg bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg shadow-md transition-all flex items-center gap-2" type="button">
+<span>Explore Flagship ₹14,999</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-lowest/10 hover:bg-surface-container-lowest/20 text-white font-label-lg text-label-lg backdrop-blur-sm transition-all flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+<span>Watch Story</span>
+</button>
+</div>
+</div>
+<!-- Hero Product Image Display -->
+<div class="relative z-10 w-full max-w-sm flex items-center justify-center">
+<img class="w-full h-64 object-cover rounded-2xl shadow-2xl" data-alt="High-end luxury black matte wireless over-ear headphones with polished aluminum accents, glowing ambient studio lighting in indigo and warm amber tones, resting on a sculptured minimalist obsidian pedestal, shot in dramatic cinematic product photography with sharp crisp highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLpUlXopyZZdsQYwXLd-OrcWMGAghoeX0xlJgjQr5Aay4TtUxPlHOQMeRwhvtZkf8qeJIlg2aF0dNBlaiEs9BIGeKUDfwSgAAMzlMG6ythOmNunGSVLyef9ZUQ7PJiCApZ5jqZiO9PMizhoLy-paKPul4Cg0g_RocjsCKkNKcQUG_t3N6I97pyfBy8IeyRx4V63T129N4VBIzBrUdf6GIaQ_TQ3z9VUuEg-UQzoYVS0p0lxk7n8-HP"/>
+</div>
+</div>
+<!-- 4. Curated Category Quick Circles -->
+<div class="w-full bg-surface-container-lowest py-space-md px-space-lg">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Curated Sound Categories</span>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold" href="#">View All Catalog ↗</a>
+</div>
+<div class="grid grid-cols-4 gap-space-sm">
+<div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col items-center gap-2 cursor-pointer group">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-surface-container-high shadow-xs">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Close up photograph of planar magnetic open-back audiophile headphones with real wood finish on sleek white studio backdrop with soft ambient daylighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6v09zEx0wjEM1A4mFNCk3vSMkD3yBIlJZ3Xn083v8WejbIZ1ur5AG1iSx4U_5XA0enHOJDnWzS2hPjJWnwdmREK2aUsaU_cKi6NdgSy6C6H3TYzoE_grpXmij5OlB3yLxXcKRgQ2u5eXvEPawsEoal3RbjgcrfRX5QqIntBsyFzqUB72eICQ8qEg9USHQrotXbbFkfHP3ovZ16eixGMvF5_PZEmCLG1PFRIkAGTcT0tA-xRW6K-jm"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Over-Ear ANC</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col items-center gap-2 cursor-pointer group">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-surface-container-high shadow-xs">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Macro product photo of sleek machined aluminum desktop DAC amplifier with glowing orange LED vacuum tube on deep graphite studio surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCziw54-4vYq1km4VLQ-R4jla7AJ4W0kfnzDRyKjIF-EtuRFXBQrC85vj_EIFvKQvhk5RZwYN49KCAO1jrxRzpQ_A8C0kZdJ0t-IJt8t5QjPsf84HXf-w_b4GlDfaAi9462qZNQUr8AvUHTcc35zoO8GGXQoj-L-OEkZw_2GaLf9U40Fqfy_EBlYup4YKbu3Oc4q3SAgFqVUjaM0_XYjA48QP96EVn1esnaHtce9-UZ0lHfGOQ-E17k"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Balanced DACs</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col items-center gap-2 cursor-pointer group">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-surface-container-high shadow-xs">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Braided silver and copper audiophile balanced headphone cable coiled with gold-plated 4.4mm jack connector under crisp studio rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeCyomjIWK35wZfyU9c-3YesuCuop4o8kOURBxBohj8pAXA8_doe7FIyZGvtAiXl_TCwy_SvFvnf6S7Yx3tE6rUy48qowbyLM15FTzwsvR1hxlhAwTTBjM5wbNZwTvBR0-fSN7sebjzK_Wb8ntzHBPZf7Av9O6wj_J0TyqczawnPRODiySV0pFSbfUJmyPBeiPt9iN3j9NPAIEz9quqwX7OdwdoWuGfBA4O-olaaXIT6L856qeR-c2"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">OCC Cables</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col items-center gap-2 cursor-pointer group">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-surface-container-high shadow-xs">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Sculptured walnut and dark metal architectural headphone desk stand holding sleek black headphones on a clean designer studio desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqIhuuA1MLqreYvusezDf5ltaG2ynI4T34h8-E3B8CbFUlRp7aln4CSJ6LakCO7QlEK8skviKxHweVwbtpuAIp8M-SRMnJX68J8dDEJEng-DcFm2t6DExwkVfbIkpIg74m2rSR_5jnGExzHqXsYAbYYfE2K6I9cMC-9EczeSzsA_1LwR33OqpT0vXwV-Wu3KA2njAqk2ZpZfsoA9Zf124c2xCEDrAsfY3X6pE6smrOJi8u0IEcuvkV"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Desk Stands</span>
+</div>
+</div>
+</div>
+<!-- 5. Flash Deals Rail with Countdown -->
+<div class="w-full bg-surface-container-low px-space-lg py-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-container text-[22px]">bolt</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Midnight Clearance Flash Deals</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant block">Limited production reserve models</span>
+</div>
+</div>
+<!-- Live Countdown Timer -->
+<div class="flex items-center gap-1 font-mono text-label-sm">
+<span class="bg-inverse-surface text-surface px-2 py-1 rounded">04h</span>
+<span class="text-on-surface-variant">:</span>
+<span class="bg-inverse-surface text-surface px-2 py-1 rounded">28m</span>
+<span class="text-on-surface-variant">:</span>
+<span class="bg-inverse-surface text-surface px-2 py-1 rounded">14s</span>
+</div>
+</div>
+<!-- Product Grid Preview (3 Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col gap-2 relative group">
+<span class="absolute top-3 left-3 z-10 bg-secondary-container text-on-secondary font-label-sm text-[10px] px-2 py-0.5 rounded-full font-bold">35% OFF</span>
+<button class="absolute top-3 right-3 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<div class="w-full h-40 bg-surface-container-low rounded-lg overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Precision studio headphone monitor in matte black with genuine memory foam ear cushions on neutral soft grey backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQiYoLiB35HUNlEpHxJSGtq1rhUaEg4ygMee0_Od0U-n8MhHomYF6ikPfPrIDuE8hMLFAT3xTKRUs5la4WKkZwvP4L3SVaQEvIYd5f_MNfU8kALojGdhSgeiYnBvUvFKxMle_LoggJTMpjK6dytdQ-bBA8yC73PVUBBHN28eYBOOXV63pxO94VPU6T0yWGWD7L4CiidlL6gDzzOka7uIXprcTkb1DAV6sowrL0pfjE0Q8vSWrftGgt"/>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-[10px] text-primary uppercase font-bold tracking-wider">Aura Pro Series</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">Apex Wireless Studio Pro</h3>
+<div class="flex items-center gap-1 text-[11px] text-secondary">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface">4.9</span>
+<span class="text-on-surface-variant">(142 reviews)</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">₹14,999</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹22,999</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-label-sm text-label-sm transition-colors" type="button">Add</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col gap-2 relative group">
+<span class="absolute top-3 left-3 z-10 bg-primary-fixed text-on-primary-fixed font-label-sm text-[10px] px-2 py-0.5 rounded-full font-bold">Bestseller</span>
+<button class="absolute top-3 right-3 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<div class="w-full h-40 bg-surface-container-low rounded-lg overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="High purity silver-plated headphone upgrade cable with 4.4mm balanced termination jack in artistic spiral layout on dark slate studio surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuVV4yaQX_vKublFfs3S_Yp0G7l37OQklAk83PwIbETKtpvzfnf-yzdboIIE5OI2-sqhHBOdPZOy1vKUwC9AS1LFvSxeQzKOT7IxjXGvBd7_2VILzU7LPhKkkhzmCwmLrvXsBgBiFiTeV_W4mhvuowE5iwGooMOuaqbXynaXB15yJdwDcC8LuyjvF2gwGbzxpTSgXqBfIlKwrNKc8kTEUI8c0HvOwBwQxdfTTvHbAe_C_Xo_b9f0bZ"/>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-[10px] text-primary uppercase font-bold tracking-wider">Acoustic Line</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">Balanced 4.4mm OCC Cable</h3>
+<div class="flex items-center gap-1 text-[11px] text-secondary">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface">4.8</span>
+<span class="text-on-surface-variant">(89 reviews)</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">₹1,899</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹2,499</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-label-sm text-label-sm transition-colors" type="button">Add</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col gap-2 relative group">
+<span class="absolute top-3 left-3 z-10 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] px-2 py-0.5 rounded-full font-bold">Protection</span>
+<button class="absolute top-3 right-3 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<div class="w-full h-40 bg-surface-container-low rounded-lg overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Rugged premium ballistic nylon and hard shell EVA travel case for over-ear headphones, waterproof zipper, luxury grey textured fabric on light surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3D-RIJZ7YdFQ6QscwyWiNqmCfeNUNOT6O8_J52QcAL8wMEhg0wwGNUmKKH-B9heYHsYTFUPdISxR3NhCukvHQFOefLGGTNREuTHklGhvAOW8x1sy_kOje6lZWMk-R29ykHjnTZSR2IYL49X1Gtd6dA-iEOuxigdB-D8_fA-R_i3yzRPnJf9ihkYfYSeFFThodstJZDlB7rNDkuEaQqjBCPY5HX3aUc80DRDooywFhkbXrEm1HoduN"/>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-[10px] text-primary uppercase font-bold tracking-wider">Storage Gear</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">Hard Shell EVA Travel Armour</h3>
+<div class="flex items-center gap-1 text-[11px] text-secondary">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface">5.0</span>
+<span class="text-on-surface-variant">(54 reviews)</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">₹1,299</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹1,999</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-label-sm text-label-sm transition-colors" type="button">Add</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 6. Trust & Authenticity Strip -->
+<div class="w-full bg-surface-container-lowest px-space-lg py-space-md border-t border-surface-container">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md text-center md:text-left">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[28px] p-2 rounded-xl bg-surface-container">verified</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold block">100% Genuine Certified</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Direct manufacturer pedigree &amp; warranty</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[28px] p-2 rounded-xl bg-surface-container">published_with_changes</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold block">7-Day Doorstep Replacement</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">No-questions-asked acoustic satisfaction</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container text-[28px] p-2 rounded-xl bg-surface-container">support_agent</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold block">24/7 Audiophile Concierge</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Setup assistance from verified engineers</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div></main></div></body></html>

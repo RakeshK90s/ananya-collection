@@ -1,0 +1,6 @@
+{
+  "name": "LuxeCart India - Customisable E-Commerce Store & Multi-Seller Platform",
+  "description": "Customisable E-Commerce Storefront & Multi-Seller Platform for the Indian Market with Live Branding & Theme Customiser, Razorpay UPI/COD payments, Pincode delivery check, and Seller Dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed-variant": "#3323cc", "on-surface": "#131b2e", "surface-bright": "#faf8ff", "inverse-surface": "#283044", "surface-container-low": "#f2f3ff", "error-container": "#ffdad6", "on-surface-variant": "#464555", "surface-container-highest": "#dae2fd", "secondary-container": "#fd761a", "on-error": "#ffffff", "inverse-on-surface": "#eef0ff", "on-primary-fixed": "#0f0069", "outline-variant": "#c7c4d8", "surface-dim": "#d2d9f4", "on-error-container": "#93000a", "surface-variant": "#dae2fd", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#ffd2be", "surface": "#faf8ff", "outline": "#777587", "secondary-fixed": "#ffdbca", "surface-container": "#eaedff", "on-primary-container": "#dad7ff", "on-primary": "#ffffff", "primary-fixed-dim": "#c3c0ff", "secondary": "#9d4300", "primary-container": "#4f46e5", "on-secondary-fixed-variant": "#783200", "on-secondary-fixed": "#341100", "on-secondary-container": "#5c2400", "tertiary-fixed-dim": "#ffb695", "on-tertiary-fixed-variant": "#7b2f00", "secondary-fixed-dim": "#ffb690", "on-tertiary-fixed": "#351000", "error": "#ba1a1a", "surface-container-high": "#e2e7ff", "tertiary-container": "#a44100", "tertiary": "#7e3000", "inverse-primary": "#c3c0ff", "on-secondary": "#ffffff", "primary-fixed": "#e2dfff", "background": "#faf8ff", "tertiary-fixed": "#ffdbcc", "on-tertiary": "#ffffff", "on-background": "#131b2e", "primary": "#3525cd", "surface-tint": "#4d44e3" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "gutter": "1.5rem", "margin": "2rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-md": "1rem", "margin-mobile": "1rem", "space-xl": "2.5rem" }, "fontFamily": { "body-sm": ["Inter"], "headline-lg": ["Outfit"], "label-sm": ["Inter"], "display-lg-mobile": ["Outfit"], "headline-xl": ["Outfit"], "label-md": ["Inter"], "body-lg": ["Inter"], "display-lg": ["Outfit"], "headline-md": ["Outfit"], "label-lg": ["Inter"], "headline-xl-mobile": ["Outfit"], "headline-sm": ["Outfit"], "body-md": ["Inter"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">storefront</span></div><div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight block">LuxeCart</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Seller Portal</span></div></div><nav class="px-space-md py-space-sm flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-lg shadow-sm"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="dashboard" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="products" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Products</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="orders" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span>Orders</span></div><span class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-container text-on-primary font-semibold">12</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="customers" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">group</span><span>Customers</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="marketing-and-promotions" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">campaign</span><span>Marketing &amp; Promotions</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="theme-customizer" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">palette</span><span>Theme Customizer</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="reports-and-analytics" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Reports &amp; Analytics</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="settings" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">settings</span><span>Settings</span></div></a></nav></div><div class="p-space-md flex flex-col gap-space-sm"><div class="p-space-md bg-surface-container-low rounded-xl flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">Store Health</span><span class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary-container inline-block"></span>99.4%</span></div><div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden"><div class="bg-primary-container h-1.5 rounded-full w-[99.4%]"></div></div><div class="pt-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant block">Escrow Balance</span><span class="font-headline-sm text-headline-sm text-on-surface font-bold">₹4,82,350</span><span class="font-label-sm text-label-sm text-on-surface-variant block">Settled via Razorpay</span></div></div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="support" href="#"><span class="material-symbols-outlined text-[18px]">help_center</span><span>Support &amp; Helpdesk</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-1"><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Aura Acoustics Flagship</span><span class="material-symbols-outlined text-primary text-[16px]">verified</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">LuxeCart Partner Store</span></div><div class="relative max-w-md w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full pl-9 pr-4 py-1.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Search orders, SKUs, inventory, customer..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-xs px-space-md py-1.5 bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span><span>Oct 1 - Oct 25, 2025</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></button><div class="flex items-center gap-space-xs"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">chat_bubble_outline</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary-container"></span></button><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 px-1 min-w-[16px] h-4 rounded-full bg-secondary-container font-label-sm text-label-sm text-on-primary flex items-center justify-center font-bold">3</span></button></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><div class="flex items-center gap-1"><span class="font-label-md text-label-md text-on-surface font-semibold">Vikramaditya S.</span><span class="material-symbols-outlined text-primary text-[14px]">verified</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Store Owner</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Command & Action Strip -->
+<div class="px-margin py-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest/60 backdrop-blur-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Store Settings</span>
+<span class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant font-medium">Merchant v4.8</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Configure your merchant profile, payment gateways, omnichannel logistics, and platform credentials.</p>
+</div>
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm bg-surface-container-low px-space-md py-1.5 rounded-full">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>All changes saved locally (2 mins ago)</span>
+</div>
+<button class="px-space-md py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant bg-surface-container-low hover:bg-surface-container-high transition-all" type="button">
+        Discard Changes
+      </button>
+<button class="flex items-center gap-space-xs px-space-lg py-2 rounded-lg font-label-lg text-label-lg bg-secondary-container text-on-primary shadow-sm hover:shadow hover:opacity-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save Settings</span>
+</button>
+</div>
+</div>
+<!-- Main Settings Workspace (2-Column Architecture) -->
+<div class="px-margin py-space-lg grid grid-cols-12 gap-gutter">
+<!-- Left Column: Vertical Navigation Tabs -->
+<div class="col-span-12 lg:col-span-3 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col gap-1 sticky top-20">
+<!-- Tab Item: Store Details -->
+<a class="group flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" href="#store-details">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[19px] group-hover:text-primary-container">store</span>
+<span class="font-label-lg text-label-lg">Store Details</span>
+</div>
+<span class="material-symbols-outlined text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</a>
+<!-- Tab Item: Payments (Active Tab) -->
+<a class="flex items-center justify-between px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary shadow-sm transition-all" href="#payments">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[19px]">credit_card</span>
+<span class="font-label-lg text-label-lg font-semibold">Payments</span>
+</div>
+<span class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-lowest/20 text-on-primary tracking-wide">Configured</span>
+</a>
+<!-- Tab Item: Shipping & Logistics -->
+<a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" href="#shipping">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[19px] group-hover:text-primary-container">local_shipping</span>
+<span class="font-label-lg text-label-lg">Shipping &amp; Logistics</span>
+</div>
+<span class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant font-medium">2 Active</span>
+</a>
+<!-- Tab Item: Taxes & GST -->
+<a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" href="#taxes">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[19px] group-hover:text-primary-container">receipt_long</span>
+<span class="font-label-lg text-label-lg">Taxes &amp; GST</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">18% HSN</span>
+</a>
+<!-- Tab Item: Notifications & Webhooks -->
+<a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" href="#notifications">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[19px] group-hover:text-primary-container">notifications_active</span>
+<span class="font-label-lg text-label-lg">Notifications &amp; Webhooks</span>
+</div>
+</a>
+<!-- Tab Item: Staff & Roles -->
+<a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" href="#staff">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[19px] group-hover:text-primary-container">badge</span>
+<span class="font-label-lg text-label-lg">Staff &amp; Roles</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 Users</span>
+</a>
+<!-- Tab Item: Custom Domain & SSL -->
+<a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" href="#domain">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[19px] group-hover:text-primary-container">language</span>
+<span class="font-label-lg text-label-lg">Custom Domain &amp; SSL</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+</a>
+<!-- Tab Item: Security & API Keys -->
+<a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" href="#security">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[19px] group-hover:text-primary-container">key</span>
+<span class="font-label-lg text-label-lg">Security &amp; API Keys</span>
+</div>
+</a>
+</div>
+<!-- Merchant Status Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">KYC &amp; Escrow</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-emerald-700 bg-emerald-100 px-space-xs py-0.5 rounded">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Verified
+          </span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Settlement Account</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">HDFC Bank •••• 4192</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">IFSC: HDFC0001824 | Current A/C</span>
+</div>
+</div>
+</div>
+<!-- Right Main Content Area: Tab Panels -->
+<div class="col-span-12 lg:col-span-9 flex flex-col gap-space-xl">
+<!-- SECTION 1: PAYMENTS CONFIGURATION -->
+<section class="flex flex-col gap-space-lg" id="payments-section">
+<!-- Section Header with Visual Flourish -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm pb-space-xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="p-1.5 rounded-lg bg-surface-container-high text-primary-container">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Payment Gateways &amp; Methods</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Manage live transaction processors, UPI routing, and checkout settlement channels.</p>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Primary Channel: <strong class="text-on-surface">Razorpay Escrow Direct</strong></span>
+</div>
+<!-- Card 1: Razorpay Integration Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-container via-primary to-secondary-container"></div>
+<!-- Top Row: Razorpay Identity & Status Badges -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center font-bold text-xl shadow-sm">
+<span class="material-symbols-outlined text-[28px]">payments</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Razorpay</span>
+<span class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-emerald-50 text-emerald-700 flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Connected
+                  </span>
+<span class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant font-medium">Active Gateway</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Automated UPI intent, debit/credit cards, and multi-bank NetBanking orchestration.</span>
+</div>
+</div>
+<!-- Mode Switcher Pill -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-xl self-start sm:self-auto">
+<button class="px-space-md py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">Test Mode</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-sm text-label-sm bg-primary-container text-on-primary font-bold shadow-sm flex items-center gap-1.5" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-300"></span> Live Mode
+              </button>
+</div>
+</div>
+<!-- Webhook Status Callout -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm p-space-md rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[20px]">sync</span>
+<div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Webhook Sync Endpoint:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">https://api.luxecart.in/v1/webhooks/razorpay</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-emerald-700 bg-surface-container-lowest px-space-xs py-1 rounded shadow-xs">
+<span class="material-symbols-outlined text-[14px]">verified</span> Secret Verified
+            </span>
+</div>
+<!-- Credential Input Fields (Key ID & Key Secret) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Key ID Field -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span>Key ID (Live API Key)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-normal">Merchant Client ID</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full pl-3 pr-24 py-2.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface font-mono select-all focus:outline-none focus:ring-2 focus:ring-primary-container" readonly="" type="text" value="rzp_live_948a201bf93k81"/>
+<button class="absolute right-1.5 top-1/2 -translate-y-1/2 flex items-center gap-1 px-space-xs py-1 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm shadow-xs transition-colors" onclick="navigator.clipboard.writeText('rzp_live_948a201bf93k81')" type="button">
+<span class="material-symbols-outlined text-[15px]">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+</div>
+<!-- Key Secret Field -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span>Key Secret (Live API Secret)</span>
+<span class="font-label-sm text-label-sm text-emerald-700 font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">lock</span> Encrypted
+                </span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full pl-3 pr-12 py-2.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface font-mono focus:outline-none focus:ring-2 focus:ring-primary-container" id="key-secret-input" type="password" value="secret_live_99k3019xla082z119q"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 text-on-surface-variant hover:text-on-surface rounded transition-colors" onclick="const f=document.getElementById('key-secret-input'); const i=this.querySelector('.material-symbols-outlined'); if(f.type==='password'){f.type='text'; i.textContent='visibility_off';}else{f.type='password'; i.textContent='visibility';}" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Supported Payment Methods Tag Cloud -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Enabled Payment Instruments</span>
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-primary-container text-[16px]">qr_code_scanner</span>
+                UPI (Instant Settlement)
+              </span>
+<span class="inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-primary-container text-[16px]">credit_card</span>
+                Credit &amp; Debit Cards
+              </span>
+<span class="inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-primary-container text-[16px]">account_balance</span>
+                NetBanking (54 Banks)
+              </span>
+<span class="inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-primary-container text-[16px]">calendar_month</span>
+                Cardless &amp; Bank EMI
+              </span>
+<span class="inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-primary-container text-[16px]">verified_user</span>
+                CRED Pay
+              </span>
+</div>
+</div>
+<!-- Bottom Meta & Actions Row -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pt-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-container">info</span>
+<span>0% platform markup. T+1 rolling settlement directly to Escrow account.</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface bg-surface-container-low hover:bg-surface-container-high transition-colors" type="button">
+                Test Connection
+              </button>
+<button class="px-space-md py-2 rounded-lg font-label-md text-label-md bg-primary-container text-on-primary hover:opacity-95 transition-opacity" type="button">
+                Update Keys
+              </button>
+</div>
+</div>
+</div>
+<!-- Card 2: Cash on Delivery (COD) Configuration Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-orange-50 text-secondary flex items-center justify-center font-bold shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[22px]">local_atm</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Cash on Delivery (COD)</span>
+<span class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-emerald-50 text-emerald-700 font-semibold">Active</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Accept cash payment at customer doorstep via verified courier logistics partners.</span>
+</div>
+</div>
+<!-- Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary-container"></div>
+</label>
+</div>
+<!-- Configuration Fields & Safeguards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xs">
+<!-- Optional Handling Charge -->
+<div class="flex flex-col gap-1.5 p-space-md rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Additional COD Fee</span>
+<input checked="" class="rounded accent-secondary-container h-4 w-4" type="checkbox"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Convenience fee per COD checkout</span>
+<div class="relative mt-1">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface font-semibold font-headline-sm text-headline-sm">₹</span>
+<input class="w-full pl-8 pr-3 py-1.5 rounded-lg bg-surface-container-lowest font-headline-sm text-headline-sm text-on-surface font-bold focus:outline-none focus:ring-2 focus:ring-primary-container" type="text" value="50"/>
+</div>
+</div>
+<!-- Maximum Order Limit -->
+<div class="flex flex-col gap-1.5 p-space-md rounded-lg bg-surface-container-low">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Maximum COD Order Limit</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Disallow COD above cart threshold</span>
+<div class="relative mt-1">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface font-semibold font-headline-sm text-headline-sm">₹</span>
+<input class="w-full pl-8 pr-3 py-1.5 rounded-lg bg-surface-container-lowest font-headline-sm text-headline-sm text-on-surface font-bold focus:outline-none focus:ring-2 focus:ring-primary-container" type="text" value="15,000"/>
+</div>
+</div>
+<!-- Fraud Prevention Safeguard -->
+<div class="flex flex-col justify-between p-space-md rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Mandatory OTP Verification</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Verify customer mobile before dispatch to curb RTO losses.</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-emerald-700 font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">shield</span> Enabled
+                </span>
+<input checked="" class="rounded accent-secondary-container h-4 w-4" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Additional Gateways Showcase -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between flex-wrap gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-700 flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[22px]">public</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Stripe Global Cross-Border</span>
+<span class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant">Available to Connect</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Collect USD, EUR, GBP, and AED with automated GST export invoice handling.</span>
+</div>
+</div>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-primary-container bg-surface-container-low hover:bg-surface-container-high transition-colors font-semibold" type="button">
+            Connect Stripe
+          </button>
+</div>
+</section>
+<!-- SECTION 2: SHIPPING & LOGISTICS PARTNERS -->
+<section class="flex flex-col gap-space-lg pt-space-md" id="shipping-section">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm pb-space-xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="p-1.5 rounded-lg bg-surface-container-high text-primary-container">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Shipping &amp; Logistics Partners</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Automated courier assignment, pickup manifests, and real-time tracking sync.</p>
+</div>
+<button class="flex items-center gap-1 font-label-md text-label-md text-primary-container font-semibold self-start md:self-auto hover:underline" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span> Add Custom Courier API
+          </button>
+</div>
+<!-- Carrier Cards Grid (Shiprocket & Delhivery Direct) -->
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-space-lg">
+<!-- Card A: Shiprocket Integration Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between gap-space-md relative overflow-hidden">
+<div class="flex flex-col gap-space-md">
+<!-- Header -->
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center font-bold shadow-sm">
+<span class="material-symbols-outlined text-[24px]">hub</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Shiprocket Multicarrier</span>
+<span class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-emerald-50 text-emerald-700 font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">check</span> Operational
+                      </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Enterprise Aggregator API</span>
+</div>
+</div>
+<span class="px-space-xs py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-mono">v3 REST</span>
+</div>
+<!-- Meta Properties -->
+<div class="grid grid-cols-2 gap-space-sm p-space-md rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Connected Account</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">ops@aura-acoustics.in</span>
+<span class="font-label-sm text-label-sm text-emerald-700">Enterprise SLA Tier</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">API Auth State</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span> OAuth Token Live
+                  </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Refreshed 4h ago</span>
+</div>
+</div>
+<!-- Active Couriers Fleet -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Active Fleets via Shiprocket</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-space-xs py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary-container">flight_takeoff</span> Blue Dart Express
+                  </span>
+<span class="px-space-xs py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary-container">local_shipping</span> Delhivery Surface
+                  </span>
+<span class="px-space-xs py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary-container">airplanemode_active</span> DTDC Air
+                  </span>
+<span class="px-space-xs py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary-container">electric_bolt</span> Ecom Express
+                  </span>
+</div>
+</div>
+<!-- Pickup Hub Details -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">warehouse</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Default Pickup Warehouse</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Bhiwandi Central Fulfillment Hub (Pin: 421302)</span>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center justify-between pt-space-xs flex-wrap gap-2">
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Sync Locations</span>
+</button>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface bg-surface-container-low hover:bg-surface-container-high transition-colors" type="button">
+                  Routing Rules
+                </button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md bg-primary-container text-on-primary hover:opacity-95 transition-opacity" type="button">
+                  Configure API
+                </button>
+</div>
+</div>
+</div>
+<!-- Card B: Delhivery Direct API Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between gap-space-md relative overflow-hidden">
+<div class="flex flex-col gap-space-md">
+<!-- Header -->
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-xl bg-red-50 text-red-700 flex items-center justify-center font-bold shadow-sm">
+<span class="material-symbols-outlined text-[24px]">speed</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Delhivery Direct</span>
+<span class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-emerald-50 text-emerald-700 font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">check</span> Connected
+                      </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Direct Contracted Pipeline (Priority SLA)</span>
+</div>
+</div>
+<span class="px-space-xs py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-mono">B2C Direct</span>
+</div>
+<!-- Meta Properties -->
+<div class="grid grid-cols-2 gap-space-sm p-space-md rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Client Identifier</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold font-mono">DEL_AUR_90218</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">North Hub Direct</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">API Token Status</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold font-mono">•••• •••• 921B</span>
+<span class="font-label-sm text-label-sm text-emerald-700">Auto-renewed daily</span>
+</div>
+</div>
+<!-- Enabled Services Chips -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Enabled Service Modalities</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-space-xs py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">bolt</span> Same-Day Metro Dispatch
+                  </span>
+<span class="px-space-xs py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary-container">inventory</span> Surface Heavy Cargo
+                  </span>
+<span class="px-space-xs py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary-container">flight</span> Express Air (Next Day)
+                  </span>
+</div>
+</div>
+<!-- Automated AWB Feature Toggle Container -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Automated AWB Allocation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instantly assign AWB once order transitions to "Ready to Dispatch"</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center justify-between pt-space-xs flex-wrap gap-2">
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">monitor_heart</span>
+<span>Test API Health</span>
+</button>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface bg-surface-container-low hover:bg-surface-container-high transition-colors" type="button">
+                  Courier SLAs
+                </button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md bg-primary-container text-on-primary hover:opacity-95 transition-opacity" type="button">
+                  Manage Account
+                </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: WAREHOUSE & INVENTORY DISPATCH VISUAL -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">route</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Smart Logistics Optimization Engine</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">LuxeCart automatically picks the fastest courier based on PIN code density, RTO history, and parcel weight.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<div class="flex flex-col text-right">
+<span class="font-headline-sm text-headline-sm text-emerald-700 font-bold">98.2%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">On-Time SLA Delivery</span>
+</div>
+<button class="px-space-md py-2 rounded-lg font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors font-semibold" type="button">
+            View Analytics
+          </button>
+</div>
+</section>
+<!-- Bottom Global Action Strip / Footer Notice -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-md shadow-xs mb-space-lg">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-primary-container text-[20px]">cloud_done</span>
+<span class="font-body-sm text-body-sm">Changes reflect instantly across storefront checkout and courier dispatch pipelines.</span>
+</div>
+<div class="flex items-center gap-space-md">
+<button class="px-space-md py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant bg-surface-container-lowest hover:bg-surface-container-high transition-colors" type="button">
+            Cancel
+          </button>
+<button class="flex items-center gap-space-xs px-space-xl py-2 rounded-lg font-label-lg text-label-lg bg-secondary-container text-on-primary font-bold shadow-sm hover:shadow hover:opacity-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Save Settings</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

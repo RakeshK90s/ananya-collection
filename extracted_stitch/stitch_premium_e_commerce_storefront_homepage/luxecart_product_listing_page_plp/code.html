@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en" style=""><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>LuxeCart - Curated Digital Storefront</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#faf8ff", "primary-container": "#4f46e5", "background": "#faf8ff", "primary-fixed": "#e2dfff", "surface-tint": "#4d44e3", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "outline": "#777587", "tertiary-container": "#a44100", "on-secondary-fixed-variant": "#783200", "inverse-on-surface": "#eef0ff", "surface-variant": "#dae2fd", "on-primary-container": "#dad7ff", "on-secondary": "#ffffff", "on-secondary-fixed": "#341100", "on-primary-fixed-variant": "#3323cc", "secondary": "#9d4300", "surface-container-highest": "#dae2fd", "on-secondary-container": "#5c2400", "error": "#ba1a1a", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#351000", "on-error": "#ffffff", "on-error-container": "#93000a", "primary": "#3525cd", "surface-container": "#eaedff", "surface": "#faf8ff", "outline-variant": "#c7c4d8", "secondary-fixed": "#ffdbca", "error-container": "#ffdad6", "surface-container-low": "#f2f3ff", "secondary-fixed-dim": "#ffb690", "inverse-surface": "#283044", "secondary-container": "#fd761a", "tertiary": "#7e3000", "tertiary-fixed": "#ffdbcc", "on-tertiary-fixed-variant": "#7b2f00", "surface-dim": "#d2d9f4", "on-surface-variant": "#464555", "on-primary-fixed": "#0f0069", "primary-fixed-dim": "#c3c0ff", "surface-container-high": "#e2e7ff", "on-tertiary-container": "#ffd2be", "on-surface": "#131b2e", "inverse-primary": "#c3c0ff", "tertiary-fixed-dim": "#ffb695", "on-background": "#131b2e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem", "margin": "2rem" }, "fontFamily": { "label-sm": ["Inter"], "headline-xl": ["Outfit"], "headline-xl-mobile": ["Outfit"], "label-lg": ["Inter"], "display-lg": ["Outfit"], "body-lg": ["Inter"], "headline-lg": ["Outfit"], "headline-sm": ["Outfit"], "display-lg-mobile": ["Outfit"], "label-md": ["Inter"], "headline-md": ["Outfit"], "body-sm": ["Inter"], "body-md": ["Inter"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(15,23,42,0.04)]"><div class="h-28 max-w-[1440px] mx-auto px-margin flex flex-col justify-between"><div class="h-16 flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-sm"><img alt="LuxeCart Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK1Ey-A47kik0pHwYi3xLOw7HCKqxCSoJxAtN02xZdcvCQ-qXEOi9Ha_CguK97SXh4E1I-vjvsQW03dbKkTgMSSP8rz2Zs9iRuy2mxxAgEaPl1cIIRm6FU7zAJMGlqFrdB1RnrWTLmavpOGbted7rjJK8AF8pqBeeOnTn0k2nQrLKuO1L4-mm9RcdT6XrfIWrXyOh9_Cg_m2BSHCLJQweW7yQbSjk-nWFbzVNAjXsQPCxD32YFoPO2"/><span class="font-headline-md text-headline-md text-on-surface tracking-tight font-bold">LuxeCart</span></div><div class="hidden xl:flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface cursor-pointer py-1.5 px-2.5 rounded-lg transition-colors"><span class="material-symbols-outlined text-primary text-[20px]">location_on</span><div class="flex flex-col text-left"><span class="font-label-sm text-label-sm text-outline">Deliver to</span><span class="font-label-md text-label-md text-on-surface font-semibold">Mumbai 400001</span></div><span class="material-symbols-outlined text-outline text-[16px]">expand_more</span></div></div><div class="flex-1 max-w-2xl mx-space-sm"><div class="flex items-center w-full h-11 bg-surface-container-lowest rounded-lg border border-outline-variant shadow-[0_1px_3px_rgba(15,23,42,0.02)] focus-within:ring-2 focus-within:ring-primary focus-within:border-transparent transition-all overflow-hidden"><button class="h-full px-space-md bg-surface-container-low font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center gap-1 shrink-0 border-r border-outline-variant transition-colors" type="button"><span class="">All Categories</span><span class="material-symbols-outlined text-[18px]">arrow_drop_down</span></button><div class="relative flex-1 h-full"><input class="w-full h-full px-space-md bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" placeholder="Search for products, brands and luxury essentials..." type="text"/></div><button aria-label="Search" class="h-full px-space-lg bg-secondary-container text-on-secondary hover:bg-secondary flex items-center justify-center shrink-0 transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button></div></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden lg:flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface cursor-pointer px-2 py-1.5 rounded-lg transition-colors"><span class="material-symbols-outlined text-[20px]">language</span><span class="font-label-md text-label-md">EN</span><span class="material-symbols-outlined text-outline text-[16px]">expand_more</span></div><a aria-label="Wishlist" class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[24px]">favorite</span><span class="absolute top-1 right-1 w-4 h-4 bg-secondary-container text-on-secondary font-label-sm text-[10px] rounded-full flex items-center justify-center font-bold">5</span></a><a aria-label="Cart" class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="cart" href="#"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute top-1 right-1 w-4 h-4 bg-secondary-container text-on-secondary font-label-sm text-[10px] rounded-full flex items-center justify-center font-bold">3</span></a><div class="h-6 w-[1px] bg-outline-variant mx-1"></div><div class="flex items-center gap-space-sm pl-1 cursor-pointer py-1 px-2 rounded-lg hover:bg-surface-container-low transition-colors"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-highest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMIIGE1MoI7sro4Klg_CkTS3THCNDVD7cISAeLfifhT3xs_kPO8nW-X46MW529dnHRw7LzqtI5TB--_S-zXrTXgZuvqMjLFiWAz4KB8e5_n8ZWWt7pLdO0ilXgJhzXUwr2VsjFC9oLW1OW7fgwBiRWQxkNhqTg7ouIhkl4gz_oJKT1IxLvXvFgixRYkxJDykMsa6LVEl-0OQ2VDFWLOML01fKMc20m4-x5PBIv57vUAOX9WczIfP2I"/><div class="hidden sm:flex flex-col text-left"><span class="font-label-sm text-label-sm text-outline">Welcome,</span><span class="font-label-md text-label-md text-on-surface font-semibold">Rahul S.</span></div><span class="material-symbols-outlined text-outline text-[18px]">expand_more</span></div></div></div><div class="h-12 flex items-center justify-between border-t border-surface-container-high"><nav class="flex items-center gap-space-lg h-full" data-active-classes="text-primary font-semibold border-b-2 border-primary"><a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors pb-0.5" data-path="all-categories" href="#">All Categories</a><a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors pb-0.5" data-path="deals" href="#">Deals</a><a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors pb-0.5" data-path="new-arrivals" href="#">New Arrivals</a><a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors pb-0.5" data-path="luxury-edit" href="#">Luxury Edit</a><a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors pb-0.5" data-path="customer-care" href="#">Customer Care</a></nav><div class="hidden md:flex items-center gap-space-md"><span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bolt</span>Flash Event: Extra 20% Off Select Curation</span></div></div></div></header><main class="w-full pt-28 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Subtle decorative ambient background elements -->
+<div class="relative w-full max-w-[1440px] mx-auto px-margin pt-space-lg pb-space-xl">
+<div class="absolute -top-10 right-20 w-96 h-96 bg-primary-fixed/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-96 left-12 w-80 h-80 bg-secondary-fixed/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<!-- Breadcrumb Bar -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm mb-space-md">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span>
+<span>Home</span>
+</a>
+<span class="text-outline-variant font-semibold">/</span>
+<a class="hover:text-primary transition-colors" href="#">Electronics &amp; Audio</a>
+<span class="text-outline-variant font-semibold">/</span>
+<span class="text-on-surface font-label-md text-label-md font-semibold">Headphones &amp; Earphones</span>
+</nav>
+<!-- Header Section with Typography Scale and Micro Analytics Pill -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg pb-space-md border-b border-surface-container-high">
+<div>
+<div class="flex items-center gap-space-sm mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm tracking-wide uppercase">Curation Vault #04</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified</span> Audiophile Grade
+          </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">
+          Flagship &amp; Studio Audio
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Showing <span class="font-semibold text-on-surface">1–16</span> of <span class="font-semibold text-on-surface">128</span> precision acoustic instruments
+        </p>
+</div>
+<!-- Sort & Display Controls -->
+<div class="flex items-center gap-space-md shrink-0">
+<!-- Sort Control -->
+<div class="relative flex items-center bg-surface-container-lowest rounded-lg shadow-sm px-3 py-2">
+<span class="font-label-sm text-label-sm text-outline mr-2">Sort by:</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer pr-5" id="sort-selector">
+<option selected="" value="popularity">Popularity</option>
+<option value="price-low">Price: Low to High</option>
+<option value="price-high">Price: High to Low</option>
+<option value="newest">Newest Additions</option>
+<option value="rating">Customer Rating</option>
+</select>
+<span class="material-symbols-outlined text-outline text-[16px] pointer-events-none -ml-4">expand_more</span>
+</div>
+<!-- View Grid/List Toggle Switch -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg shadow-inner">
+<button aria-label="Grid View" class="p-1.5 rounded-md bg-surface-container-lowest text-primary shadow-xs transition-all flex items-center justify-center" id="view-grid">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</button>
+<button aria-label="List View" class="p-1.5 rounded-md text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center" id="view-list">
+<span class="material-symbols-outlined text-[18px]">view_list</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Active Filters Strip -->
+<div class="flex flex-wrap items-center gap-space-sm mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline mr-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">filter_alt</span> Applied Filters:
+      </span>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md shadow-xs">
+<span>Over-Ear</span>
+<button aria-label="Remove Over-Ear filter" class="hover:text-error transition-colors flex items-center">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md shadow-xs">
+<span>₹5,000 – ₹25,000</span>
+<button aria-label="Remove price filter" class="hover:text-error transition-colors flex items-center">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md shadow-xs">
+<span class="flex items-center gap-0.5">4<span class="material-symbols-outlined text-[14px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span> &amp; Above</span>
+<button aria-label="Remove rating filter" class="hover:text-error transition-colors flex items-center">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<button class="font-label-md text-label-md text-primary font-semibold hover:underline ml-2 transition-all">
+        Clear All
+      </button>
+</div>
+<!-- Master Layout Split: Sticky Filters (280px) + 4-Column Card Grid -->
+<div class="flex flex-col lg:flex-row gap-gutter items-start">
+<!-- Sticky Sidebar Filters -->
+<aside class="w-full lg:w-[280px] shrink-0 sticky top-36 z-20">
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_2px_12px_rgba(15,23,42,0.04)] p-space-lg flex flex-col gap-space-lg max-h-[calc(100vh-170px)] overflow-y-auto">
+<!-- Sidebar Header -->
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container-high">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Filters</span>
+</div>
+<button class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors uppercase tracking-wider font-semibold">
+              Reset
+            </button>
+</div>
+<!-- Category Tree / Hierarchy -->
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface uppercase tracking-wider text-[11px]">Audio Hierarchy</span>
+<div class="pl-2 border-l-2 border-primary/20 flex flex-col gap-1.5 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-primary font-semibold cursor-pointer">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">arrow_right</span> Over-Ear Headphones
+                </span>
+<span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded-full bg-primary/10 text-primary">24</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors pl-4">
+<span>In-Ear Monitors</span>
+<span class="text-outline text-[11px]">18</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors pl-4">
+<span>DAC &amp; Amps</span>
+<span class="text-outline text-[11px]">12</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors pl-4">
+<span>Wireless Earbuds</span>
+<span class="text-outline text-[11px]">32</span>
+</div>
+</div>
+</div>
+<!-- Price Dual-Range Filter -->
+<div class="flex flex-col gap-space-sm pt-space-xs border-t border-surface-container-high">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface uppercase tracking-wider text-[11px]">Price Spectrum (₹)</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Custom</span>
+</div>
+<!-- Range Visual Track Representation -->
+<div class="relative w-full h-1.5 bg-surface-container-high rounded-full my-2">
+<div class="absolute left-1/6 right-1/4 h-full bg-primary rounded-full"></div>
+<div class="absolute left-1/6 top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-surface-container-lowest shadow-md ring-2 ring-primary cursor-pointer"></div>
+<div class="absolute right-1/4 top-1/2 -translate-y-1/2 translate-x-1/2 w-4 h-4 rounded-full bg-surface-container-lowest shadow-md ring-2 ring-primary cursor-pointer"></div>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex-1 bg-surface-container-low rounded-lg px-2.5 py-1.5 flex flex-col">
+<span class="font-label-sm text-[10px] text-outline">Min</span>
+<input class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none w-full" type="text" value="₹5,000"/>
+</div>
+<span class="text-outline font-semibold">-</span>
+<div class="flex-1 bg-surface-container-low rounded-lg px-2.5 py-1.5 flex flex-col">
+<span class="font-label-sm text-[10px] text-outline">Max</span>
+<input class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none w-full" type="text" value="₹25,000"/>
+</div>
+<button class="h-10 px-3 bg-secondary-container hover:bg-secondary text-on-secondary rounded-lg font-label-md text-label-md font-bold transition-all shadow-xs shrink-0 self-end">
+                Go
+              </button>
+</div>
+</div>
+<!-- Brands Filter -->
+<div class="flex flex-col gap-space-xs pt-space-xs border-t border-surface-container-high">
+<span class="font-label-md text-label-md font-semibold text-on-surface uppercase tracking-wider text-[11px] mb-1">Acoustic Houses</span>
+<div class="relative mb-2">
+<input class="w-full bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm px-3 py-1.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search brand..." type="text"/>
+<span class="material-symbols-outlined text-outline text-[16px] absolute right-2.5 top-2">search</span>
+</div>
+<div class="flex flex-col gap-2 max-h-40 overflow-y-auto pr-1">
+<label class="flex items-center justify-between text-on-surface font-body-sm text-body-sm cursor-pointer group">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors font-medium">Aura Acoustics</span>
+</div>
+<span class="font-label-sm text-[11px] text-outline">28</span>
+</label>
+<label class="flex items-center justify-between text-on-surface font-body-sm text-body-sm cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Sennheiser</span>
+</div>
+<span class="font-label-sm text-[11px] text-outline">19</span>
+</label>
+<label class="flex items-center justify-between text-on-surface font-body-sm text-body-sm cursor-pointer group">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors font-medium">Sony Audio</span>
+</div>
+<span class="font-label-sm text-[11px] text-outline">34</span>
+</label>
+<label class="flex items-center justify-between text-on-surface font-body-sm text-body-sm cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Bose Studio</span>
+</div>
+<span class="font-label-sm text-[11px] text-outline">22</span>
+</label>
+<label class="flex items-center justify-between text-on-surface font-body-sm text-body-sm cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Bang &amp; Olufsen</span>
+</div>
+<span class="font-label-sm text-[11px] text-outline">11</span>
+</label>
+<label class="flex items-center justify-between text-on-surface font-body-sm text-body-sm cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Marshall</span>
+</div>
+<span class="font-label-sm text-[11px] text-outline">14</span>
+</label>
+</div>
+</div>
+<!-- Customer Rating Filter -->
+<div class="flex flex-col gap-2 pt-space-xs border-t border-surface-container-high">
+<span class="font-label-md text-label-md font-semibold text-on-surface uppercase tracking-wider text-[11px]">User Satisfaction</span>
+<div class="flex flex-col gap-1.5">
+<label class="flex items-center gap-2 cursor-pointer font-body-sm text-body-sm text-on-surface group">
+<input checked="" class="accent-primary" name="rating-filter" type="radio"/>
+<div class="flex items-center text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-outline-variant">star</span>
+</div>
+<span class="font-label-md text-[12px] group-hover:text-primary font-medium">&amp; above</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer font-body-sm text-body-sm text-on-surface-variant group">
+<input class="accent-primary" name="rating-filter" type="radio"/>
+<div class="flex items-center text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-outline-variant">star</span>
+<span class="material-symbols-outlined text-[16px] text-outline-variant">star</span>
+</div>
+<span class="font-label-md text-[12px] group-hover:text-on-surface">&amp; above</span>
+</label>
+</div>
+</div>
+<!-- Discount Filter -->
+<div class="flex flex-col gap-2 pt-space-xs border-t border-surface-container-high">
+<span class="font-label-md text-label-md font-semibold text-on-surface uppercase tracking-wider text-[11px]">Vault Discounts</span>
+<div class="grid grid-cols-2 gap-1.5 font-label-md text-label-md">
+<button class="py-1.5 px-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface text-center transition-colors">
+                50% or more
+              </button>
+<button class="py-1.5 px-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface text-center transition-colors">
+                40% or more
+              </button>
+<button class="py-1.5 px-2 rounded-lg bg-primary/10 text-primary font-semibold text-center">
+                30% or more
+              </button>
+<button class="py-1.5 px-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface text-center transition-colors">
+                20% or more
+              </button>
+</div>
+</div>
+<!-- Availability & Logistics Toggles -->
+<div class="flex flex-col gap-3 pt-space-xs border-t border-surface-container-high">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">In Stock Only</span>
+<span class="font-body-sm text-[11px] text-outline">Ready to ship immediately</span>
+</div>
+<button class="w-10 h-6 bg-primary rounded-full relative p-0.5 cursor-pointer transition-colors" type="button">
+<span class="w-5 h-5 bg-on-primary rounded-full block shadow-sm transform translate-x-4 transition-transform"></span>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[16px]">electric_bolt</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Same-Day Rush</span>
+</div>
+<span class="font-body-sm text-[11px] text-outline">Mumbai Metro &amp; NCR</span>
+</div>
+<button class="w-10 h-6 bg-surface-container-high rounded-full relative p-0.5 cursor-pointer transition-colors" type="button">
+<span class="w-5 h-5 bg-on-primary rounded-full block shadow-sm transform translate-x-0 transition-transform"></span>
+</button>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Product Grid: 4 Columns desktop, 2 tablet, 1 mobile -->
+<section class="flex-1 w-full">
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-gutter">
+<!-- Product Card 1: Best Seller -->
+<div class="group bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(15,23,42,0.04)] hover:shadow-[0_12px_24px_rgba(15,23,42,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up studio portrait of sleek matte black wireless headphones with brushed metallic brass accents on a minimalist light grey pedestal with subtle warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJG-gIL9-dU9ogL_y29LoYNkrzp6WKTQaC6MLYgfED7PEdHiISeJdXKEqWfL7NyqY6lGg8Xe0e23A0qyA7JV1reiElm5R3ejU_0r1UjfBn-ozmwRQUmY3c5o1cza2HGEpwqdfucgDxjGBInrgmwA4BhjnQvxpKUswxOum-T7R6Q3uxE_Nk2lv0cT-bUTGKHWHWeB8dAvXZCRs3TZYh8J2_fb7XOPOvzDfiB2g9wpUXze9JELSJqlzy"/>
+<!-- Badges -->
+<span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-secondary-container text-on-secondary font-label-sm text-[10px] tracking-wider uppercase font-bold shadow-xs">
+                35% OFF
+              </span>
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-secondary-container flex items-center justify-center transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-1 justify-between gap-3">
+<div>
+<span class="font-label-sm text-[11px] font-bold text-primary tracking-wider uppercase">AURA ACOUSTICS</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold line-clamp-2 mt-0.5 group-hover:text-primary transition-colors">
+                  Apex Wireless Studio Pro ANC Headset
+                </h3>
+<div class="flex items-center gap-1.5 mt-1.5">
+<div class="flex items-center text-secondary-container text-[14px]">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface ml-1">4.8</span>
+</div>
+<span class="text-outline font-body-sm text-[12px]">(1,240)</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] ml-auto">Bestseller</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">₹14,999</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹22,999</span>
+</div>
+<div class="flex items-center gap-1 text-[11px] font-label-sm text-primary mt-1">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+<span>Free Next-Day Delivery</span>
+</div>
+<button class="w-full mt-3 py-2.5 px-3 rounded-lg bg-secondary-container hover:bg-secondary text-on-secondary font-label-md text-label-md font-bold transition-all shadow-sm flex items-center justify-center gap-1.5 active:scale-95">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2: Sony Audio -->
+<div class="group bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(15,23,42,0.04)] hover:shadow-[0_12px_24px_rgba(15,23,42,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High-end silver grey over-ear audiophile headphones with leather ear cushions suspended in atmospheric soft studio light against an ivory gradient backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQaPwwfJtMdPhPEGB-IJZ-e4W7NYngV5z85zH2LWT1z7n_rR8ngwy4K1ABuYJp1Oyu5G5cTPgDcLWe7kqrOnZRg0FqY0GDzN_iI5BFG3HJO5NeSpUNtXzB960mvqMi2UFcLWKN2FJ6PLdWESFrtMsrGooEIVbhus4WSy9-mE4jwcMeCfu7VD-4NzQxqlWjaOivJycXR3WPNzazAZ5CsYuAhpkW9YlZx2RjmfC4zlFLgeePMlanouYD"/>
+<span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-[10px] tracking-wider uppercase font-bold shadow-xs">
+                Limited Edition
+              </span>
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-secondary-container flex items-center justify-center transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-1 justify-between gap-3">
+<div>
+<span class="font-label-sm text-[11px] font-bold text-primary tracking-wider uppercase">SONY SOUND</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold line-clamp-2 mt-0.5 group-hover:text-primary transition-colors">
+                  WH-1000XM5 Heritage Master Edition
+                </h3>
+<div class="flex items-center gap-1.5 mt-1.5">
+<div class="flex items-center text-secondary-container text-[14px]">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface ml-1">4.9</span>
+</div>
+<span class="text-outline font-body-sm text-[12px]">(3,812)</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">₹26,990</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹34,990</span>
+</div>
+<div class="flex items-center gap-1 text-[11px] font-label-sm text-secondary font-semibold mt-1">
+<span class="material-symbols-outlined text-[14px]">electric_bolt</span>
+<span>Same-Day Metro Delivery</span>
+</div>
+<button class="w-full mt-3 py-2.5 px-3 rounded-lg bg-secondary-container hover:bg-secondary text-on-secondary font-label-md text-label-md font-bold transition-all shadow-sm flex items-center justify-center gap-1.5 active:scale-95">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3: Sennheiser Pure -->
+<div class="group bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(15,23,42,0.04)] hover:shadow-[0_12px_24px_rgba(15,23,42,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Refined open-back studio reference headphones with breathable mesh earcups resting on raw slate rock with subtle indigo directional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnfgiT8uIigPEKY7ETtQy1DLUggvVwpaYOaW2sK996JO8MSU-gIV60gHQfTXxj62EQ-Awt1U0g22ikvVfcaCPlc_SYQbjVXvzh6H6_nxBQ3BU7MkdtsQfdVjo_Bh5R7vRJu30E9Z7XO0LZHVs6RfJGXgP1vEIP5gj2RwxkUmaZ1MzUEAwY3xZmKwfjxlmxn_PMCib_cP7qk7nTqu3rhDgwU5jQilojkbforqshP0io7atIgQYW4QMh"/>
+<span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-sm text-[10px] tracking-wider uppercase font-semibold">
+                Studio Reference
+              </span>
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-secondary-container flex items-center justify-center transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-1 justify-between gap-3">
+<div>
+<span class="font-label-sm text-[11px] font-bold text-primary tracking-wider uppercase">SENNHEISER</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold line-clamp-2 mt-0.5 group-hover:text-primary transition-colors">
+                  HD 660S2 Open-Back Spatial Monitors
+                </h3>
+<div class="flex items-center gap-1.5 mt-1.5">
+<div class="flex items-center text-secondary-container text-[14px]">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface ml-1">4.7</span>
+</div>
+<span class="text-outline font-body-sm text-[12px]">(642)</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">₹38,990</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹44,990</span>
+</div>
+<div class="flex items-center gap-1 text-[11px] font-label-sm text-primary mt-1">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+<span>Free Next-Day Delivery</span>
+</div>
+<button class="w-full mt-3 py-2.5 px-3 rounded-lg bg-secondary-container hover:bg-secondary text-on-secondary font-label-md text-label-md font-bold transition-all shadow-sm flex items-center justify-center gap-1.5 active:scale-95">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4: CRITICAL SOLD OUT STATE CARD -->
+<div class="relative bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(15,23,42,0.04)] flex flex-col overflow-hidden opacity-90">
+<!-- Desaturated Image with Overlaid Banner -->
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover filter grayscale contrast-75" data-alt="Vintage copper and black luxury headphones resting on a marble podium with dramatic rim lighting and deep shadow falloff" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtfog82Q2HpoBrMUdGNYLOw3JwpwpiydoVVkkaV39tZv4EFEFW9v1D-zpeZwOL9vYf9ijkKv2RUoru67yBuPEUuzq6t2KO115LZNOpZo8DcX8iiAdfGZj4jy3CEVBENjoCkkORcApfgQMrOT47erN8p11um2G1g3rqkei6VU5li5QrFYvfVak__-ptF8lTWFKzZEdNo7qoyoKBNTpVtJKYfOwq2JNULpurbU43j0yc4Lhu4qby8W8i"/>
+<div class="absolute inset-0 bg-surface-dim/40 backdrop-blur-[1px] flex items-center justify-center">
+<span class="px-4 py-1.5 rounded-full bg-inverse-surface text-inverse-on-surface font-label-lg text-label-lg font-bold tracking-wider uppercase shadow-md flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-error">block</span> Sold Out
+                </span>
+</div>
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-1 justify-between gap-3">
+<div>
+<span class="font-label-sm text-[11px] font-bold text-outline tracking-wider uppercase">BANG &amp; OLUFSEN</span>
+<h3 class="font-headline-sm text-headline-sm text-outline font-semibold line-clamp-2 mt-0.5">
+                  Beoplay HX Timber Oak Edition
+                </h3>
+<div class="flex items-center gap-1.5 mt-1.5">
+<div class="flex items-center text-outline text-[14px]">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold ml-1">4.9</span>
+</div>
+<span class="text-outline font-body-sm text-[12px]">(418)</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-outline">₹42,000</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹49,999</span>
+</div>
+<div class="flex items-center gap-1 text-[11px] font-label-sm text-error mt-1 font-medium">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Restock anticipated in 6 days</span>
+</div>
+<!-- Disabled button with Notify Me trigger -->
+<button class="w-full mt-3 py-2.5 px-3 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+<span>Notify When Back</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(15,23,42,0.04)] hover:shadow-[0_12px_24px_rgba(15,23,42,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Retro-styled wireless over-ear headphones with textured black vinyl finish and golden script typography on a polished mahogany surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxW_abBefvZ4qp0y3rkA-9zK2sloBeqk5dwyTGu43uDc9PTN1S7r2ZGDcom1Y2ZAXYN6smZfbxAaJpufUcsY3cR9-xvb7ZyAC0l3ClZU7LWUuFbUzAEqB7LBcfLq0ex9d_5-npBAdW_eVkfcCyWyHTtFiUVuKNEEFrA4YcqSfpy114T2fxO-W08EIFP4ZlDqcMKN519mGpcgMAzJSi53iGjWI3nJUSpiD5u2AsckZosiZoxeYRs_s6"/>
+<span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-secondary-container text-on-secondary font-label-sm text-[10px] tracking-wider uppercase font-bold shadow-xs">
+                25% OFF
+              </span>
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-secondary-container flex items-center justify-center transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-1 justify-between gap-3">
+<div>
+<span class="font-label-sm text-[11px] font-bold text-primary tracking-wider uppercase">MARSHALL</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold line-clamp-2 mt-0.5 group-hover:text-primary transition-colors">
+                  Monitor II A.N.C. Iconic Sound
+                </h3>
+<div class="flex items-center gap-1.5 mt-1.5">
+<div class="flex items-center text-secondary-container text-[14px]">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface ml-1">4.6</span>
+</div>
+<span class="text-outline font-body-sm text-[12px]">(890)</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">₹18,999</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹24,999</span>
+</div>
+<div class="flex items-center gap-1 text-[11px] font-label-sm text-primary mt-1">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+<span>Free Next-Day Delivery</span>
+</div>
+<button class="w-full mt-3 py-2.5 px-3 rounded-lg bg-secondary-container hover:bg-secondary text-on-secondary font-label-md text-label-md font-bold transition-all shadow-sm flex items-center justify-center gap-1.5 active:scale-95">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(15,23,42,0.04)] hover:shadow-[0_12px_24px_rgba(15,23,42,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist matte white headphones with breathable silver mesh headband arranged neatly alongside modern acoustic measurement graph paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABlOi6iIE5UYmdNwjVBz99blVFX1nlilAz2B2Ud1ykFZbl3LhOGTetuJebdwrQkgtLEqgEvILg4O6DAkx4YI22P6ZvmvCTbHuS__RopZYV_RerMEzHog5VNYmvjKbsGhOk6WN1SDFsg4vCThGeJQOkvPzT3Y1BWzIAdomEQkMZnhccaowekcMOF8v4UI3Mh5x5WVDyvoNTZvQSEOZa03KW2bw1s6wbXDw-QkL0haj1iSVndpB07VHJ"/>
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-secondary-container flex items-center justify-center transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-1 justify-between gap-3">
+<div>
+<span class="font-label-sm text-[11px] font-bold text-primary tracking-wider uppercase">BOSE ACOUSTICS</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold line-clamp-2 mt-0.5 group-hover:text-primary transition-colors">
+                  QuietComfort Ultra Noise-Canceling
+                </h3>
+<div class="flex items-center gap-1.5 mt-1.5">
+<div class="flex items-center text-secondary-container text-[14px]">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface ml-1">4.8</span>
+</div>
+<span class="text-outline font-body-sm text-[12px]">(2,110)</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">₹29,990</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹35,900</span>
+</div>
+<div class="flex items-center gap-1 text-[11px] font-label-sm text-secondary font-semibold mt-1">
+<span class="material-symbols-outlined text-[14px]">electric_bolt</span>
+<span>Same-Day Metro Delivery</span>
+</div>
+<button class="w-full mt-3 py-2.5 px-3 rounded-lg bg-secondary-container hover:bg-secondary text-on-secondary font-label-md text-label-md font-bold transition-all shadow-sm flex items-center justify-center gap-1.5 active:scale-95">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 7 -->
+<div class="group bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(15,23,42,0.04)] hover:shadow-[0_12px_24px_rgba(15,23,42,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High fidelity planar magnetic audiophile headphones with real wood outer rings on an acoustic wave diffusal backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZNVNTtWDoTgw9HfgWSVSmehQUKpQZDryZ1qyF-c20jkwdOZVqjmvZJlFUGMSrYUxdkdHXzqVQc4Sh6Klx4x98f_dgCwxtQnQagTydWNJA2IIQPlxr86G0ejp8q5WDwtQF0XZw7JGR9MWO_42i2oXUz9FN3AYxxnlUdSUrHu5AqCuK_aTpIajP5K1s0SbEMh4PsgC_lQDDZyLEFgbJ89N450Atr1EskO6HKNbecFx6YQGfOBo9UKlQ"/>
+<span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-[10px] tracking-wider uppercase font-bold shadow-xs">
+                Planar Magnetic
+              </span>
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-secondary-container flex items-center justify-center transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-1 justify-between gap-3">
+<div>
+<span class="font-label-sm text-[11px] font-bold text-primary tracking-wider uppercase">AURA ACOUSTICS</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold line-clamp-2 mt-0.5 group-hover:text-primary transition-colors">
+                  Vanguard Open Planar Driver Pro
+                </h3>
+<div class="flex items-center gap-1.5 mt-1.5">
+<div class="flex items-center text-secondary-container text-[14px]">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface ml-1">4.9</span>
+</div>
+<span class="text-outline font-body-sm text-[12px]">(320)</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">₹46,500</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹54,000</span>
+</div>
+<div class="flex items-center gap-1 text-[11px] font-label-sm text-primary mt-1">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+<span>Free Next-Day Delivery</span>
+</div>
+<button class="w-full mt-3 py-2.5 px-3 rounded-lg bg-secondary-container hover:bg-secondary text-on-secondary font-label-md text-label-md font-bold transition-all shadow-sm flex items-center justify-center gap-1.5 active:scale-95">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 8 -->
+<div class="group bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(15,23,42,0.04)] hover:shadow-[0_12px_24px_rgba(15,23,42,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Aerospace-grade navy and champagne gold studio headphones resting on modern aluminum geometric stand against soft ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUIBFfM7ZWu7Eg8GUnA0DKqj0FaOYsB9R4RojRix_XC9MLMIYgS68X9I_aocYpOY-4aiw3HoBFTFv53_vz06wk_PnwHnVyqjrMu5fjjNhkmdV0Jlb1AYp-sdRYjuG4-XEJBy-PtJAiC9HP4yLtGQDU317tPQFK1-ayvrwud5eIIQMsofKd777CORaiOtY58QfpnO2eomgcedijBnvIvbG38btKQQoETOR-u2RCP9WDyJi2_rcNYv1v"/>
+<span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-secondary-container text-on-secondary font-label-sm text-[10px] tracking-wider uppercase font-bold shadow-xs">
+                40% OFF
+              </span>
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-secondary-container flex items-center justify-center transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-1 justify-between gap-3">
+<div>
+<span class="font-label-sm text-[11px] font-bold text-primary tracking-wider uppercase">AUDIO-TECHNICA</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold line-clamp-2 mt-0.5 group-hover:text-primary transition-colors">
+                  ATH-M50xBT2 Deep Navy Wireless
+                </h3>
+<div class="flex items-center gap-1.5 mt-1.5">
+<div class="flex items-center text-secondary-container text-[14px]">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface ml-1">4.7</span>
+</div>
+<span class="text-outline font-body-sm text-[12px]">(5,420)</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">₹15,499</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹25,990</span>
+</div>
+<div class="flex items-center gap-1 text-[11px] font-label-sm text-primary mt-1">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+<span>Free Next-Day Delivery</span>
+</div>
+<button class="w-full mt-3 py-2.5 px-3 rounded-lg bg-secondary-container hover:bg-secondary text-on-secondary font-label-md text-label-md font-bold transition-all shadow-sm flex items-center justify-center gap-1.5 active:scale-95">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Curated Editorial Banner Break in Grid (Visual Breakaway Bento) -->
+<div class="mt-space-lg rounded-xl bg-gradient-to-r from-primary to-primary-container p-space-lg text-on-primary flex flex-col md:flex-row items-center justify-between gap-space-md shadow-md">
+<div class="flex flex-col max-w-xl">
+<span class="font-label-sm text-[11px] tracking-widest uppercase text-on-primary-container font-semibold">LuxeCart Audio Concierge</span>
+<h4 class="font-headline-md text-headline-md font-bold mt-1">Need help tuning your acoustic setup?</h4>
+<p class="font-body-md text-body-md text-on-primary-container mt-1">Our sound architects are on standby to curate the ideal DAC, cable pairing, and impedance profile for your ears.</p>
+</div>
+<button class="px-space-lg py-3 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-container-low font-label-lg text-label-lg font-bold shadow-md transition-all shrink-0">
+            Book Sound Consultation
+          </button>
+</div>
+<!-- Pagination Bar -->
+<div class="mt-space-xl flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-lg border-t border-surface-container-high">
+<!-- Page Selector Quantity -->
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span>Show</span>
+<select class="bg-surface-container-lowest border-none font-label-md text-label-md text-on-surface font-semibold py-1 px-2.5 rounded shadow-xs focus:outline-none cursor-pointer">
+<option selected="">16 items per page</option>
+<option>32 items per page</option>
+<option>48 items per page</option>
+</select>
+</div>
+<!-- Numbers Bar -->
+<div class="flex items-center gap-1.5">
+<button aria-label="Previous Page" class="p-2 rounded-lg bg-surface-container-lowest text-outline hover:text-on-surface hover:bg-surface-container-low disabled:opacity-40 transition-colors shadow-xs" disabled="">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button class="w-9 h-9 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm">1</button>
+<button class="w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md font-semibold transition-colors shadow-xs">2</button>
+<button class="w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md font-semibold transition-colors shadow-xs">3</button>
+<button class="w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md font-semibold transition-colors shadow-xs">4</button>
+<span class="px-1 text-outline font-bold">…</span>
+<button class="w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md font-semibold transition-colors shadow-xs">8</button>
+<button aria-label="Next Page" class="p-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+<!-- Quick Jump or Summary Status -->
+<span class="font-body-sm text-body-sm text-outline">
+            Page 1 of 8 (128 Items Total)
+          </span>
+</div>
+</section>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/50 pt-space-xl pb-space-lg text-on-surface mt-space-xl"><div class="max-w-[1440px] mx-auto px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter pb-space-xl border-b border-surface-container-high"><div class="lg:col-span-4 pr-space-lg"><div class="flex items-center gap-space-sm mb-space-md"><img alt="LuxeCart Brand Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK1Ey-A47kik0pHwYi3xLOw7HCKqxCSoJxAtN02xZdcvCQ-qXEOi9Ha_CguK97SXh4E1I-vjvsQW03dbKkTgMSSP8rz2Zs9iRuy2mxxAgEaPl1cIIRm6FU7zAJMGlqFrdB1RnrWTLmavpOGbted7rjJK8AF8pqBeeOnTn0k2nQrLKuO1L4-mm9RcdT6XrfIWrXyOh9_Cg_m2BSHCLJQweW7yQbSjk-nWFbzVNAjXsQPCxD32YFoPO2"/><span class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface">LuxeCart</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-space-lg">Curating refined global craftsmanship, authentic luxury labels, and effortless elevated commerce with expedited nationwide delivery.</p><div class="flex flex-col gap-space-xs"><span class="font-label-md text-label-md text-on-surface font-semibold">Follow LuxeCart</span><div class="flex items-center gap-space-sm mt-1"><a aria-label="Explore" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a><a aria-label="Connect" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">chat</span></a><a aria-label="Media" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a><a aria-label="Channel" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">play_circle</span></a></div></div></div><div class="lg:col-span-2"><span class="font-label-lg text-label-lg text-on-surface block mb-space-md">Company</span><ul class="flex flex-col gap-space-xs"><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">About Us</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">Sustainability</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">Artisans &amp; Partners</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">Careers</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">Press &amp; Media</li></ul></div><div class="lg:col-span-2"><span class="font-label-lg text-label-lg text-on-surface block mb-space-md">Customer Service</span><ul class="flex flex-col gap-space-xs"><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">Help Center &amp; FAQs</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">Track Your Order</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">Returns &amp; Exchanges</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">Shipping &amp; Handling</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors">Contact Concierge</li></ul></div><div class="lg:col-span-4"><span class="font-label-lg text-label-lg text-on-surface block mb-space-md">Stay in Touch</span><p class="font-body-md text-body-md text-on-surface-variant mb-space-md">Receive exclusive access to private vaults, early seasonal sales, and tailored edits.</p><form class="flex flex-col gap-space-xs w-full" onsubmit="return false;"><div class="flex items-center gap-space-xs w-full"><input class="flex-1 min-w-0 h-11 px-3 bg-surface-container-low border border-outline-variant rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary shadow-xs transition-all" placeholder="Enter your email address" type="email"/><button class="h-11 px-space-md bg-secondary-container text-on-secondary hover:bg-secondary font-label-md text-label-md font-semibold rounded-lg transition-all shadow-sm shrink-0 inline-flex items-center justify-center cursor-pointer" type="submit">Subscribe</button></div><span class="font-body-sm text-body-sm text-outline">Zero spam. Opt out anytime.</span></form></div></div><div class="pt-space-lg flex flex-col lg:flex-row items-center justify-between gap-space-md"><div class="flex flex-wrap items-center gap-space-md text-outline font-body-sm text-body-sm"><span class="text-on-surface">© 2025 LuxeCart Retail Private Ltd. All rights reserved.</span><span class="">•</span><a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a><span class="">•</span><a class="hover:text-on-surface transition-colors" href="#">Terms of Service</a><span class="">•</span><a class="hover:text-on-surface transition-colors" href="#">Security &amp; Trust</a></div><div class="flex items-center gap-space-sm"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider mr-1">Accepted Payments</span><div class="flex items-center gap-1.5 text-on-surface-variant"><span class="px-2 py-1 bg-surface-container-low border border-outline-variant/60 rounded font-label-sm text-[11px] font-bold">VISA</span><span class="px-2 py-1 bg-surface-container-low border border-outline-variant/60 rounded font-label-sm text-[11px] font-bold">Mastercard</span><span class="px-2 py-1 bg-surface-container-low border border-outline-variant/60 rounded font-label-sm text-[11px] font-bold">UPI</span><span class="px-2 py-1 bg-surface-container-low border border-outline-variant/60 rounded font-label-sm text-[11px] font-bold">RuPay</span><span class="px-2 py-1 bg-surface-container-low border border-outline-variant/60 rounded font-label-sm text-[11px] font-bold">NetBanking</span></div></div></div></div></footer>
+</body></html>

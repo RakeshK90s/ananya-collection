@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed-variant": "#3323cc", "on-surface": "#131b2e", "surface-bright": "#faf8ff", "inverse-surface": "#283044", "surface-container-low": "#f2f3ff", "error-container": "#ffdad6", "on-surface-variant": "#464555", "surface-container-highest": "#dae2fd", "secondary-container": "#fd761a", "on-error": "#ffffff", "inverse-on-surface": "#eef0ff", "on-primary-fixed": "#0f0069", "outline-variant": "#c7c4d8", "surface-dim": "#d2d9f4", "on-error-container": "#93000a", "surface-variant": "#dae2fd", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#ffd2be", "surface": "#faf8ff", "outline": "#777587", "secondary-fixed": "#ffdbca", "surface-container": "#eaedff", "on-primary-container": "#dad7ff", "on-primary": "#ffffff", "primary-fixed-dim": "#c3c0ff", "secondary": "#9d4300", "primary-container": "#4f46e5", "on-secondary-fixed-variant": "#783200", "on-secondary-fixed": "#341100", "on-secondary-container": "#5c2400", "tertiary-fixed-dim": "#ffb695", "on-tertiary-fixed-variant": "#7b2f00", "secondary-fixed-dim": "#ffb690", "on-tertiary-fixed": "#351000", "error": "#ba1a1a", "surface-container-high": "#e2e7ff", "tertiary-container": "#a44100", "tertiary": "#7e3000", "inverse-primary": "#c3c0ff", "on-secondary": "#ffffff", "primary-fixed": "#e2dfff", "background": "#faf8ff", "tertiary-fixed": "#ffdbcc", "on-tertiary": "#ffffff", "on-background": "#131b2e", "primary": "#3525cd", "surface-tint": "#4d44e3" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "gutter": "1.5rem", "margin": "2rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-md": "1rem", "margin-mobile": "1rem", "space-xl": "2.5rem" }, "fontFamily": { "body-sm": ["Inter"], "headline-lg": ["Outfit"], "label-sm": ["Inter"], "display-lg-mobile": ["Outfit"], "headline-xl": ["Outfit"], "label-md": ["Inter"], "body-lg": ["Inter"], "display-lg": ["Outfit"], "headline-md": ["Outfit"], "label-lg": ["Inter"], "headline-xl-mobile": ["Outfit"], "headline-sm": ["Outfit"], "body-md": ["Inter"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">storefront</span></div><div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight block">LuxeCart</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Seller Portal</span></div></div><nav class="px-space-md py-space-sm flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-lg shadow-sm"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="dashboard" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="products" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Products</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="orders" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span>Orders</span></div><span class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-container text-on-primary font-semibold">12</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="customers" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">group</span><span>Customers</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="marketing-and-promotions" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">campaign</span><span>Marketing &amp; Promotions</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="theme-customizer" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">palette</span><span>Theme Customizer</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="reports-and-analytics" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Reports &amp; Analytics</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="settings" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">settings</span><span>Settings</span></div></a></nav></div><div class="p-space-md flex flex-col gap-space-sm"><div class="p-space-md bg-surface-container-low rounded-xl flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">Store Health</span><span class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary-container inline-block"></span>99.4%</span></div><div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden"><div class="bg-primary-container h-1.5 rounded-full w-[99.4%]"></div></div><div class="pt-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant block">Escrow Balance</span><span class="font-headline-sm text-headline-sm text-on-surface font-bold">₹4,82,350</span><span class="font-label-sm text-label-sm text-on-surface-variant block">Settled via Razorpay</span></div></div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="support" href="#"><span class="material-symbols-outlined text-[18px]">help_center</span><span>Support &amp; Helpdesk</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-1"><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Aura Acoustics Flagship</span><span class="material-symbols-outlined text-primary text-[16px]">verified</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">LuxeCart Partner Store</span></div><div class="relative max-w-md w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full pl-9 pr-4 py-1.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Search orders, SKUs, inventory, customer..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-xs px-space-md py-1.5 bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span><span>Oct 1 - Oct 25, 2025</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></button><div class="flex items-center gap-space-xs"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">chat_bubble_outline</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary-container"></span></button><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 px-1 min-w-[16px] h-4 rounded-full bg-secondary-container font-label-sm text-label-sm text-on-primary flex items-center justify-center font-bold">3</span></button></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><div class="flex items-center gap-1"><span class="font-label-md text-label-md text-on-surface font-semibold">Vikramaditya S.</span><span class="material-symbols-outlined text-primary text-[14px]">verified</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Store Owner</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Script for Navigation highlight, status toast, copy clipboard -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Highlight Orders in left sidebar as active
+      const navLinks = document.querySelectorAll("aside nav a");
+      navLinks.forEach((link) => {
+        if (link.getAttribute("data-path") === "orders") {
+          link.classList.remove("text-on-surface-variant", "hover:bg-surface-container-high");
+          link.classList.add("bg-primary-container", "text-on-primary", "font-label-lg", "shadow-sm");
+          const icon = link.querySelector(".material-symbols-outlined");
+          if (icon) icon.classList.add("text-on-primary");
+        }
+      });
+    });
+
+    function copyToClipboard(text, elemId) {
+      navigator.clipboard.writeText(text).then(() => {
+        const elem = document.getElementById(elemId);
+        if (elem) {
+          const originalText = elem.innerText;
+          elem.innerText = "Copied!";
+          setTimeout(() => {
+            elem.innerText = originalText;
+          }, 1800);
+        }
+      });
+    }
+
+    function toggleDropdown(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.toggle("hidden");
+      }
+    }
+
+    function showStatusSavedToast() {
+      const toast = document.getElementById("toast-feedback");
+      if (toast) {
+        toast.classList.remove("opacity-0", "pointer-events-none", "translate-y-2");
+        toast.classList.add("opacity-100", "translate-y-0");
+        setTimeout(() => {
+          toast.classList.add("opacity-0", "pointer-events-none", "translate-y-2");
+          toast.classList.remove("opacity-100", "translate-y-0");
+        }, 2400);
+      }
+    }
+  </script>
+<!-- Notification Toast -->
+<div class="fixed bottom-6 right-6 z-50 flex items-center gap-space-sm bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-lg shadow-xl opacity-0 pointer-events-none translate-y-2 transition-all duration-300" id="toast-feedback">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">check_circle</span>
+<span class="font-label-md text-label-md">Order state &amp; sync logs updated successfully</span>
+</div>
+<div class="px-space-lg py-space-md flex flex-col gap-space-lg max-w-[1440px] mx-auto w-full">
+<!-- Top Breadcrumb & Quick Telemetry -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<nav class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span>Orders</span>
+</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface-variant">Order Details</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="font-semibold text-on-surface bg-surface-container px-2 py-0.5 rounded">#LC-94821098</span>
+</nav>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+          Real-time sync via Razorpay Webhook
+        </span>
+<span class="text-on-surface-variant text-[12px] font-mono">BOM-FC-ZONE-1</span>
+</div>
+</div>
+<!-- Header & Action Controls Bar -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col xl:flex-row xl:items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Order #LC-94821098</h1>
+<div class="flex flex-wrap gap-1.5 items-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px]">stars</span>
+              LuxeCart Direct Flagship
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface font-medium">
+<span class="material-symbols-outlined text-[14px] text-primary">account_balance_wallet</span>
+              Paid via Razorpay UPI
+            </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+              Fulfillment: Ready for Dispatch
+            </span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Placed on <strong class="text-on-surface font-semibold">Thursday, Oct 24, 2025 at 03:45 PM IST</strong> (3 hours ago)</span>
+<span class="mx-1">•</span>
+<span>Gateway Ref: <span class="font-mono text-on-surface">pay_Ok82a17nQ</span></span>
+</div>
+</div>
+<!-- Action Group -->
+<div class="flex flex-wrap items-center gap-space-sm xl:self-center">
+<!-- Status Changer -->
+<div class="flex items-center bg-surface-container-low rounded-lg p-1">
+<select class="bg-transparent font-label-md text-label-md text-on-surface px-space-sm py-1.5 focus:outline-none cursor-pointer" id="order-status-select">
+<option value="pending">Pending</option>
+<option value="processing">Processing</option>
+<option selected="" value="ready">Ready for Dispatch</option>
+<option value="shipped">Shipped</option>
+<option value="delivered">Delivered</option>
+<option value="cancelled">Cancelled</option>
+<option value="returned">Returned</option>
+</select>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary font-label-md text-label-md rounded shadow-sm hover:opacity-95 transition-all flex items-center gap-1" onclick="showStatusSavedToast()">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Save Status</span>
+</button>
+</div>
+<!-- Primary CTA: Create Shipment with dropdown -->
+<div class="relative">
+<div class="inline-flex rounded-lg shadow-sm">
+<button class="px-space-lg py-2 bg-secondary-container text-on-primary font-label-lg text-label-lg rounded-l-lg hover:brightness-105 transition-all flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+<span>Create Shipment</span>
+</button>
+<button class="px-2 py-2 bg-secondary-container text-on-primary rounded-r-lg hover:brightness-105 transition-all" onclick="toggleDropdown('shipment-carrier-menu')">
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+</div>
+<!-- Carrier Popover -->
+<div class="hidden absolute right-0 mt-2 w-64 bg-surface-container-lowest rounded-xl shadow-xl z-30 p-2 flex flex-col gap-1" id="shipment-carrier-menu">
+<div class="px-3 py-1.5 text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Select Logistics Partner</div>
+<a class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface font-label-md text-label-md" href="#">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">bolt</span>
+<span>Shiprocket One-Click</span>
+</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-primary-fixed text-on-primary-fixed rounded">Fastest</span>
+</a>
+<a class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface font-label-md text-label-md" href="#">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">flight_takeoff</span>
+<span>Delhivery Direct Air</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Priority</span>
+</a>
+<a class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface font-label-md text-label-md" href="#">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">navigation</span>
+<span>Blue Dart Apex</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Surface/Air</span>
+</a>
+</div>
+</div>
+<!-- Quick Document Actions -->
+<div class="flex items-center gap-1.5">
+<button class="p-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors flex items-center justify-center" title="Print Tax Invoice">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors flex items-center justify-center" title="Download Packing Slip">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</button>
+<button class="px-space-sm py-2 rounded-lg bg-error-container text-on-error-container hover:opacity-90 font-label-md text-label-md transition-colors flex items-center gap-1" title="Issue Refund / Credit Note">
+<span class="material-symbols-outlined text-[16px]">replay</span>
+<span>Refund / Credit</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 2-Column Asymmetric Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN (~65% / 8 columns of 12) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- 1. Order Items Table Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Card Header -->
+<div class="p-space-lg bg-surface-container-low flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Items Ordered (3 Items)</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Combined Consignment • 1 Outer Master Carton</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5 bg-surface-container px-space-sm py-1 rounded-lg font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">scale</span>
+<span>Total Weight: <strong class="font-semibold">1.42 kg</strong></span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-space-sm py-1 rounded-lg font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">warehouse</span>
+<span>Bhiwandi FC, Bay C-14</span>
+</div>
+</div>
+</div>
+<!-- Items Listing -->
+<div class="p-space-lg flex flex-col gap-space-md">
+<!-- Item 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low/50 hover:bg-surface-container-low transition-colors flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-20 h-20 rounded-xl overflow-hidden bg-surface-container flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Close-up luxury shot of matte obsidian black over-ear audiophile headphones with carbon fiber accents on a clean studio surface with soft dramatic rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl6EhNrpuDOilCkNsQmMWP9ocMfTamFlO3S3lmvuKlVbpE-WQyVMfceAQMewxFFW_nS7XdpH-9bxod61FAOdxwCWVe6-94Ebvg5GmSppub89rGL9r6z09hG33-D1UE8uDI27km23dt-YuZGS6NTIENCzQI9vZcwJNnX87Eeyt57jBoCkB5cADnPxVRok7ORaue8b7xxBcZZve2uhtGSpSMdwdInvaFneMR2zju7UwPglFYqM35mAes"/>
+<span class="absolute bottom-1 right-1 px-1 bg-surface-container-lowest/90 font-label-sm text-[10px] text-on-surface rounded font-mono">1x</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed uppercase tracking-wider font-semibold">Audio Flagship</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">HSN 8518.30.00</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate mt-0.5">Apex Wireless Studio Pro ANC Headset</h3>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span>Variant: <strong class="text-on-surface">Obsidian Black</strong></span>
+<span>•</span>
+<span>Cable: <strong class="text-on-surface">3.5mm SE</strong></span>
+<span>•</span>
+<span class="font-mono text-label-sm">SKU-APX-01</span>
+<span>•</span>
+<span class="font-mono text-label-sm">EAN: 890432190871</span>
+</div>
+<div class="mt-2 flex items-center gap-1.5 text-on-surface font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span>Stock Allocated: <span class="font-semibold text-primary">Kalina Bin #B2-401</span></span>
+</div>
+</div>
+</div>
+<div class="flex sm:flex-col items-end justify-between w-full sm:w-auto gap-space-xs flex-shrink-0 text-right">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">₹14,999</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹22,999</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold bg-secondary-fixed px-2 py-0.5 rounded">35% OFF Deal</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Qty: 1 × ₹14,999</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low/50 hover:bg-surface-container-low transition-colors flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-20 h-20 rounded-xl overflow-hidden bg-surface-container flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="High-end braided copper headphone cable with gold-plated balanced 4.4mm jack connector displayed neatly on an off-white architectural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP-bZ5YnKKn90A5_5-HAy-bCEUJplhrhQ5PWJSdBW6ATCZY_OFG-9kAQXcrK7FNnDTi3c2M-zb8fP8jyQJYYHrpNII53Ym6ML0EPAqUQOZdeNuA-YxS2d1npI1OvCfGLF_cBeiDozRem5LZSGrR2c-xriZNTznB7wJXtEaWz0eMSPm-zzjQFDtPpqGsMofagJ39h4cLFCaXguDeXOgsbfte9bg63dc5iv2VVIwrnDIkTh-5INUYXYC"/>
+<span class="absolute bottom-1 right-1 px-1 bg-surface-container-lowest/90 font-label-sm text-[10px] text-on-surface rounded font-mono">1x</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant uppercase tracking-wider font-semibold">Accessory</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">HSN 8544.42.99</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate mt-0.5">Balanced 4.4mm Audiophile Cable</h3>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span>Material: <strong class="text-on-surface">OCC Copper Cryo Treated</strong></span>
+<span>•</span>
+<span class="font-mono text-label-sm">SKU-CAB-44C</span>
+</div>
+<div class="mt-2 flex items-center gap-1.5 text-on-surface font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span>Stock Allocated: <span class="font-semibold text-primary">Bhiwandi Bay C-14</span></span>
+</div>
+</div>
+</div>
+<div class="flex sm:flex-col items-end justify-between w-full sm:w-auto gap-space-xs flex-shrink-0 text-right">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">₹1,899</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Qty: 1 × ₹1,899</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low/50 hover:bg-surface-container-low transition-colors flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-20 h-20 rounded-xl overflow-hidden bg-surface-container flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Minimalist weather-resistant hard EVA molded travel carrying case for studio headphones in matte carbon grey with waterproof zipper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-hpox9BYp9k0oBCXGyjx63ziLvSCvlipmYs9pCXduJxt72wJynB0nmp41vnNX2H62dyNDKNcCH66Mx-ggUjKa8ZsSt2HSL0X-JHZcsS5ZRb0ZkBxhUl5j9l41lPYBXiR0BNEX1yI4BUWwdxrSpSdfInCEOFfMQy5BoMYMrjlJsvrh0m3TNyXia5okrZ1noLlu9xP2iQ05JSEv_UK5e1uAiKeZztqtkdFKOiufxxEX1Xr_duE-n758"/>
+<span class="absolute bottom-1 right-1 px-1 bg-surface-container-lowest/90 font-label-sm text-[10px] text-on-surface rounded font-mono">1x</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant uppercase tracking-wider font-semibold">Protection</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">HSN 4202.92.00</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate mt-0.5">Hard Shell EVA Travel Armor Case</h3>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span>Finish: <strong class="text-on-surface">Matte Carbon Grey</strong></span>
+<span>•</span>
+<span class="font-mono text-label-sm">SKU-CSE-EVA</span>
+</div>
+<div class="mt-2 flex items-center gap-1.5 text-on-surface font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span>Stock Allocated: <span class="font-semibold text-primary">Bhiwandi Bay C-14</span></span>
+</div>
+</div>
+</div>
+<div class="flex sm:flex-col items-end justify-between w-full sm:w-auto gap-space-xs flex-shrink-0 text-right">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">₹1,299</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Qty: 1 × ₹1,299</span>
+</div>
+</div>
+</div>
+<!-- Financial Breakdown Subcard (Clean high contrast surface) -->
+<div class="p-space-lg bg-surface-container-low flex flex-col md:flex-row items-start justify-between gap-space-lg">
+<div class="flex flex-col gap-space-sm max-w-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">LuxeCart Seller Settlement Matrix</span>
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex flex-col gap-2 shadow-sm">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Platform Fee (8.0%):</span>
+<span class="text-error font-medium">-₹1,415.76</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Payment Gateway Surcharge:</span>
+<span class="text-on-surface font-medium">₹0.00 (Tier-1 Zero UPI)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">TCS (GST under Sec 52):</span>
+<span class="text-on-surface font-medium">₹0.00 (Escrow Reconciled)</span>
+</div>
+<div class="pt-2 mt-1 bg-surface-container-low p-2 rounded-lg flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Net Payout to Aura Escrow</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">₹16,281.24</span>
+</div>
+</div>
+</div>
+<!-- Customer Breakdown -->
+<div class="w-full md:max-w-xs flex flex-col gap-2">
+<div class="flex items-center justify-between font-body-md text-body-md">
+<span class="text-on-surface-variant">Items Subtotal:</span>
+<span class="text-on-surface font-semibold font-mono">₹18,197.00</span>
+</div>
+<div class="flex items-center justify-between font-body-md text-body-md">
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">local_offer</span>
+<span>Coupon LUXE20 (50% Cart Level):</span>
+</span>
+<span class="text-secondary font-semibold font-mono">-₹9,098.00</span>
+</div>
+<div class="flex items-center justify-between font-body-md text-body-md">
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">stars</span>
+<span>Privilege VIP Instant Voucher:</span>
+</span>
+<span class="text-secondary font-semibold font-mono">-₹500.00</span>
+</div>
+<div class="flex items-center justify-between font-body-md text-body-md">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span>Priority Air Logistics:</span>
+<span class="text-[10px] bg-primary-fixed text-on-primary-fixed font-semibold px-1 rounded">STORE FREE</span>
+</span>
+<span class="text-on-surface font-medium font-mono">₹0.00</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Integrated GST (18% inclusive):</span>
+<span class="font-mono">₹2,776.32</span>
+</div>
+<!-- Grand Total -->
+<div class="p-space-md rounded-xl bg-inverse-surface text-inverse-on-surface mt-space-sm flex items-center justify-between shadow-md">
+<div>
+<span class="font-label-sm text-label-sm text-surface-container-highest uppercase block tracking-wider">Total Customer Paid</span>
+<span class="font-headline-lg text-headline-lg font-bold text-on-primary">₹17,697.00</span>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-secondary-fixed block font-semibold">Captured Instant</span>
+<span class="font-label-sm text-label-sm text-surface-container-highest">UPI / Autopay</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. Shipment & Logistics Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Integrated Logistics &amp; Shipping Label</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Blue Dart Apex Priority Air • API Manifest Active</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-primary bg-primary-container px-2.5 py-1 rounded-full font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-bright"></span>
+                Courier Manifest Pushed
+              </span>
+</div>
+</div>
+<!-- Carrier & AWB Barcode Mosaic -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md bg-surface-container-low p-space-md rounded-xl">
+<!-- Left detail column -->
+<div class="md:col-span-7 flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Primary Tracking AWB</span>
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md font-mono text-on-surface font-bold tracking-wider">BDA-9948201198</span>
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors flex items-center gap-1" id="copy-awb-btn" onclick="copyToClipboard('BDA-9948201198', 'copy-awb-btn')">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Copy AWB</span>
+</button>
+</div>
+</div>
+<!-- Telemetry Metrics Grid -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Box Dimensions</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">28 × 22 × 14 cm</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant block">Vol. Wt: 1.72 kg</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Scheduled Pickup</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">Today, 5:00 - 5:30 PM</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant block">Pickup Slot Confirmed</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary rounded-lg font-label-md text-label-md hover:opacity-95 transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">sensors</span>
+<span>Track Live Telemetry</span>
+</button>
+<button class="px-space-md py-1.5 bg-surface-container text-on-surface rounded-lg font-label-md text-label-md hover:bg-surface-container-high transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Thermal Label (4×6)</span>
+</button>
+</div>
+</div>
+<!-- Right: Barcode Preview Container -->
+<div class="md:col-span-5 bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col items-center justify-center text-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Pickup Scanning Pass</span>
+<!-- Authentic SVG Barcode graphic -->
+<svg class="w-full max-w-[200px] h-12 text-on-surface" fill="currentColor" viewbox="0 0 160 40">
+<rect height="40" width="3" x="0" y="0"></rect>
+<rect height="40" width="2" x="5" y="0"></rect>
+<rect height="40" width="5" x="9" y="0"></rect>
+<rect height="40" width="2" x="17" y="0"></rect>
+<rect height="40" width="4" x="22" y="0"></rect>
+<rect height="40" width="2" x="28" y="0"></rect>
+<rect height="40" width="6" x="33" y="0"></rect>
+<rect height="40" width="3" x="42" y="0"></rect>
+<rect height="40" width="2" x="48" y="0"></rect>
+<rect height="40" width="5" x="53" y="0"></rect>
+<rect height="40" width="2" x="61" y="0"></rect>
+<rect height="40" width="4" x="66" y="0"></rect>
+<rect height="40" width="2" x="73" y="0"></rect>
+<rect height="40" width="5" x="78" y="0"></rect>
+<rect height="40" width="3" x="86" y="0"></rect>
+<rect height="40" width="6" x="92" y="0"></rect>
+<rect height="40" width="2" x="101" y="0"></rect>
+<rect height="40" width="4" x="106" y="0"></rect>
+<rect height="40" width="2" x="113" y="0"></rect>
+<rect height="40" width="6" x="118" y="0"></rect>
+<rect height="40" width="3" x="127" y="0"></rect>
+<rect height="40" width="4" x="133" y="0"></rect>
+<rect height="40" width="2" x="140" y="0"></rect>
+<rect height="40" width="5" x="145" y="0"></rect>
+<rect height="40" width="3" x="153" y="0"></rect>
+</svg>
+<span class="font-mono text-label-sm text-on-surface font-bold tracking-widest block">*BDA9948201198*</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Ready for Delhivery / Blue Dart Handover</span>
+</div>
+</div>
+</div>
+<!-- 3. Order Activity & Audit Log (Timeline) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Order Activity &amp; Audit Log</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">4 Events Logged</span>
+</div>
+<!-- Vertical Timeline with bespoke connector -->
+<div class="relative pl-6 flex flex-col gap-space-md before:absolute before:left-2 before:top-3 before:bottom-3 before:w-0.5 before:bg-surface-container-highest">
+<!-- Timeline Event 1 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-secondary-container flex items-center justify-center shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Shipping Label Manifest Generated</span>
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[11px] rounded font-medium">Logistics API</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Today, Oct 24 • 05:15 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Blue Dart Air AWB <code class="bg-surface-container px-1 py-0.5 rounded text-on-surface font-mono">BDA-9948201198</code> successfully generated by <strong class="text-on-surface font-semibold">Vikramaditya S.</strong> via integrated Shiprocket gateway. Manifest queued for evening airfreight slot.
+              </p>
+</div>
+<!-- Timeline Event 2 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-primary-container flex items-center justify-center shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Packed &amp; Sealed with Tamper-Proof Tape</span>
+<span class="px-2 py-0.5 bg-surface-container font-label-sm text-[11px] text-on-surface-variant rounded">Kalina Vault</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Today, Oct 24 • 04:30 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Order items inspected by warehouse lead <strong class="text-on-surface">Ramesh K.</strong> Packed into corrugated Box Type-B with hologram seal #LC-SEC-8921.
+              </p>
+</div>
+<!-- Timeline Event 3 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-primary flex items-center justify-center shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Payment Settled &amp; Escrow Confirmed</span>
+<span class="px-2 py-0.5 bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] rounded font-medium">Razorpay UPI</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Today, Oct 24 • 03:47 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Transaction ID <code class="bg-surface-container px-1 py-0.5 rounded text-on-surface font-mono">RZP-TXN-883920194</code> captured for ₹17,697.00. Funds held in LuxeCart Seller Trust Escrow.
+              </p>
+</div>
+<!-- Timeline Event 4 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Order Placed by Customer</span>
+<span class="px-2 py-0.5 bg-surface-container font-label-sm text-[11px] text-on-surface-variant rounded">Web Storefront</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Today, Oct 24 • 03:45 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Customer Rahul Sharma checked out with 3 items using promotional coupon code <strong class="text-on-surface">LUXE20</strong> from Chrome Desktop (IP: 49.36.128.44 - Mumbai).
+              </p>
+</div>
+</div>
+<!-- Add Internal Note Box -->
+<div class="mt-space-sm pt-space-md bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">edit_note</span>
+<span>Internal Merchant Staff Notes</span>
+</span>
+<div class="flex gap-space-sm items-center">
+<input class="flex-1 bg-surface-container-lowest px-space-md py-2 rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="Add an internal reference note (visible only to warehouse and store operators)..." type="text"/>
+<button class="px-space-md py-2 bg-primary-container text-on-primary font-label-md text-label-md rounded-lg shadow-sm hover:opacity-90 transition-all flex items-center gap-1 flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Post Note</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (~35% / 4 columns of 12) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- 1. Customer Profile Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-headline-sm text-headline-sm font-bold">
+                RS
+              </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Rahul Sharma</h3>
+<span class="material-symbols-outlined text-primary text-[18px]" title="LuxeCart Verified Buyer">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Verified VIP Buyer • Tier-1 Collector</span>
+</div>
+</div>
+</div>
+<!-- Customer Meta Stats -->
+<div class="grid grid-cols-2 gap-space-xs bg-surface-container-low p-space-sm rounded-xl">
+<div class="p-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Lifetime Value</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">₹1,42,850</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant block">Across 8 orders</span>
+</div>
+<div class="p-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Member Since</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">March 2023</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant block">0 return flags</span>
+</div>
+</div>
+<!-- Contact Details -->
+<div class="flex flex-col gap-space-xs font-body-sm text-body-sm">
+<div class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">phone</span>
+<span class="text-on-surface font-medium">+91 98201 44210</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-[10px]">OTP Verified</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">alternate_email</span>
+<span class="text-on-surface font-medium truncate max-w-[170px]">rahul.sharma@okicici</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[16px] cursor-pointer" onclick="copyToClipboard('rahul.sharma@okicici', 'copy-email-btn')">content_copy</span>
+</div>
+</div>
+<!-- Direct Communication CTAs -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<button class="px-space-sm py-2 bg-surface-container-low text-on-surface hover:bg-surface-container-high rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">chat</span>
+<span>WhatsApp Msg</span>
+</button>
+<button class="px-space-sm py-2 bg-surface-container-low text-on-surface hover:bg-surface-container-high rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>Email Buyer</span>
+</button>
+</div>
+</div>
+<!-- 2. Delivery & Shipping Address Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">home_pin</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Shipping Destination</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">Residential</span>
+</div>
+<div class="flex flex-col gap-1 font-body-md text-body-md text-on-surface">
+<span class="font-semibold text-on-surface">Rahul Sharma</span>
+<p class="text-on-surface-variant font-body-sm leading-relaxed">
+              Flat 402, Sea Green Apartments,<br/>
+              Worli Sea Face, Worli,<br/>
+              Mumbai, Maharashtra - <strong>400018</strong>, India
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">near_me</span>
+<span>Landmark Reference</span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Near Worli Sea Face Promenade, Gate #2</span>
+</div>
+<div class="p-space-sm bg-secondary-fixed/50 rounded-lg flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] flex-shrink-0 mt-0.5">info</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-secondary-fixed font-semibold">Delivery Instructions</span>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed-variant">"Leave at security desk if recipient unavailable; call before delivery."</p>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Pincode Serviceability:</span>
+<span class="font-semibold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+              Blue Dart 1-Day Priority Air Active
+            </span>
+</div>
+</div>
+<!-- 3. Billing & Payment Information Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Billing &amp; Settlement</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">shield</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Payment Method:</span>
+<span class="text-on-surface font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+                UPI Instant (Google Pay)
+              </span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Razorpay TXN ID:</span>
+<span class="font-mono text-on-surface text-label-sm font-semibold">RZP-TXN-883920194</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Auth Token:</span>
+<span class="font-mono text-on-surface text-label-sm">#LC-TX-98402</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Tax Invoice:</span>
+<span class="font-mono text-primary font-semibold hover:underline cursor-pointer">INV-LC-2025-0892</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-1 mt-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Escrow Security State</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">100% Protected</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary-container h-1.5 rounded-full w-full"></div>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant pt-1">Auto-settles into Aura Escrow bank account on delivery + 2 calendar days.</span>
+</div>
+</div>
+</div>
+<!-- 4. Quick Admin & Fraud Check Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold uppercase tracking-wider">Merchant Governance</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Automated Audit</span>
+</div>
+<!-- Risk Score Gauge -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest text-primary flex items-center justify-center font-bold font-headline-sm">
+                98
+              </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Fraud Risk: Very Low</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">0 Chargebacks • Match OTP Pincode</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+</div>
+<!-- Quick Utilities -->
+<div class="flex flex-col gap-1.5 pt-1">
+<button class="w-full px-space-md py-2 bg-surface-container-low text-on-surface hover:bg-surface-container-high rounded-lg font-label-md text-label-md transition-colors flex items-center justify-between">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">file_download</span>
+<span>Download GST E-Way Bill</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">chevron_right</span>
+</button>
+<button class="w-full px-space-md py-2 bg-surface-container-low text-on-surface hover:bg-surface-container-high rounded-lg font-label-md text-label-md transition-colors flex items-center justify-between">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">content_copy</span>
+<span>Duplicate Order Details</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">chevron_right</span>
+</button>
+<button class="w-full px-space-md py-2 bg-error-container/40 text-error hover:bg-error-container rounded-lg font-label-md text-label-md transition-colors flex items-center justify-between">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">block</span>
+<span>Blacklist / Flag Customer</span>
+</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Spacing Margin -->
+<div class="h-space-xl"></div>
+</div>
+</div></main></div></body></html>

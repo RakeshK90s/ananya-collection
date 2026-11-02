@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><title>LuxeCart - Curated Digital Storefront</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#faf8ff", "primary-container": "#4f46e5", "background": "#faf8ff", "primary-fixed": "#e2dfff", "surface-tint": "#4d44e3", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "outline": "#777587", "tertiary-container": "#a44100", "on-secondary-fixed-variant": "#783200", "inverse-on-surface": "#eef0ff", "surface-variant": "#dae2fd", "on-primary-container": "#dad7ff", "on-secondary": "#ffffff", "on-secondary-fixed": "#341100", "on-primary-fixed-variant": "#3323cc", "secondary": "#9d4300", "surface-container-highest": "#dae2fd", "on-secondary-container": "#5c2400", "error": "#ba1a1a", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#351000", "on-error": "#ffffff", "on-error-container": "#93000a", "primary": "#3525cd", "surface-container": "#eaedff", "surface": "#faf8ff", "outline-variant": "#c7c4d8", "secondary-fixed": "#ffdbca", "error-container": "#ffdad6", "surface-container-low": "#f2f3ff", "secondary-fixed-dim": "#ffb690", "inverse-surface": "#283044", "secondary-container": "#fd761a", "tertiary": "#7e3000", "tertiary-fixed": "#ffdbcc", "on-tertiary-fixed-variant": "#7b2f00", "surface-dim": "#d2d9f4", "on-surface-variant": "#464555", "on-primary-fixed": "#0f0069", "primary-fixed-dim": "#c3c0ff", "surface-container-high": "#e2e7ff", "on-tertiary-container": "#ffd2be", "on-surface": "#131b2e", "inverse-primary": "#c3c0ff", "tertiary-fixed-dim": "#ffb695", "on-background": "#131b2e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem", "margin": "2rem" }, "fontFamily": { "label-sm": ["Inter"], "headline-xl": ["Outfit"], "headline-xl-mobile": ["Outfit"], "label-lg": ["Inter"], "display-lg": ["Outfit"], "body-lg": ["Inter"], "headline-lg": ["Outfit"], "headline-sm": ["Outfit"], "display-lg-mobile": ["Outfit"], "label-md": ["Inter"], "headline-md": ["Outfit"], "body-sm": ["Inter"], "body-md": ["Inter"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-outline-variant/40 shadow-[0_1px_8px_rgba(15,23,42,0.03)]"><div class="h-16 max-w-[1440px] mx-auto px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-sm"><img alt="LuxeCart Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK1Ey-A47kik0pHwYi3xLOw7HCKqxCSoJxAtN02xZdcvCQ-qXEOi9Ha_CguK97SXh4E1I-vjvsQW03dbKkTgMSSP8rz2Zs9iRuy2mxxAgEaPl1cIIRm6FU7zAJMGlqFrdB1RnrWTLmavpOGbted7rjJK8AF8pqBeeOnTn0k2nQrLKuO1L4-mm9RcdT6XrfIWrXyOh9_Cg_m2BSHCLJQweW7yQbSjk-nWFbzVNAjXsQPCxD32YFoPO2"/><span class="font-headline-md text-headline-md text-on-surface tracking-tight font-bold">LuxeCart</span></div><div class="flex items-center gap-space-xs text-primary bg-surface-container-low px-space-md py-1.5 rounded-full border border-primary/20"><span class="material-symbols-outlined text-[18px] text-primary">lock</span><span class="font-label-md text-label-md font-semibold text-on-surface">100% Secure 256-Bit SSL Checkout</span></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-primary">support_agent</span><div class="flex flex-col text-left"><span class="font-label-sm text-label-sm text-outline">Need Assistance?</span><span class="font-label-md text-label-md text-on-surface font-semibold">1800-889-LUXE</span></div></div><a class="font-label-md text-label-md text-primary hover:text-surface-tint font-semibold flex items-center gap-0.5" data-path="cart" href="#"><span class="material-symbols-outlined text-[18px]">arrow_back</span><span>Back to Cart</span></a></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1440px] mx-auto px-margin py-space-lg">
+<!-- Breadcrumb & Status Tracker -->
+<div class="flex items-center justify-between mb-space-lg">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span>
+<span>Store</span>
+</a>
+<span>/</span>
+<span class="text-on-surface font-semibold">Account Authentication</span>
+</div>
+<div class="hidden md:flex items-center gap-2 bg-surface-container-high/80 px-space-md py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Sovereign Vault Session #LX-9402</span>
+</div>
+</div>
+<!-- Main Split Grid Experience -->
+<div class="grid grid-cols-1 lg:grid-cols-12 rounded-xl overflow-hidden shadow-xl bg-surface-container-lowest">
+<!-- LEFT COLUMN: Brand Showcase & Visual Storytelling (5 cols) -->
+<div class="lg:col-span-5 relative bg-primary flex flex-col justify-between p-space-lg lg:p-space-xl overflow-hidden text-on-primary">
+<!-- Ambient Atmospheric Gradients -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-surface-tint opacity-50 blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-secondary-container opacity-25 blur-3xl pointer-events-none"></div>
+<!-- Header Brand Identity inside Card -->
+<div class="relative z-10 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-primary-fixed-dim/20 backdrop-blur-md">
+<span class="material-symbols-outlined text-[16px] text-on-primary" style="font-variation-settings: 'FILL' 1;">diamond</span>
+<span class="font-label-sm text-label-sm tracking-widest uppercase font-semibold text-primary-fixed">Private Sanctuary</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl font-bold tracking-tight text-on-primary leading-tight">
+            Access the World of Curated Luxury &amp; Acoustic Perfection
+          </h1>
+<p class="font-body-md text-body-md text-on-primary-container max-w-md">
+            Join 150,000+ connoisseurs receiving privileged vault access, white-glove logistics, and curated private acoustic releases.
+          </p>
+</div>
+<!-- Luxury Visual Vignette with Floating Assurance Badges -->
+<div class="relative z-10 my-space-lg">
+<div class="relative rounded-xl overflow-hidden shadow-md group">
+<img class="w-full h-64 object-cover object-center transform transition-transform duration-700 group-hover:scale-105" data-alt="Exquisite studio still life of handcrafted premium leather and brushed champagne gold headphones resting on a sculpted black marble plinth, dramatic moody museum spotlighting with subtle indigo and warm tungsten reflections, ultra-luxurious editorial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUWw3YoI6onI-WhpH0fhx2vg8UZ_QesmDOTSKirhPxj60pIwAvEBLGfxbn8OjRZScL-Ds8a7eUrcGDwmbXhGHjR8begF0TkwWhB8ZFLDlTW_uAJjV8zkNqbrQIgBGxFAC-uou8HoaBrakVg1Gg5lMUsRMIFlFmi27-DWwgjLNzMN8W8rAIx7e0-ZpWCAo0ZEPNw7v4iaF6gwvYBdoogGINgxge4Iln_sro0l-QvqEovcTWxOQizEXA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+<div class="flex items-center gap-2 bg-surface-container-lowest/90 backdrop-blur-md py-1 px-3 rounded-full text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm font-bold">100% Authenticity Verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-primary font-semibold tracking-wide">Edition 2025</span>
+</div>
+</div>
+<!-- Feature Guarantee Badges Row -->
+<div class="grid grid-cols-2 gap-space-sm mt-space-md">
+<div class="flex items-center gap-2.5 p-space-sm rounded-lg bg-surface-container-high/15 backdrop-blur-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest/15 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px] text-on-primary">local_shipping</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm font-bold text-on-primary truncate">White-Glove</span>
+<span class="font-body-sm text-[11px] text-on-primary-container leading-none">Doorstep Handling</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 p-space-sm rounded-lg bg-surface-container-high/15 backdrop-blur-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest/15 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px] text-on-primary">concierge</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm font-bold text-on-primary truncate">VIP Concierge</span>
+<span class="font-body-sm text-[11px] text-on-primary-container leading-none">24/7 Dedicated Line</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Verified Member Testimonial Card -->
+<div class="relative z-10 p-space-md rounded-xl bg-surface-container-high/20 backdrop-blur-md">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-1 text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-[10px] tracking-wider uppercase text-primary-fixed bg-surface-container-lowest/15 px-2 py-0.5 rounded-full font-semibold">Tier-1 Collector</span>
+</div>
+<p class="font-body-md text-body-md italic text-on-primary leading-snug">
+            “LuxeCart completely elevated my audio acquisitions. Seamless passwordless authorization, pristine packaging, and unmatched concierge care.”
+          </p>
+<div class="mt-3 flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-primary">— Devang M., Mumbai</span>
+<span class="font-label-sm text-label-sm text-on-primary-container">Verified Patron</span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Interactive Authentication Module (7 cols) -->
+<div class="lg:col-span-7 p-space-lg lg:p-space-xl flex flex-col justify-between bg-surface-container-lowest">
+<div>
+<!-- Mode Tabs: Sign In / Register toggle -->
+<div class="flex items-center justify-between pb-space-sm mb-space-lg">
+<div class="flex items-center gap-space-sm p-1 rounded-lg bg-surface-container-low">
+<button class="px-space-md py-1.5 rounded font-label-md text-label-md font-bold transition-all bg-surface-container-lowest text-primary shadow-sm" id="tab-phone" onclick="switchAuthMode('phone')">
+                Mobile Number
+              </button>
+<button class="px-space-md py-1.5 rounded font-label-md text-label-md font-semibold transition-all text-on-surface-variant hover:text-on-surface" id="tab-email" onclick="switchAuthMode('email')">
+                Work / VIP Email
+              </button>
+</div>
+<div class="flex items-center gap-1.5 text-secondary-container font-label-sm text-label-sm font-bold bg-secondary-container/10 px-space-md py-1 rounded-full">
+<span class="material-symbols-outlined text-[15px]">flash_on</span>
+<span>Fast OTP Access</span>
+</div>
+</div>
+<!-- Section Headline -->
+<div class="mb-space-lg">
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight" id="auth-heading">
+              Sign In or Join LuxeCart
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1" id="auth-subheading">
+              Enter your mobile credentials to receive an instantaneous, single-use authentication passcode.
+            </p>
+</div>
+<!-- STATE 1: CREDENTIAL INPUT VIEW -->
+<div class="flex flex-col gap-space-md" id="credential-flow-step">
+<!-- Mobile Field Form Group -->
+<div class="flex flex-col gap-1.5" id="mobile-input-group">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Mobile Number</label>
+<div class="flex items-center rounded-lg bg-surface-container-low p-1.5 transition-all focus-within:bg-surface-container-lowest focus-within:shadow-md">
+<!-- Country Code Selector -->
+<div class="flex items-center gap-1.5 px-space-sm py-1.5 bg-surface-container-lowest rounded shadow-xs cursor-pointer hover:bg-surface-container">
+<span class="text-base leading-none">🇮🇳</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">+91</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</div>
+<!-- Input Input -->
+<input class="w-full bg-transparent px-space-sm py-2 font-headline-sm text-headline-sm text-on-surface placeholder:text-outline/60 focus:outline-none" id="user-phone-input" maxlength="10" placeholder="98765 43210" type="tel" value="98201 44520"/>
+<button class="p-1.5 text-outline hover:text-on-surface transition-colors" onclick="clearInputField('user-phone-input')" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<div class="flex items-center justify-between px-1">
+<span class="font-body-sm text-[11px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">bolt</span>
+                  Instant SMS &amp; WhatsApp delivery
+                </span>
+<button class="font-label-sm text-label-sm text-primary hover:text-surface-tint font-semibold" onclick="switchAuthMode('email')" type="button">
+                  Use email address instead
+                </button>
+</div>
+</div>
+<!-- Email Field Form Group (Toggled via JS) -->
+<div class="hidden flex flex-col gap-1.5" id="email-input-group">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Private VIP Email</label>
+<div class="flex items-center rounded-lg bg-surface-container-low p-1.5 transition-all focus-within:bg-surface-container-lowest focus-within:shadow-md">
+<div class="p-2 text-primary">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<input class="w-full bg-transparent px-space-xs py-2 font-body-lg text-body-lg text-on-surface placeholder:text-outline/60 focus:outline-none" id="user-email-input" placeholder="name@domain.com" type="email"/>
+<button class="p-1.5 text-outline hover:text-on-surface" onclick="clearInputField('user-email-input')" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<div class="flex items-center justify-between px-1">
+<span class="font-body-sm text-[11px] text-on-surface-variant">Encrypted magic sign-in link</span>
+<button class="font-label-sm text-label-sm text-primary hover:text-surface-tint font-semibold" onclick="switchAuthMode('phone')" type="button">
+                  Use mobile number instead
+                </button>
+</div>
+</div>
+<!-- Primary Action CTA -->
+<button class="w-full py-3.5 px-space-lg rounded-lg bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-space-xs group active:scale-[0.99]" onclick="triggerOtpStep()" type="button">
+<span>Get One-Time Password (OTP)</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<!-- STATE 2: OTP VERIFICATION VIEW (Interactive Simulation) -->
+<div class="hidden flex flex-col gap-space-md" id="otp-flow-step">
+<div class="p-space-md rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">sms</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Code sent to</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface" id="display-target-credential">+91 98201 44520</span>
+</div>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:text-surface-tint font-semibold flex items-center gap-0.5" onclick="backToCredentialInput()" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Edit</span>
+</button>
+</div>
+<!-- OTP Input 6-Box Array -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Enter 6-Digit Passcode</label>
+<div class="flex items-center justify-between gap-2">
+<input class="otp-box w-12 h-14 text-center font-headline-lg text-headline-lg font-bold rounded-lg bg-surface-container-low text-primary focus:bg-surface-container-lowest focus:shadow-md focus:outline-none transition-all" maxlength="1" type="text" value="7"/>
+<input class="otp-box w-12 h-14 text-center font-headline-lg text-headline-lg font-bold rounded-lg bg-surface-container-low text-primary focus:bg-surface-container-lowest focus:shadow-md focus:outline-none transition-all" maxlength="1" type="text" value="4"/>
+<input class="otp-box w-12 h-14 text-center font-headline-lg text-headline-lg font-bold rounded-lg bg-surface-container-low text-primary focus:bg-surface-container-lowest focus:shadow-md focus:outline-none transition-all" maxlength="1" type="text" value="2"/>
+<input class="otp-box w-12 h-14 text-center font-headline-lg text-headline-lg font-bold rounded-lg bg-surface-container-low text-primary focus:bg-surface-container-lowest focus:shadow-md focus:outline-none transition-all" maxlength="1" type="text" value="9"/>
+<input class="otp-box w-12 h-14 text-center font-headline-lg text-headline-lg font-bold rounded-lg bg-surface-container-low text-primary focus:bg-surface-container-lowest focus:shadow-md focus:outline-none transition-all" maxlength="1" type="text"/>
+<input class="otp-box w-12 h-14 text-center font-headline-lg text-headline-lg font-bold rounded-lg bg-surface-container-low text-primary focus:bg-surface-container-lowest focus:shadow-md focus:outline-none transition-all" maxlength="1" type="text"/>
+</div>
+</div>
+<!-- Resend Countdown and Trigger -->
+<div class="flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">timer</span>
+<span>Resend OTP in <strong class="text-on-surface" id="countdown-timer">00:24</strong></span>
+</div>
+<button class="font-label-sm text-label-sm text-outline hover:text-primary font-medium cursor-not-allowed" disabled="" id="resend-btn" type="button">
+                Resend Code
+              </button>
+</div>
+<!-- Verify & Proceed Action -->
+<button class="w-full py-3.5 px-space-lg rounded-lg bg-primary hover:bg-surface-tint text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-space-xs active:scale-[0.99]" onclick="simulateAuthSuccess()" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Verify &amp; Access Account</span>
+</button>
+</div>
+<!-- Trust & Security Banner -->
+<div class="flex items-center justify-center gap-space-xs mt-space-md py-2 px-space-md rounded-lg bg-surface-container-low/70">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant font-medium">
+              256-Bit Bank-Grade Encryption • Instant Passwordless Access
+            </span>
+</div>
+<!-- Divider -->
+<div class="relative my-space-md flex items-center justify-center">
+<div class="w-full h-px bg-surface-container-high"></div>
+<span class="absolute px-3 bg-surface-container-lowest font-label-sm text-[11px] uppercase tracking-wider text-outline font-semibold">
+              or continue with
+            </span>
+</div>
+<!-- Social / Biometric Login Buttons -->
+<div class="grid grid-cols-3 gap-space-sm">
+<button class="flex items-center justify-center gap-2 py-2.5 px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-all" type="button">
+<svg class="w-4 h-4" viewbox="0 0 24 24">
+<path d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z" fill="#4285F4"></path>
+<path d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z" fill="#34A853"></path>
+<path d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.98 0 12s.45 3.82 1.25 5.42l4.03-3.15z" fill="#FBBC05"></path>
+<path d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z" fill="#EA4335"></path>
+</svg>
+<span class="font-label-sm text-label-sm font-semibold">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-2.5 px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-all" type="button">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+<path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.36c.63-.78 1.06-1.85.94-2.93-.91.04-2.02.61-2.67 1.39-.58.68-1.08 1.77-.95 2.82 1.02.08 2.05-.5 2.68-1.28z"></path>
+</svg>
+<span class="font-label-sm text-label-sm font-semibold">Apple</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-2.5 px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">fingerprint</span>
+<span class="font-label-sm text-label-sm font-semibold">Passkey</span>
+</button>
+</div>
+<!-- Secondary Link: Guest Checkout / Track Orders -->
+<div class="mt-space-md text-center">
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-secondary hover:text-secondary-container font-semibold transition-colors py-1 px-3 rounded-full hover:bg-secondary-fixed/30" href="#">
+<span class="material-symbols-outlined text-[17px]">electric_bolt</span>
+<span>Continue as Guest (Instant Order Tracking)</span>
+</a>
+</div>
+</div>
+<!-- Footer / Legal & Concierge Support Bar -->
+<div class="pt-space-md mt-space-md">
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1 text-[11px] text-outline text-center sm:text-left">
+<span>By signing in, you accept the</span>
+<a class="text-primary underline" href="#">Sovereign Terms</a>
+<span>&amp;</span>
+<a class="text-primary underline" href="#">Privacy Standards</a>
+</div>
+<a class="inline-flex items-center gap-1 text-primary hover:text-surface-tint font-label-sm text-label-sm font-semibold shrink-0" href="tel:18008895893">
+<span class="material-symbols-outlined text-[15px]">headset_mic</span>
+<span>1800-889-LUXE Support</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Supplementary Trust Badges Under Authentication Shell -->
+<div class="mt-space-lg grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<div class="flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">security</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Zero SPAM</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Transactional alerts only</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">encrypted</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">End-to-End</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Hardware-bound security</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">card_membership</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Vault Privileges</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Earn LuxePoints on visit</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">published_with_changes</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Seamless Return</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">7-day doorstep replacement</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+    function switchAuthMode(mode) {
+      const phoneInputGroup = document.getElementById('mobile-input-group');
+      const emailInputGroup = document.getElementById('email-input-group');
+      const tabPhone = document.getElementById('tab-phone');
+      const tabEmail = document.getElementById('tab-email');
+      const authSub = document.getElementById('auth-subheading');
+
+      if (mode === 'email') {
+        phoneInputGroup.classList.add('hidden');
+        emailInputGroup.classList.remove('hidden');
+
+        tabPhone.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        tabPhone.classList.add('text-on-surface-variant');
+
+        tabEmail.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        tabEmail.classList.remove('text-on-surface-variant');
+
+        authSub.textContent = 'Enter your private VIP email to receive a secure authorization link and passkey.';
+      } else {
+        emailInputGroup.classList.add('hidden');
+        phoneInputGroup.classList.remove('hidden');
+
+        tabEmail.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        tabEmail.classList.add('text-on-surface-variant');
+
+        tabPhone.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        tabPhone.classList.remove('text-on-surface-variant');
+
+        authSub.textContent = 'Enter your mobile credentials to receive an instantaneous, single-use authentication passcode.';
+      }
+    }
+
+    function clearInputField(elementId) {
+      const input = document.getElementById(elementId);
+      if (input) {
+        input.value = '';
+        input.focus();
+      }
+    }
+
+    function triggerOtpStep() {
+      const step1 = document.getElementById('credential-flow-step');
+      const step2 = document.getElementById('otp-flow-step');
+      const displayTarget = document.getElementById('display-target-credential');
+      const phoneInput = document.getElementById('user-phone-input');
+      const emailInput = document.getElementById('user-email-input');
+      const heading = document.getElementById('auth-heading');
+      const subheading = document.getElementById('auth-subheading');
+
+      const isEmailActive = !document.getElementById('email-input-group').classList.contains('hidden');
+
+      if (isEmailActive && emailInput.value.trim() !== '') {
+        displayTarget.textContent = emailInput.value.trim();
+      } else {
+        displayTarget.textContent = '+91 ' + (phoneInput.value.trim() || '98201 44520');
+      }
+
+      heading.textContent = 'Enter Verification Passcode';
+      subheading.textContent = 'A single-use verification code has been dispatched. Please enter it below to proceed.';
+
+      step1.classList.add('hidden');
+      step2.classList.remove('hidden');
+
+      // Setup OTP inputs auto-advance
+      const otpInputs = document.querySelectorAll('.otp-box');
+      otpInputs.forEach((input, index) => {
+        input.addEventListener('keyup', (e) => {
+          if (e.key >= '0' && e.key <= '9') {
+            if (index < otpInputs.length - 1) {
+              otpInputs[index + 1].focus();
+            }
+          } else if (e.key === 'Backspace') {
+            if (index > 0 && input.value === '') {
+              otpInputs[index - 1].focus();
+            }
+          }
+        });
+      });
+    }
+
+    function backToCredentialInput() {
+      const step1 = document.getElementById('credential-flow-step');
+      const step2 = document.getElementById('otp-flow-step');
+      const heading = document.getElementById('auth-heading');
+      const subheading = document.getElementById('auth-subheading');
+
+      heading.textContent = 'Sign In or Join LuxeCart';
+      subheading.textContent = 'Enter your mobile credentials to receive an instantaneous, single-use authentication passcode.';
+
+      step2.classList.add('hidden');
+      step1.classList.remove('hidden');
+    }
+
+    function simulateAuthSuccess() {
+      const button = event.currentTarget;
+      button.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span><span>Securing Sanctuary Vault...</span>';
+      setTimeout(() => {
+        window.location.href = '#';
+      }, 1000);
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/40 py-space-lg text-on-surface mt-space-xl"><div class="max-w-[1440px] mx-auto px-margin flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm"><div class="flex items-center gap-1 text-primary"><span class="material-symbols-outlined text-[18px]">verified_user</span><span class="font-label-sm text-label-sm font-semibold">Bank-Grade Encryption</span></div><span>•</span><span class="text-outline">© 2025 LuxeCart Retail Private Ltd. All rights reserved.</span></div><div class="flex items-center gap-space-sm"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Payment Guarantee</span><div class="flex items-center gap-1.5 text-on-surface-variant"><span class="px-2 py-0.5 bg-surface-container-low border border-outline-variant/60 rounded font-label-sm text-[11px] font-bold">VISA</span><span class="px-2 py-0.5 bg-surface-container-low border border-outline-variant/60 rounded font-label-sm text-[11px] font-bold">Mastercard</span><span class="px-2 py-0.5 bg-surface-container-low border border-outline-variant/60 rounded font-label-sm text-[11px] font-bold">UPI</span><span class="px-2 py-0.5 bg-surface-container-low border border-outline-variant/60 rounded font-label-sm text-[11px] font-bold">RuPay</span><span class="px-2 py-0.5 bg-surface-container-low border border-outline-variant/60 rounded font-label-sm text-[11px] font-bold">Norton Secured</span></div></div></div></footer></body></html>

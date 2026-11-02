@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed-variant": "#3323cc", "on-surface": "#131b2e", "surface-bright": "#faf8ff", "inverse-surface": "#283044", "surface-container-low": "#f2f3ff", "error-container": "#ffdad6", "on-surface-variant": "#464555", "surface-container-highest": "#dae2fd", "secondary-container": "#fd761a", "on-error": "#ffffff", "inverse-on-surface": "#eef0ff", "on-primary-fixed": "#0f0069", "outline-variant": "#c7c4d8", "surface-dim": "#d2d9f4", "on-error-container": "#93000a", "surface-variant": "#dae2fd", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#ffd2be", "surface": "#faf8ff", "outline": "#777587", "secondary-fixed": "#ffdbca", "surface-container": "#eaedff", "on-primary-container": "#dad7ff", "on-primary": "#ffffff", "primary-fixed-dim": "#c3c0ff", "secondary": "#9d4300", "primary-container": "#4f46e5", "on-secondary-fixed-variant": "#783200", "on-secondary-fixed": "#341100", "on-secondary-container": "#5c2400", "tertiary-fixed-dim": "#ffb695", "on-tertiary-fixed-variant": "#7b2f00", "secondary-fixed-dim": "#ffb690", "on-tertiary-fixed": "#351000", "error": "#ba1a1a", "surface-container-high": "#e2e7ff", "tertiary-container": "#a44100", "tertiary": "#7e3000", "inverse-primary": "#c3c0ff", "on-secondary": "#ffffff", "primary-fixed": "#e2dfff", "background": "#faf8ff", "tertiary-fixed": "#ffdbcc", "on-tertiary": "#ffffff", "on-background": "#131b2e", "primary": "#3525cd", "surface-tint": "#4d44e3" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "gutter": "1.5rem", "margin": "2rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-md": "1rem", "margin-mobile": "1rem", "space-xl": "2.5rem" }, "fontFamily": { "body-sm": ["Inter"], "headline-lg": ["Outfit"], "label-sm": ["Inter"], "display-lg-mobile": ["Outfit"], "headline-xl": ["Outfit"], "label-md": ["Inter"], "body-lg": ["Inter"], "display-lg": ["Outfit"], "headline-md": ["Outfit"], "label-lg": ["Inter"], "headline-xl-mobile": ["Outfit"], "headline-sm": ["Outfit"], "body-md": ["Inter"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">storefront</span></div><div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight block">LuxeCart</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Seller Portal</span></div></div><nav class="px-space-md py-space-sm flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-lg shadow-sm"><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-all group bg-primary-container text-on-primary font-label-lg shadow-sm" data-path="dashboard" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="products" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Products</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="orders" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span>Orders</span></div><span class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-container text-on-primary font-semibold">12</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="customers" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">group</span><span>Customers</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="marketing-and-promotions" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">campaign</span><span>Marketing &amp; Promotions</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="theme-customizer" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">palette</span><span>Theme Customizer</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="reports-and-analytics" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Reports &amp; Analytics</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="settings" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">settings</span><span>Settings</span></div></a></nav></div><div class="p-space-md flex flex-col gap-space-sm"><div class="p-space-md bg-surface-container-low rounded-xl flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">Store Health</span><span class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary-container inline-block"></span>99.4%</span></div><div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden"><div class="bg-primary-container h-1.5 rounded-full w-[99.4%]"></div></div><div class="pt-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant block">Escrow Balance</span><span class="font-headline-sm text-headline-sm text-on-surface font-bold">₹4,82,350</span><span class="font-label-sm text-label-sm text-on-surface-variant block">Settled via Razorpay</span></div></div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="support" href="#"><span class="material-symbols-outlined text-[18px]">help_center</span><span>Support &amp; Helpdesk</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-1"><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Aura Acoustics Flagship</span><span class="material-symbols-outlined text-primary text-[16px]">verified</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">LuxeCart Partner Store</span></div><div class="relative max-w-md w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full pl-9 pr-4 py-1.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Search orders, SKUs, inventory, customer..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-xs px-space-md py-1.5 bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span><span>Oct 1 - Oct 25, 2025</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></button><div class="flex items-center gap-space-xs"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">chat_bubble_outline</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary-container"></span></button><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 px-1 min-w-[16px] h-4 rounded-full bg-secondary-container font-label-sm text-label-sm text-on-primary flex items-center justify-center font-bold">3</span></button></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><div class="flex items-center gap-1"><span class="font-label-md text-label-md text-on-surface font-semibold">Vikramaditya S.</span><span class="material-symbols-outlined text-primary text-[14px]">verified</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Store Owner</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="px-space-lg py-space-lg flex flex-col gap-space-lg max-w-[1540px] mx-auto w-full">
+<!-- 1. Top Greeting & Action Header Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Welcome back, Vikramaditya!</h1>
+<span class="text-[22px] leading-none select-none">👋</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Here is what is happening with <span class="font-semibold text-primary">Aura Acoustics Flagship Store</span> today.
+        </p>
+</div>
+<div class="flex items-center flex-wrap gap-space-sm">
+<a class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary">open_in_new</span>
+<span>Live Storefront</span>
+</a>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-low font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">receipt_long</span>
+<span>Download GST Report</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-lg py-2 rounded-lg bg-secondary-container text-on-primary font-label-lg text-label-lg shadow-sm hover:opacity-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ Add New Product</span>
+</button>
+</div>
+</div>
+<!-- 2. KPI Metric Cards Row (4 cards with micro sparklines) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Today's Gross Sales</span>
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold mt-1">₹1,48,920</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+</div>
+</div>
+<div class="flex items-end justify-between pt-2">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> 18.4%
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">vs yesterday</span>
+</div>
+<!-- Sparkline Mini SVG -->
+<svg class="w-20 h-7 text-primary" fill="none" viewbox="0 0 80 28">
+<path d="M2 24 L14 19 L26 21 L38 12 L50 16 L62 8 L78 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Today's Orders</span>
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold mt-1">42 Orders</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">local_mall</span>
+</div>
+</div>
+<div class="flex items-end justify-between pt-2">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> 12.0%
+              </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">last 24h</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium mt-0.5">8 awaiting dispatch</span>
+</div>
+<svg class="w-20 h-7 text-secondary-container" fill="none" viewbox="0 0 80 28">
+<path d="M2 22 L16 20 L30 14 L44 17 L58 9 L72 11 L78 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Store Visitors</span>
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold mt-1">3,840</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">monitoring</span>
+</div>
+</div>
+<div class="flex items-end justify-between pt-2">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> 5.2%
+              </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">traffic</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Peak traffic: 3:00 PM IST</span>
+</div>
+<svg class="w-20 h-7 text-primary" fill="none" viewbox="0 0 80 28">
+<path d="M2 25 L15 22 L28 17 L42 20 L55 8 L68 12 L78 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Store Conversion Rate</span>
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold mt-1">3.48%</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">auto_graph</span>
+</div>
+</div>
+<div class="flex items-end justify-between pt-2">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +0.6%
+              </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">vs bench</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Category benchmark: 2.80%</span>
+</div>
+<svg class="w-20 h-7 text-primary-container" fill="none" viewbox="0 0 80 28">
+<path d="M2 19 L15 16 L28 19 L42 11 L55 14 L68 6 L78 2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- 3. Analytics & Sales Chart (2/3) + Low Stock Alert Box (1/3) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md items-start">
+<!-- Chart Column (2 Cols) -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<!-- Chart Controls -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-xs">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Gross Revenue &amp; Order Velocity</h2>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container text-primary font-semibold">Live Feed</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Audited metrics updated real-time across omnichannel checkouts</p>
+</div>
+<div class="inline-flex p-1 bg-surface-container-low rounded-lg gap-1 self-start sm:self-auto">
+<button class="px-3 py-1 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors">Daily</button>
+<button class="px-3 py-1 rounded-md bg-surface-container-lowest text-primary shadow-sm font-label-md text-label-md font-semibold">Weekly</button>
+<button class="px-3 py-1 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors">Monthly</button>
+<button class="px-3 py-1 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors">Quarterly</button>
+</div>
+</div>
+<!-- Metrics bar -->
+<div class="grid grid-cols-3 gap-space-sm p-space-md bg-surface-container-low rounded-xl">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Period Net Revenue</span>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">₹8,94,200</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Avg Order Value (AOV)</span>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">₹14,200</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Store Return Rate</span>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">1.2% <span class="font-label-sm text-label-sm font-normal text-on-surface-variant">(Low)</span></div>
+</div>
+</div>
+<!-- Inline SVG Interactive Visual Line Chart -->
+<div class="relative w-full h-72 pt-space-xs">
+<!-- Floating Tooltip Mock for Oct 24 Peak -->
+<div class="absolute left-[69%] top-[14%] -translate-x-1/2 -translate-y-full bg-inverse-surface text-inverse-on-surface px-3 py-2 rounded-lg shadow-lg pointer-events-none z-10 flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-inverse-on-surface/80">Thursday, Oct 24</span>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="font-label-md text-label-md font-bold">₹1,84,350</span>
+<span class="text-inverse-on-surface/60 text-[11px]">• 54 Orders</span>
+</div>
+<!-- Arrow tip -->
+<div class="absolute bottom-[-5px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-inverse-surface rotate-45"></div>
+</div>
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 680 230">
+<defs>
+<lineargradient id="chartGradientIndigo" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4F46E5" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#4F46E5" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Horizontal Background Grid lines -->
+<line stroke="#E2E8F0" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="30" y2="30"></line>
+<line stroke="#E2E8F0" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="80" y2="80"></line>
+<line stroke="#E2E8F0" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="130" y2="130"></line>
+<line stroke="#E2E8F0" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="180" y2="180"></line>
+<!-- Area fill -->
+<path d="M 30 170 Q 110 160 140 135 T 250 110 T 360 145 T 470 50 T 570 95 T 660 65 L 660 200 L 30 200 Z" fill="url(#chartGradientIndigo)"></path>
+<!-- Main Curve Path (Deep Indigo) -->
+<path d="M 30 170 Q 110 160 140 135 T 250 110 T 360 145 T 470 50 T 570 95 T 660 65" fill="none" stroke="#4F46E5" stroke-linecap="round" stroke-width="3"></path>
+<!-- Secondary Path - Orders Count (Subtle warm accent) -->
+<path d="M 30 185 Q 110 175 140 160 T 250 145 T 360 165 T 470 115 T 570 140 T 660 120" fill="none" stroke="#FD761A" stroke-dasharray="4 4" stroke-width="2"></path>
+<!-- Data Circles on Main Line -->
+<circle cx="30" cy="170" fill="#FFFFFF" r="4" stroke="#4F46E5" stroke-width="2"></circle>
+<circle cx="140" cy="135" fill="#FFFFFF" r="4" stroke="#4F46E5" stroke-width="2"></circle>
+<circle cx="250" cy="110" fill="#FFFFFF" r="4" stroke="#4F46E5" stroke-width="2"></circle>
+<circle cx="360" cy="145" fill="#FFFFFF" r="4" stroke="#4F46E5" stroke-width="2"></circle>
+<!-- Highlighted Peak Circle -->
+<circle cx="470" cy="50" fill="#FD761A" r="6" stroke="#FFFFFF" stroke-width="3"></circle>
+<circle cx="570" cy="95" fill="#FFFFFF" r="4" stroke="#4F46E5" stroke-width="2"></circle>
+<circle cx="660" cy="65" fill="#FFFFFF" r="4" stroke="#4F46E5" stroke-width="2"></circle>
+</svg>
+<!-- X-Axis Labels -->
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm pt-2 px-3">
+<span>Fri (Oct 18)</span>
+<span>Sat (Oct 19)</span>
+<span>Sun (Oct 20)</span>
+<span>Mon (Oct 21)</span>
+<span class="font-bold text-on-surface">Thu (Oct 24)</span>
+<span>Fri (Oct 25)</span>
+<span>Today (Sat)</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-2">
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1.5"><span class="w-3 h-1 bg-primary rounded-full inline-block"></span> Gross Revenue (₹ INR)</span>
+<span class="flex items-center gap-1.5"><span class="w-3 h-1 bg-secondary-container rounded-full inline-block"></span> Order Velocity (Count)</span>
+</div>
+<span class="text-on-surface-variant">Last synced 3 mins ago</span>
+</div>
+</div>
+<!-- Low Stock & Restock Urgency (1 Col) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md h-full justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container animate-pulse"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Inventory Alerts</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-error-container text-on-error-container font-semibold">3 Critical</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Fast-moving SKUs nearing fulfillment stockout thresholds in Bhiwandi FC.</p>
+</div>
+<!-- SKU alert list -->
+<div class="flex flex-col gap-space-sm">
+<!-- Item 1 -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Apex Wireless Studio Pro ANC</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Midnight Obsidian • SKU-APX-01</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold whitespace-nowrap">
+                Only 4 Left
+              </span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-error h-1.5 rounded-full w-[15%]"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Velocity: ~6 units/day</span>
+<button class="font-label-sm text-label-sm text-primary font-bold hover:underline">Quick PO +</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Balanced 4.4mm OCC Copper Cable</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Braided Bronze • SKU-CAB-44C</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold whitespace-nowrap">
+                7 Units Left
+              </span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary-container h-1.5 rounded-full w-[28%]"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Velocity: ~3 units/day</span>
+<button class="font-label-sm text-label-sm text-primary font-bold hover:underline">Quick PO +</button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Hard Shell EVA Travel Armor Case</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Matte Carbon • SKU-CSE-EVA</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold whitespace-nowrap">
+                Only 2 Left
+              </span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-error h-1.5 rounded-full w-[8%]"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Runout expected: Today</span>
+<button class="font-label-sm text-label-sm text-primary font-bold hover:underline">Quick PO +</button>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-1 py-2 px-space-md rounded-lg bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors text-center" href="#">
+<span>Manage All Inventory &amp; Bulk PO</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- 4. Middle Two-Column Grid: Top Products vs Dispatch Pipeline -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Left Column: Top Performing Products -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Top Performing SKUs</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ranked by 30-day gross GMV &amp; repeat customer rate</p>
+</div>
+<button class="font-label-md text-label-md text-primary font-semibold hover:underline">View All (48)</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Product Row 1 -->
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between gap-space-sm hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-6 font-headline-sm text-headline-sm font-bold text-on-surface-variant/70 text-center">#1</span>
+<img class="w-12 h-12 rounded-lg object-cover bg-surface" data-alt="High-end sleek matte black over-ear audiophile headphones studio product photography on clean light grey backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu70KDlUnytZT1L9T25-fFCNdeWNCu5Fus2-K-Oa-7i5dx4RjE21AtNxWRR9LCcHO0eSQo1XfYjMbJojKRxCN1aZMLDgr_f3RmMnvcewGM8ErUzkQxnW_Llo_W2S1FWz_ZBfU5hV8bpFbUXO3tx_5uQGc6HQnDjCm1Bu7Rkmka4RaH7soguwxYk404SRlOLsrmTmh8I8fU8CSdtTGzYUrxac1M2KKboGymMfWtU7puZKrZNomjtr7K"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Apex Wireless Studio Pro ANC</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Audiophile Wireless • 142 units sold</span>
+</div>
+</div>
+<div class="flex flex-col items-end whitespace-nowrap pl-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">₹21,29,858</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">44% of GMV</span>
+</div>
+</div>
+<!-- Product Row 2 -->
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between gap-space-sm hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-6 font-headline-sm text-headline-sm font-bold text-on-surface-variant/70 text-center">#2</span>
+<img class="w-12 h-12 rounded-lg object-cover bg-surface" data-alt="Braided bronze audiophile 4.4mm headphone upgrade cable product photography close up on slate neutral surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjHrDTRPU768SznETkNlLe87sUVMi3-czhAQtP2xlpTIIA1O15tBm9Levq30hucyzZ33LrP3HyNNqw-m7MBcRPlP-6eeURx5ZvS2ccs2T4sPOahbOYgeTKE_Xo9On9L4tuBXinUV5S4An1FPR7st895lN__3gcdNWJaU4ifkbr9o1Yxw2XFKv1U05CghMFt4auiiH5tGgQipMG0JLK_ou1Y1RmwKbsEii1hemyLYjySvtTeD5TyouB"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Balanced 4.4mm OCC Copper Cable</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Accessories • 98 units sold</span>
+</div>
+</div>
+<div class="flex flex-col items-end whitespace-nowrap pl-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">₹1,86,102</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">16% of GMV</span>
+</div>
+</div>
+<!-- Product Row 3 -->
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between gap-space-sm hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-6 font-headline-sm text-headline-sm font-bold text-on-surface-variant/70 text-center">#3</span>
+<img class="w-12 h-12 rounded-lg object-cover bg-surface" data-alt="Solid dark walnut sculpted wood headphone stand luxury desktop accessory studio lighting shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBewBZrkaj5Sll8LaTzD_oVg6WbDGUAjtLnMLNBu0r_BiL-1ZADtfn3tnlorJg18hDzkN-WZ16V8ZlNTeNzsGgy6ghASmbZsUWOpY0zZheUop5LbDeI54Rqb86hLSHXaCzyULK3RPVTP-pSu9cc5beGzW2zRQM7ofP_QQ3C-Iux3KeNwUm8PBQrLJlYpZqBuS1xxR2wx93ZnmCXwEhp6d7fRKYH9MvqnL_K71vXlAzUja66wf36Ri39"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Luxe Solid Walnut Headphone Stand</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Desk Accessories • 64 units sold</span>
+</div>
+</div>
+<div class="flex flex-col items-end whitespace-nowrap pl-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">₹1,59,936</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">12% of GMV</span>
+</div>
+</div>
+<!-- Product Row 4 -->
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between gap-space-sm hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-6 font-headline-sm text-headline-sm font-bold text-on-surface-variant/70 text-center">#4</span>
+<img class="w-12 h-12 rounded-lg object-cover bg-surface" data-alt="Compact aluminum hi-res portable digital-to-analog audio converter dac and headphone amplifier macro product shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs89M01sXZFIMcPDG2C804isnyIgNhWcGLK5ct4LIVhLG7t9XYkFiDqcSgqyyWJBap7Tp1SvaaPBH24_xZ50NVYtLJRpfUwvAvy4UJCedXchHZ8HtslAQnqxt-zGhGrFlcMdybZNMj6teUo3Gr6bnYsBP2qxzR-rMDYAKiXwLAB6Bov97GKUC05v-dddTbU5TPj6X4siaqOTggJxB5pmpXHabrKeg7mtmiKnGIBqTm-jrRweGRnMJN"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Hi-Res Portable Audio DAC &amp; Amp</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Electronics • 28 units sold</span>
+</div>
+</div>
+<div class="flex flex-col items-end whitespace-nowrap pl-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">₹1,81,972</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">14% of GMV</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Fulfillment & Dispatch Pipeline -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between gap-space-md">
+<div>
+<div class="flex items-center justify-between pb-1">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Fulfillment Pipeline</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SLA Threshold: 24h</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live warehouse stage breakdown for outbound regional shipments</p>
+</div>
+<!-- 4 Pipeline Stage Cards -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Pending Fulfillment -->
+<div class="p-space-md bg-secondary-fixed/50 rounded-xl flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-secondary-fixed uppercase font-semibold">Awaiting Pick/Pack</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">pending_actions</span>
+</div>
+<div>
+<div class="font-headline-xl text-headline-xl text-on-secondary-fixed font-bold">12</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">4 Priority Air Express</span>
+</div>
+</div>
+<!-- Manifest Generated / Ready to Ship -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Ready to Handover</span>
+<span class="material-symbols-outlined text-[18px] text-primary">inventory</span>
+</div>
+<div>
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold">18</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Manifest printed</span>
+</div>
+</div>
+<!-- In Transit -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">In Transit</span>
+<span class="material-symbols-outlined text-[18px] text-primary-container">local_shipping</span>
+</div>
+<div>
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold">34</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Blue Dart &amp; Delhivery</span>
+</div>
+</div>
+<!-- Delivered Today -->
+<div class="p-space-md bg-surface-container-high rounded-xl flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface uppercase font-semibold">Delivered Today</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface">task_alt</span>
+</div>
+<div>
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold">28</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">0 NDR / Reattempts</span>
+</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Courier Pickup Window</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Today at 4:30 PM (Blue Dart Van #MH04-8902)</span>
+</div>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-primary font-label-md text-label-md font-semibold hover:bg-surface-container-high transition-colors">
+            Reprint Manifest
+          </button>
+</div>
+</div>
+</div>
+<!-- 5. Bottom Section: Rich Orders Table with Filter Controls -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<!-- Section Header & Filter Toolbar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Recent Customer Orders</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Review live transactions, escrow settlement, and fulfillment tokens</p>
+</div>
+<!-- Filter and Search Row -->
+<div class="flex items-center flex-wrap gap-space-sm">
+<!-- Status Tabs -->
+<div class="inline-flex p-1 bg-surface-container-low rounded-lg gap-1">
+<button class="px-3 py-1 rounded-md bg-surface-container-lowest text-primary shadow-sm font-label-md text-label-md font-semibold">All (92)</button>
+<button class="px-3 py-1 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors">Unfulfilled (12)</button>
+<button class="px-3 py-1 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors">Shipped (34)</button>
+<button class="px-3 py-1 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors">Delivered</button>
+</div>
+<!-- Export CSV CTA -->
+<button class="inline-flex items-center gap-1.5 px-space-md py-1.5 bg-surface-container rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">file_download</span>
+<span>Export CSV</span>
+</button>
+</div>
+</div>
+<!-- Dense Orders Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4 rounded-l-lg font-semibold">Order ID</th>
+<th class="py-3 px-4 font-semibold">Customer &amp; Geo</th>
+<th class="py-3 px-4 font-semibold">Product Purchased</th>
+<th class="py-3 px-4 font-semibold">Total Amount</th>
+<th class="py-3 px-4 font-semibold">Payment &amp; Escrow</th>
+<th class="py-3 px-4 font-semibold">Fulfillment Status</th>
+<th class="py-3 px-4 rounded-r-lg font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-label-md text-label-md font-bold text-primary">
+                #LC-94821098
+                <span class="block font-body-sm text-body-sm text-on-surface-variant font-normal">24 mins ago</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Rahul Sharma</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bandra West, Mumbai (MH)</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<img class="w-9 h-9 rounded-md object-cover bg-surface" data-alt="Apex wireless studio pro headphones thumb" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR8ebR7SWLKkWAYQY2IxuHOQkz3ctB_wTZGeA-QUxUgFUIb9i6w75ku3SjVQdsVGU7KMMrhqgBBCgm5OI3-ADhjJ1jmBttr9TbuakpaXe_dPUGFltqK1J8f8-_Oy7_2u_vGsmutIh3TQXxXZyLXOsvxYtH3448u5MKdk0hHimCee8KkfnH0E4m-O9_EgAShjL3P6XGQv3WGWkM1zquAS-0VDYVhMNRr5tFJgXEghd2UzF9HYvl1KX6"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate max-w-[190px]">Apex Wireless Studio Pro</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Obsidian Black • 1 unit</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 font-label-lg text-label-lg font-bold text-on-surface">
+                ₹17,697
+              </td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
+                    UPI Razorpay
+                  </div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Escrow Settled</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed font-bold">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span> Ready for Dispatch
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Print Manifest">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1.5 rounded-lg text-primary hover:bg-surface-container transition-colors" title="View Details">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-label-md text-label-md font-bold text-primary">
+                #LC-94821099
+                <span class="block font-body-sm text-body-sm text-on-surface-variant font-normal">1 hour ago</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Ananya Nambiar</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Indiranagar, Bengaluru (KA)</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<img class="w-9 h-9 rounded-md object-cover bg-surface" data-alt="Solid dark walnut sculpted wood headphone stand thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4VkXN29DsLsobv6zUpp-g2s1Z1obZYLrHdgB_NoD9Dq-mL2_DbZM3SWx14x5SAgRLQdMU0AOt9adJ5qj9arHhqbwZ22mb6c5IJZ0RQoGtrS2Ua5GQ_xuOaS6v99ITT0j2tDUjsm2xYJT5LhOe689R6oq0G_h_zYvfezQm2ROqHsRIY7Rlv0EGFRIYGrJMXeDQhHfLIoubeQskDpzO_Wh4SXsapX19Iv8rMl5JMDs2NVDmElrKbGdP"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate max-w-[190px]">Luxe Solid Walnut Stand</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Natural Oil • 2 units</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 font-label-lg text-label-lg font-bold text-on-surface">
+                ₹4,998
+              </td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
+                    Credit Card (HDFC)
+                  </div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Escrow Verified</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-high text-primary font-bold">
+<span class="material-symbols-outlined text-[14px]">forklift</span> In Transit
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Print Manifest">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1.5 rounded-lg text-primary hover:bg-surface-container transition-colors" title="View Details">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-label-md text-label-md font-bold text-primary">
+                #LC-94821102
+                <span class="block font-body-sm text-body-sm text-on-surface-variant font-normal">2 hours ago</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Vikram Khurana</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Civil Lines, New Delhi (DL)</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<img class="w-9 h-9 rounded-md object-cover bg-surface" data-alt="Hi-Res portable DAC amplifier unit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpxxOl5nimG0sZF9FLM69u4G0wMliTkthvdXdvSZ31LSUcxOD6XbdEWAYQBiZPs9NminwwdSkzf-SCY2oI0rPuBo9PVJCJOjvaG7Wpmn7bhk49FxMMDPEDrIyjlBgc6oBXB5bfu2S3RsJnTwMgWP-Wxx1cV7J5haG4NPPgMibxxtR53-xda5jkjGNFXSoqpnWq_m1Dp80OcM32GDKx3S2UY9xLkvhMW2tgkiqw0CmPdDHQ7AY3H3Ng"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate max-w-[190px]">Hi-Res Audio DAC &amp; Amp</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Space Gray • 1 unit</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 font-label-lg text-label-lg font-bold text-on-surface">
+                ₹6,499
+              </td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container inline-block"></span>
+                    Net Banking
+                  </div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Escrow Held</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface font-bold">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Delivered
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Print Manifest">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1.5 rounded-lg text-primary hover:bg-surface-container transition-colors" title="View Details">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-label-md text-label-md font-bold text-primary">
+                #LC-94821105
+                <span class="block font-body-sm text-body-sm text-on-surface-variant font-normal">3 hours ago</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Priya Sen</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Kalyani Nagar, Pune (MH)</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<img class="w-9 h-9 rounded-md object-cover bg-surface" data-alt="Copper braided cable audio connector" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHhdrxm81DmMUr0sUdhIpaTHAI1R_ZlTAMo9slEDeysugADs3TLwbcjE05KvSsr725xeuD2Ao_CTM8Lp2c7Y_6tMff6MCqqZ17OP4JWMGeJNFYwvCwH_cd7xlmqvsCCehLc2OOYly4F_5fiAtDsF4dSDiOvNEXdVh6R3mOBScXh3o79of8PulbK8KCdU7MXas93kA2XSHMyuvQHjQ23VDjueAEidT9xDVaZ8tixNzFdoelXeGtBbw_"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate max-w-[190px]">Balanced 4.4mm Cable</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Custom Length • 1 unit</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 font-label-lg text-label-lg font-bold text-on-surface">
+                ₹1,899
+              </td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container inline-block"></span>
+                    Cash on Delivery
+                  </div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Awaiting Courier Cash</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-high text-primary font-bold">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span> Out for Delivery
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Print Manifest">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1.5 rounded-lg text-primary hover:bg-surface-container transition-colors" title="View Details">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-label-md text-label-md font-bold text-primary">
+                #LC-94821108
+                <span class="block font-body-sm text-body-sm text-on-surface-variant font-normal">4 hours ago</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Tanya Deshmukh</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Jubilee Hills, Hyderabad (TG)</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<img class="w-9 h-9 rounded-md object-cover bg-surface" data-alt="Headphone case audio travel pouch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXWsZCdeGzUfxj69jkaydoRhfxdGEkbilQ5cUemd3GzOmB18Fm0pGwO-OIQgsn15thrHrXLMdRKzGTHFUeD8UpW7uN7uIxxJbEDbxEgw2aLQz-5gR11fnSPUa8JCShqPgWhnYXV2Uh0jgX-rZTpngyGpukzgELCCPbAW9VlfyjOK10dtYDSxYXFs0bfOFv4ItcCX1sfNvP26y_1lxKq0E_A7CSfb9i90GZH0eJ5uvnN3DGOgeRd2VB"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate max-w-[190px]">EVA Travel Armor Case</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Matte Carbon • 2 units</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 font-label-lg text-label-lg font-bold text-on-surface">
+                ₹3,198
+              </td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
+                    UPI PhonePe
+                  </div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Escrow Settled</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface font-bold">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Delivered
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Print Manifest">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1.5 rounded-lg text-primary hover:bg-surface-container transition-colors" title="View Details">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Footer -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span>Showing <strong>1 to 5</strong> of 92 recent orders</span>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1 rounded-md bg-surface-container font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors" disabled="">Previous</button>
+<button class="w-8 h-8 rounded-md bg-primary-container text-on-primary font-label-md text-label-md font-semibold">1</button>
+<button class="w-8 h-8 rounded-md bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors">2</button>
+<button class="w-8 h-8 rounded-md bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors">3</button>
+<span class="px-1 text-on-surface-variant">...</span>
+<button class="w-8 h-8 rounded-md bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors">19</button>
+<button class="px-3 py-1 rounded-md bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors">Next</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Outfit:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary": "#7e3000", "surface-container-high": "#e2e7ff", "primary-fixed": "#e2dfff", "on-tertiary-fixed-variant": "#7b2f00", "surface-tint": "#4d44e3", "outline-variant": "#c7c4d8", "inverse-on-surface": "#eef0ff", "on-secondary": "#ffffff", "on-primary-container": "#dad7ff", "surface-container-lowest": "#ffffff", "on-surface": "#131b2e", "outline": "#777587", "secondary-fixed-dim": "#ffb690", "surface-dim": "#d2d9f4", "error-container": "#ffdad6", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#783200", "error": "#ba1a1a", "inverse-primary": "#c3c0ff", "primary": "#3525cd", "surface-container": "#eaedff", "primary-fixed-dim": "#c3c0ff", "on-primary-fixed-variant": "#3323cc", "surface-container-highest": "#dae2fd", "secondary": "#9d4300", "tertiary-container": "#a44100", "on-secondary-fixed": "#341100", "surface-container-low": "#f2f3ff", "on-surface-variant": "#464555", "tertiary-fixed": "#ffdbcc", "surface-bright": "#faf8ff", "on-tertiary-container": "#ffd2be", "secondary-container": "#fd761a", "on-tertiary-fixed": "#351000", "on-background": "#131b2e", "background": "#faf8ff", "on-tertiary": "#ffffff", "surface-variant": "#dae2fd", "surface": "#faf8ff", "tertiary-fixed-dim": "#ffb695", "on-error-container": "#93000a", "inverse-surface": "#283044", "on-primary-fixed": "#0f0069", "on-error": "#ffffff", "on-secondary-container": "#5c2400", "primary-container": "#4f46e5", "secondary-fixed": "#ffdbca" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1rem", "space-md": "1rem", "margin": "2rem", "gutter": "1.5rem", "gutter-mobile": "0.75rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem" }, "fontFamily": { "body-lg": ["Inter"], "headline-md": ["Outfit"], "headline-lg": ["Outfit"], "label-sm": ["Inter"], "headline-sm": ["Outfit"], "label-md": ["Inter"], "body-sm": ["Inter"], "headline-xl": ["Outfit"], "headline-xl-mobile": ["Outfit"], "display-lg-mobile": ["Outfit"], "body-md": ["Inter"], "label-lg": ["Inter"], "display-lg": ["Outfit"] }, "fontSize": { "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface min-h-full flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-14 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 -ml-2 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:scale-95 transition-all" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1">Checkout Flow</h1></div><div class="flex items-center gap-1"><button aria-label="Share" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container active:scale-95 transition-all" type="button"><span class="material-symbols-outlined text-[22px]">share</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-safe bg-surface"><div class="flex flex-col w-full pb-32">
+<!-- Minimal Top Security Banner -->
+<div class="px-margin-mobile pt-space-xs pb-space-sm flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">encrypted</span>
+<span class="font-label-sm text-label-sm tracking-wide uppercase font-semibold">256-Bit SSL Encrypted Checkout</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified_user</span>
+<span class="font-label-sm text-label-sm">Safe &amp; Assured</span>
+</div>
+</div>
+<div class="px-margin-mobile mt-space-md flex flex-col gap-space-md">
+<!-- Stepper Indicator -->
+<div class="flex items-center justify-between px-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Address</span>
+</div>
+<div class="h-0.5 flex-1 mx-2 bg-primary-container"></div>
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center font-label-sm text-label-sm">2</div>
+<span class="font-label-md text-label-md text-secondary font-semibold">Payment</span>
+</div>
+<div class="h-0.5 flex-1 mx-2 bg-surface-container-highest"></div>
+<div class="flex items-center gap-2 opacity-50">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm">3</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Review</span>
+</div>
+</div>
+<!-- Step 1: Address (Completed Compact State) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-primary mt-0.5">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Vikramaditya S.</span>
+<span class="px-2 py-0.5 bg-surface-container text-primary font-label-sm text-label-sm rounded-full">HOME</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">
+              Flat 802, Horizon Apts, Bandra West, Mumbai 400050
+            </p>
+<span class="font-body-sm text-body-sm text-on-surface-variant">+91 98201 44820</span>
+</div>
+</div>
+<button class="font-label-md text-label-md text-primary font-semibold hover:underline px-2 py-1 -mr-2" type="button">
+          Change
+        </button>
+</div>
+</div>
+<!-- Step 2: Payment Methods (Open & Active Step) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm">
+            2
+          </div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Select Payment Option</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed/50 px-2.5 py-0.5 rounded-full font-semibold">
+          100% Refund Guarantee
+        </span>
+</div>
+<!-- Payment Accordion Options -->
+<div class="flex flex-col gap-2.5" id="paymentOptions">
+<!-- Option 1: Instant UPI (Selected State) -->
+<div class="bg-surface-container-low rounded-xl p-space-md transition-all" id="upiContainer">
+<label class="flex items-center justify-between cursor-pointer w-full">
+<div class="flex items-center gap-3">
+<input checked="" class="w-4 h-4 text-primary accent-primary" name="payment_choice" onchange="togglePaymentState('upi')" type="radio" value="upi"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">UPI Instant Payment</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-secondary-container text-on-secondary rounded font-semibold uppercase">Fastest</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Google Pay, PhonePe, Paytm, BHIM</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">bolt</span>
+</label>
+<!-- UPI Sub-options -->
+<div class="mt-4 pt-3 flex flex-col gap-3" id="upiDetails">
+<div class="grid grid-cols-4 gap-2">
+<button class="flex flex-col items-center justify-center py-2.5 px-1 rounded-lg bg-surface-container-lowest shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[24px] text-primary">account_balance_wallet</span>
+<span class="font-label-sm text-label-sm text-on-surface mt-1 font-medium">GPay</span>
+</button>
+<button class="flex flex-col items-center justify-center py-2.5 px-1 rounded-lg bg-surface-container-lowest shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[24px] text-primary">payments</span>
+<span class="font-label-sm text-label-sm text-on-surface mt-1 font-medium">PhonePe</span>
+</button>
+<button class="flex flex-col items-center justify-center py-2.5 px-1 rounded-lg bg-surface-container-lowest shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[24px] text-primary">qr_code_scanner</span>
+<span class="font-label-sm text-label-sm text-on-surface mt-1 font-medium">Paytm</span>
+</button>
+<button class="flex flex-col items-center justify-center py-2.5 px-1 rounded-lg bg-surface-container-lowest shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[24px] text-on-surface-variant">contactless</span>
+<span class="font-label-sm text-label-sm text-on-surface mt-1 font-medium">Other</span>
+</button>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<div class="relative flex-1">
+<input class="w-full bg-surface-container-lowest rounded-lg px-3 py-2.5 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary" placeholder="e.g. mobile@oksbi" type="text"/>
+<span class="material-symbols-outlined text-[16px] absolute right-3 top-3 text-outline">alternate_email</span>
+</div>
+<button class="bg-surface-container-high text-primary font-label-md text-label-md px-3.5 py-2.5 rounded-lg active:scale-95 font-semibold" type="button">
+                Verify
+              </button>
+</div>
+</div>
+</div>
+<!-- Option 2: Credit / Debit Cards -->
+<div class="bg-surface rounded-xl p-space-md transition-all" id="cardContainer">
+<label class="flex items-center justify-between cursor-pointer w-full">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 text-primary accent-primary" name="payment_choice" onchange="togglePaymentState('card')" type="radio" value="card"/>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Credit / Debit Cards</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">HDFC Regalia ending in •••• 4192</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">credit_card</span>
+</label>
+<div class="mt-3.5 pt-3 hidden flex-col gap-3" id="cardDetails">
+<div class="bg-surface-container-lowest p-3 rounded-lg shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-6 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-bold flex items-center justify-center">
+                  VISA
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">HDFC Bank Regalia</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Expires 09/27</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<input class="w-16 bg-surface-container px-2 py-1.5 rounded text-center font-headline-sm text-headline-sm tracking-widest text-on-surface focus:outline-none" maxlength="3" placeholder="CVV" type="password"/>
+</div>
+</div>
+<button class="flex items-center gap-1.5 font-label-md text-label-md text-primary font-semibold py-1" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+              Add New Card
+            </button>
+</div>
+</div>
+<!-- Option 3: NetBanking -->
+<div class="bg-surface rounded-xl p-space-md transition-all" id="netbankingContainer">
+<label class="flex items-center justify-between cursor-pointer w-full">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 text-primary accent-primary" name="payment_choice" onchange="togglePaymentState('netbanking')" type="radio" value="netbanking"/>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">NetBanking</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">All major Indian banks supported</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">account_balance</span>
+</label>
+<div class="mt-3.5 pt-3 hidden grid-cols-3 gap-2" id="netbankingDetails">
+<button class="py-2 px-1 text-center font-label-sm text-label-sm rounded-lg bg-surface-container-lowest shadow-sm text-on-surface font-semibold" type="button">HDFC</button>
+<button class="py-2 px-1 text-center font-label-sm text-label-sm rounded-lg bg-surface-container-lowest shadow-sm text-on-surface font-semibold" type="button">ICICI</button>
+<button class="py-2 px-1 text-center font-label-sm text-label-sm rounded-lg bg-surface-container-lowest shadow-sm text-on-surface font-semibold" type="button">SBI</button>
+</div>
+</div>
+<!-- Option 4: Cash on Delivery -->
+<div class="bg-surface rounded-xl p-space-md transition-all" id="codContainer">
+<label class="flex items-center justify-between cursor-pointer w-full">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 text-primary accent-primary" name="payment_choice" onchange="togglePaymentState('cod')" type="radio" value="cod"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Cash on Delivery</span>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed px-1.5 py-0.5 rounded font-medium">+₹50 handling</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pay in cash or scan QR at doorstep</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">local_shipping</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Step 3: Order Review & Trust Badges -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface font-headline-sm text-headline-sm">
+            3
+          </div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Order Items (3 items)</h2>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-semibold" type="button">View Details</button>
+</div>
+<div class="flex items-center gap-3 overflow-x-auto py-2">
+<div class="relative w-16 h-16 rounded-lg bg-surface-container-low shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Premium minimalist leather weekend travel bag in cognac brown on neutral studio backdrop with soft warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCODAavztJYx2P2-VdqGiYYfnTd8107BAgATUtEPTQqOkzZJyZyYn1jie3Agyl3tXkTuzcKOIUdITZhWfPXovPgJU9pKQFRVrOOZmUE_MtYM4TZEf90IxUcwUecXkEl9MQpZ0zfRS8GuZmXYj4ox2dctwie08HSGnAsx2SQdgBFUn6fY-mIMJX-qkQM8rJAHTbfEacEHs7-EsXIU3tE1URAelfd9VaFBEQpMlM8BiwiMGNDwUfijaFG"/>
+</div>
+<div class="relative w-16 h-16 rounded-lg bg-surface-container-low shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Sleek wireless noise cancelling headphones in matte black luxury packaging with studio ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWU_NWCfZKdwR40S3I_AGjcle64f39b9GfEHEXGi3jUKOYA3XzflayoJLINDbe3vJLtEEbakm3slMaHU9XAw1uVykXKo1SVO0QiXRiWGu_4uETsw83ih928iSVhoHztvUlQ7Q8LQ51ezjVJ3PmBTdVoq6mdMqGbhA_HbaDWERhLpCZA8VTlpjdZ48HjwgmQZqCFMwGlBigCGdx2Fah7yVMzQ_xMM22STLq9381BOT7cGM6wpAKTpks"/>
+</div>
+<div class="relative w-16 h-16 rounded-lg bg-surface-container-low shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Luxury automatic chronograph stainless steel watch with deep navy dial resting on stone pedestal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQNZgfR1SV8CBOteQKADpjuiNY5Etsgw1mb6DMeKs986hEt42VHtDrwxtbLmWb8x4rzkBehOfKgtXy_bHsxoRpufIKqWJAOpl19YnLdUk4pW5lVs3rLitod4jIa6waoD9Se91vZT916Hw_NqMEz_vtEJbZyQH9l3p_jtFj61vRyanO_z41BULdyqlivjTX6KvDPs49b-3PObBxfXTLYuFcJi__bDmonQdJrexAvbzjdQWoIbHoQlc5"/>
+</div>
+<div class="w-16 h-16 rounded-lg bg-surface-container flex flex-col items-center justify-center shrink-0 text-on-surface-variant">
+<span class="font-label-md text-label-md font-bold text-primary">Est.</span>
+<span class="font-label-sm text-label-sm">Tomorrow</span>
+</div>
+</div>
+</div>
+<!-- Price Breakdown Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface pb-1">Price Details</h3>
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant pt-1">
+<span>Cart MRP Total</span>
+<span class="line-through">₹22,999</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Retail Bag Discount</span>
+<span class="text-tertiary-container font-semibold">- ₹6,302</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Estimated Delivery Fee</span>
+<span class="text-secondary font-semibold">FREE</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Secured Packaging &amp; Protect</span>
+<span class="text-on-surface">FREE</span>
+</div>
+<div class="h-0.5 bg-surface-container my-2"></div>
+<div class="flex justify-between items-baseline pt-1">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Total Amount</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">You saved ₹6,302 on this order</span>
+</div>
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface font-bold">₹16,697</span>
+</div>
+</div>
+<!-- Luxe Trust Seals -->
+<div class="grid grid-cols-3 gap-2 px-1 text-center py-2">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-[20px] text-primary">workspace_premium</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium mt-1">100% Authentic</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-[20px] text-primary">published_with_changes</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium mt-1">7 Days Easy Return</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-[20px] text-primary">lock_clock</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium mt-1">PCI-DSS Level 1</span>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Checkout Bar -->
+<div class="fixed bottom-0 inset-x-0 z-40 bg-surface/90 backdrop-blur-xl shadow-xl px-margin-mobile pt-3 pb-safe">
+<div class="flex flex-col gap-2 max-w-[390px] mx-auto w-full pb-2">
+<button class="w-full bg-secondary-container hover:bg-secondary active:scale-[0.98] transition-all py-3.5 px-4 rounded-xl flex items-center justify-between text-on-secondary shadow-md" id="payButton" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+<span class="font-label-lg text-label-lg font-bold tracking-wide">Pay ₹16,697 via UPI</span>
+</div>
+<div class="flex items-center gap-1 font-label-md text-label-md font-semibold">
+<span>Complete</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+</button>
+<!-- Thumb-friendly Mini Bottom Navigation -->
+<div class="flex items-center justify-around pt-2 text-on-surface-variant font-label-sm text-label-sm">
+<a class="flex flex-col items-center hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">home</span>
+<span>Home</span>
+</a>
+<a class="flex flex-col items-center hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">category</span>
+<span>Categories</span>
+</a>
+<a class="flex flex-col items-center hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+<span>Wishlist</span>
+</a>
+<a class="flex flex-col items-center text-primary font-bold" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+<span>Cart</span>
+</a>
+<a class="flex flex-col items-center hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">person</span>
+<span>Account</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function togglePaymentState(selectedType) {
+    const upiContainer = document.getElementById('upiContainer');
+    const cardContainer = document.getElementById('cardContainer');
+    const netbankingContainer = document.getElementById('netbankingContainer');
+    const codContainer = document.getElementById('codContainer');
+
+    const upiDetails = document.getElementById('upiDetails');
+    const cardDetails = document.getElementById('cardDetails');
+    const netbankingDetails = document.getElementById('netbankingDetails');
+    const payBtn = document.getElementById('payButton');
+
+    // Reset base classes
+    [upiContainer, cardContainer, netbankingContainer, codContainer].forEach(el => {
+      el.className = 'bg-surface rounded-xl p-space-md transition-all';
+    });
+
+    upiDetails.classList.add('hidden');
+    cardDetails.classList.add('hidden');
+    cardDetails.classList.remove('flex');
+    netbankingDetails.classList.add('hidden');
+    netbankingDetails.classList.remove('grid');
+
+    if (selectedType === 'upi') {
+      upiContainer.className = 'bg-surface-container-low rounded-xl p-space-md transition-all';
+      upiDetails.classList.remove('hidden');
+      payBtn.querySelector('.font-label-lg').textContent = 'Pay ₹16,697 via UPI';
+    } else if (selectedType === 'card') {
+      cardContainer.className = 'bg-surface-container-low rounded-xl p-space-md transition-all';
+      cardDetails.classList.remove('hidden');
+      cardDetails.classList.add('flex');
+      payBtn.querySelector('.font-label-lg').textContent = 'Pay ₹16,697 via Card';
+    } else if (selectedType === 'netbanking') {
+      netbankingContainer.className = 'bg-surface-container-low rounded-xl p-space-md transition-all';
+      netbankingDetails.classList.remove('hidden');
+      netbankingDetails.classList.add('grid');
+      payBtn.querySelector('.font-label-lg').textContent = 'Pay ₹16,697 via NetBanking';
+    } else if (selectedType === 'cod') {
+      codContainer.className = 'bg-surface-container-low rounded-xl p-space-md transition-all';
+      payBtn.querySelector('.font-label-lg').textContent = 'Place Order (₹16,747 COD)';
+    }
+  }
+</script></main></body></html>

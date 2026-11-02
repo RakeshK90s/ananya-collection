@@ -1,0 +1,41 @@
+# LuxeCart Design Direction & Screen Specification
+
+## 2. Design Direction
+- **Style**: Modern, clean, premium; soft shadows, rounded corners (12px cards, 10px buttons), subtle glassmorphism on header/floating bars.
+- **Inspiration**: Amazon (robust search & catalog functionality), Flipkart (clean product grid, facet filtering), Meesho (straightforward commerce flow).
+- **Primary Color**: Deep Indigo `#4F46E5`
+- **Accent Color**: Warm Orange `#F97316` (CTA buttons, offer badges, urgent deals)
+- **Neutrals**: Surface/Background `#F8FAFC`, Text/Headings `#0F172A`, Border `#E2E8F0`
+- **Status Colors**: Success `#16A34A`, Warning `#F59E0B`, Danger `#DC2626`
+- **Typography**: Headings: Poppins / Plus Jakarta Sans; Body: Inter
+- **Corner Radius**: 12px for product cards, 10px for primary/secondary buttons, pill rounded badges.
+- **Modes**: Light mode initially; Dark mode subsequently.
+- **Language**: English default with switchable multi-language selector.
+
+---
+
+## 3. Screen Inventory & Phased Architecture
+
+### Phase 1: Storefront Core Journey (High Priority)
+1. **Homepage** *(Generated - Complete)*
+2. **Product Listing Page (PLP)**: Multi-facet filters (category, brand, price slider, rating, discount), sort bar, grid/list view toggle, active filter pills, pagination/infinite scroll.
+3. **Product Detail Page (PDP)**: Interactive photo gallery & zoom, pricing & EMI breakdown, variant selectors (size/color/storage), stock indicator, delivery pincode check, customer reviews, sticky mobile/desktop purchase bar.
+4. **Cart (Dedicated Page + Slide-over Drawer)**: Item list, quantity stepper, coupon applicator, free shipping milestone progress bar, order summary breakdown, 1-click checkout CTA.
+5. **Checkout**: 3-step accordion (Delivery Address, Payment Options with UPI/Cards/COD/Netbanking, Final Review).
+6. **Order Confirmation & Tracking**: Success celebration, summary, order ID, live delivery timeline tracker, download invoice action.
+7. **Login / Signup**: OTP-based mobile/email verification modal/screen, quick social login, clean security trust badges.
+
+### Phase 2: Customer Account & Post-Purchase
+8. **Customer Account Portal**: Order history, live shipment tracking map, saved addresses, wishlist, wallet/refunds, profile settings.
+
+### Phase 3: Seller Admin Dashboard
+9. **Seller Dashboard**: Real-time sales metrics, order fulfillment alerts, revenue graphs, top-selling inventory.
+10. **Seller Product Inventory**: Data table with bulk actions, stock status toggle (Active, Paused, Sold Out), search and filter.
+11. **Add / Edit Product**: Multi-tab form (Basic details, SKU & variants, pricing & taxes, high-res image upload, SEO metadata).
+12. **Orders Management & Details**: Order queue, invoice generation, courier manifest generation, status pipeline (Pending, Packed, Shipped, Delivered, Returned).
+13. **Theme Customiser**: Visual storefront theme customizer with live viewport preview (brand colors, typography, hero banners, category layout).
+14. **Seller Settings**: Store profile, Razorpay/Stripe payment gateway integration, shipping zones & rates.
+
+### Phase 4: Platform & Super Admin
+15. **Store Setup Wizard**: Step-by-step onboarding for new vendors (GSTIN, bank account, business verification, initial catalog).
+16. **Super Admin Dashboard**: Multi-tenant platform overview, vendor approval queue, commission payout reconciliation, dispute management.
