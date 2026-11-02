@@ -2325,11 +2325,11 @@ export const UnifiedAdminPanel: React.FC = () => {
                   <div className="flex items-center justify-between p-4 rounded-xl bg-stone-50 border border-stone-100">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full bg-[#B8860B]/10 text-[#B8860B] font-bold flex items-center justify-center">
-                        PA
+                        NS
                       </div>
                       <div>
-                        <div className="font-bold text-stone-900 text-sm">Pooja Agarwal</div>
-                        <div className="text-xs text-stone-500">pooja.agarwal@gmail.com · +91 9871122334</div>
+                        <div className="font-bold text-stone-900 text-sm">Neha Sharma</div>
+                        <div className="text-xs text-stone-500">neha.sharma@gmail.com · +91 9871122334</div>
                         <div className="text-[11px] text-stone-400">Barakhamba Road, New Delhi</div>
                       </div>
                     </div>

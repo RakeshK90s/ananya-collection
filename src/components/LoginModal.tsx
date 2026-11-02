@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   X,
   Phone,
   Lock,
   ArrowRight,
-  ShieldCheck,
   User,
   CheckCircle2,
 } from 'lucide-react';
 import { useStore } from '../context/StoreContext';
-import { DEMO_USERS } from '../data/mockData';
 
 export const LoginModal: React.FC = () => {
   const {
@@ -21,34 +19,53 @@ export const LoginModal: React.FC = () => {
   } = useStore();
 
   const [authTab, setAuthTab] = useState<'signin' | 'register'>('signin');
-  const [mobileOrEmail, setMobileOrEmail] = useState('9871122334');
-  const [password, setPassword] = useState('password123');
+  const [mobileOrEmail, setMobileOrEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [fullName, setFullName] = useState('');
   const [regMobile, setRegMobile] = useState('');
   const [regEmail, setRegEmail] = useState('');
-  const [city, setCity] = useState('New Delhi');
-  const [pincode, setPincode] = useState('110001');
+  const [city, setCity] = useState('');
+  const [pincode, setPincode] = useState('');
+
+  useEffect(() => {
+    if (authModalMode === 'signup') {
+      setAuthTab('register');
+    }
+  }, [authModalMode]);
 
   if (!isLoginModalOpen) return null;
 
   const handleSignIn = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!mobileOrEmail.trim()) {
+      alert('Please enter your mobile number or email.');
+      return;
+    }
+    const isEmail = mobileOrEmail.includes('@');
+    const rawName = isEmail
+      ? mobileOrEmail.split('@')[0].replace(/[._]/g, ' ')
+      : `Member ${mobileOrEmail.slice(-4)}`;
+    const formattedName = rawName
+      .split(' ')
+      .map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+      .join(' ');
+
     loginUser({
-      id: 'usr-customer-1',
-      name: 'Pooja Agarwal',
-      email: mobileOrEmail.includes('@') ? mobileOrEmail : 'pooja.agarwal@gmail.com',
-      mobile: !mobileOrEmail.includes('@') ? mobileOrEmail : '9871122334',
-      city: 'Rohini, New Delhi',
+      id: `usr-${Date.now()}`,
+      name: formattedName,
+      email: isEmail ? mobileOrEmail.trim() : '',
+      mobile: !isEmail ? mobileOrEmail.trim() : '',
+      city: 'Delhi NCR',
       state: 'Delhi',
-      pincode: '110085',
+      pincode: '110001',
       role: 'customer',
       isLoggedIn: true,
       savedAddresses: [
         {
-          fullName: 'Pooja Agarwal',
-          mobile: '9871122334',
-          pincode: '110085',
-          addressLine1: 'B-4, Sector 8, Rohini',
+          fullName: formattedName,
+          mobile: !isEmail ? mobileOrEmail.trim() : '',
+          pincode: '110001',
+          addressLine1: 'Delhi NCR',
           city: 'New Delhi',
           state: 'Delhi',
           type: 'home',
@@ -60,47 +77,32 @@ export const LoginModal: React.FC = () => {
 
   const handleRegister = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!fullName || !regMobile) {
+    if (!fullName.trim() || !regMobile.trim()) {
       alert('Please enter your full name and mobile number.');
       return;
     }
 
     loginUser({
       id: `usr-${Date.now()}`,
-      name: fullName,
-      mobile: regMobile,
-      email: regEmail || `${regMobile}@ananyaboutique.in`,
+      name: fullName.trim(),
+      mobile: regMobile.trim(),
+      email: regEmail.trim(),
       role: 'customer',
-      city: city || 'New Delhi',
+      city: city.trim() || 'New Delhi',
       state: 'Delhi',
-      pincode: pincode || '110001',
+      pincode: pincode.trim() || '110001',
       isLoggedIn: true,
       savedAddresses: [
         {
-          fullName,
-          mobile: regMobile,
-          pincode: pincode || '110001',
-          addressLine1: `${city}, Delhi NCR`,
-          city: city || 'New Delhi',
+          fullName: fullName.trim(),
+          mobile: regMobile.trim(),
+          pincode: pincode.trim() || '110001',
+          addressLine1: city.trim() ? `${city.trim()}, Delhi NCR` : 'Delhi NCR',
+          city: city.trim() || 'New Delhi',
           state: 'Delhi',
           type: 'home',
         },
       ],
-    });
-    setIsLoginModalOpen(false);
-  };
-
-  const handleQuickCustomerLogin = () => {
-    loginUser({
-      id: 'usr-customer-1',
-      name: 'Pooja Agarwal',
-      email: 'pooja.agarwal@gmail.com',
-      mobile: '9871122334',
-      city: 'New Delhi',
-      state: 'Delhi',
-      pincode: '110001',
-      role: 'customer',
-      isLoggedIn: true,
     });
     setIsLoginModalOpen(false);
   };
@@ -132,7 +134,7 @@ export const LoginModal: React.FC = () => {
         </div>
 
         {/* Auth Gate Notification if any */}
-        {authModalMode === 'role_gate' && authGateMessage && (
+        {(authModalMode === 'role_gate' || authModalMode === 'signup') && authGateMessage && (
           <div className="mb-4 p-3 bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 rounded-xl text-xs text-amber-900 dark:text-amber-200 leading-relaxed">
             {authGateMessage}
           </div>
@@ -248,7 +250,7 @@ export const LoginModal: React.FC = () => {
                   type="email"
                   value={regEmail}
                   onChange={(e) => setRegEmail(e.target.value)}
-                  placeholder="priya@gmail.com"
+                  placeholder="name@gmail.com"
                   className="w-full px-3 py-2 text-xs bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-xl focus:bg-white focus:outline-hidden focus:ring-1 focus:ring-[#B8860B]"
                 />
               </div>
@@ -263,8 +265,8 @@ export const LoginModal: React.FC = () => {
                   type="text"
                   value={city}
                   onChange={(e) => setCity(e.target.value)}
-                  placeholder="New Delhi"
-                  className="w-full px-3 py-2 text-xs bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-xl"
+                  placeholder="e.g. Rohini, Delhi"
+                  className="w-full px-3 py-2 text-xs bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-xl focus:bg-white focus:outline-hidden focus:ring-1 focus:ring-[#B8860B]"
                 />
               </div>
               <div>
@@ -275,8 +277,8 @@ export const LoginModal: React.FC = () => {
                   type="text"
                   value={pincode}
                   onChange={(e) => setPincode(e.target.value)}
-                  placeholder="110001"
-                  className="w-full px-3 py-2 text-xs bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-xl"
+                  placeholder="6 Digits"
+                  className="w-full px-3 py-2 text-xs bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-xl focus:bg-white focus:outline-hidden focus:ring-1 focus:ring-[#B8860B]"
                 />
               </div>
             </div>
@@ -290,18 +292,6 @@ export const LoginModal: React.FC = () => {
             </button>
           </form>
         )}
-
-        {/* Quick Demo Customer Button */}
-        <div className="mt-6 pt-4 border-t border-stone-100 dark:border-stone-800 text-center">
-          <button
-            type="button"
-            onClick={handleQuickCustomerLogin}
-            className="w-full py-2 px-3 bg-stone-100 hover:bg-stone-200 dark:bg-stone-800 dark:hover:bg-stone-700 rounded-xl text-xs font-semibold text-stone-700 dark:text-stone-300 transition-colors cursor-pointer flex items-center justify-center gap-2"
-          >
-            <User className="w-3.5 h-3.5 text-stone-500" />
-            <span>1-Click Customer Demo Profile (Pooja Agarwal)</span>
-          </button>
-        </div>
       </div>
     </div>
   );

@@ -36,6 +36,10 @@ export const CartDrawer: React.FC = () => {
     removeCoupon,
     freeDeliveryThreshold,
     setActiveTab,
+    currentUser,
+    setIsLoginModalOpen,
+    setAuthModalMode,
+    setAuthGateMessage,
   } = useStore();
 
   const t = useTranslation(language);
@@ -55,6 +59,12 @@ export const CartDrawer: React.FC = () => {
 
   const handleCheckoutClick = () => {
     setIsCartDrawerOpen(false);
+    if (!currentUser.isLoggedIn) {
+      setAuthModalMode('signup');
+      setAuthGateMessage('Please register or sign in to proceed with your order.');
+      setIsLoginModalOpen(true);
+      return;
+    }
     setActiveTab('checkout');
   };
 

@@ -19,8 +19,8 @@ interface AdminLoginModalProps {
 
 export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ isOpen, onClose }) => {
   const { loginUser, setActiveTab } = useStore();
-  const [adminId, setAdminId] = useState('acadmin');
-  const [adminPassword, setAdminPassword] = useState('acadmin123');
+  const [adminId, setAdminId] = useState('');
+  const [adminPassword, setAdminPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -48,7 +48,7 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ isOpen, onClos
         setActiveTab('admin');
         onClose();
       } else {
-        setErrorMsg('Invalid Admin ID or Password. Valid credentials are ID: acadmin / Password: acadmin123');
+        setErrorMsg('Invalid Admin ID or Password. Access denied.');
       }
       setIsSubmitting(false);
     }, 300);
@@ -112,8 +112,8 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ isOpen, onClos
                   setAdminId(e.target.value);
                   setErrorMsg('');
                 }}
-                placeholder="acadmin"
-                className="w-full pl-9 pr-3 py-2.5 text-xs sm:text-sm font-mono bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-xl text-stone-900 dark:text-white focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#B8860B]/40"
+                placeholder="Enter Admin ID"
+                className="w-full pl-9 pr-3 py-2.5 text-xs sm:text-sm font-sans bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-xl text-stone-900 dark:text-white focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#B8860B]/40"
               />
             </div>
           </div>
@@ -132,8 +132,8 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ isOpen, onClos
                   setAdminPassword(e.target.value);
                   setErrorMsg('');
                 }}
-                placeholder="acadmin123"
-                className="w-full pl-9 pr-10 py-2.5 text-xs sm:text-sm font-mono bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-xl text-stone-900 dark:text-white focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#B8860B]/40"
+                placeholder="••••••••••••"
+                className="w-full pl-9 pr-10 py-2.5 text-xs sm:text-sm font-sans bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-xl text-stone-900 dark:text-white focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#B8860B]/40"
               />
               <button
                 type="button"
@@ -143,12 +143,6 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ isOpen, onClos
                 {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
             </div>
-          </div>
-
-          {/* Preset Helper Tag */}
-          <div className="p-2.5 bg-stone-50 dark:bg-stone-800/80 rounded-xl border border-stone-200 dark:border-stone-700/80 text-[11px] text-stone-600 dark:text-stone-300 flex items-center justify-between">
-            <span>Admin ID: <strong className="font-mono text-stone-900 dark:text-amber-200">acadmin</strong></span>
-            <span>Password: <strong className="font-mono text-stone-900 dark:text-amber-200">acadmin123</strong></span>
           </div>
 
           <button

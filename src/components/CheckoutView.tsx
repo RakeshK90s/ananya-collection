@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import {
   ShieldCheck,
@@ -32,33 +32,59 @@ export const CheckoutView: React.FC = () => {
     placeOrder,
     setActiveTab,
     currentUser,
+    setIsLoginModalOpen,
+    setAuthModalMode,
+    setAuthGateMessage,
   } = useStore();
 
   const t = useTranslation(language);
+
+  // Auth gate
+  useEffect(() => {
+    if (!currentUser.isLoggedIn) {
+      setAuthModalMode('signup');
+      setAuthGateMessage('Please register or sign in to complete your checkout.');
+      setIsLoginModalOpen(true);
+    }
+  }, [currentUser.isLoggedIn]);
 
   // 3-Step Accordion State: 1 = Address, 2 = Payment, 3 = Review
   const [activeStep, setActiveStep] = useState<1 | 2 | 3>(1);
 
   // Address State
   const [address, setAddress] = useState<CustomerAddress>({
-    fullName: currentUser.name || 'Pooja Agarwal',
-    mobile: currentUser.mobile || '9871122334',
-    pincode: '110001',
-    addressLine1: 'Flat 402, Shanti Kunj Apartments, Barakhamba Road',
+    fullName: currentUser.isLoggedIn ? currentUser.name : '',
+    mobile: currentUser.isLoggedIn ? currentUser.mobile : '',
+    pincode: currentUser.isLoggedIn && currentUser.pincode ? currentUser.pincode : '',
+    addressLine1: currentUser.savedAddresses?.[0]?.addressLine1 || '',
     addressLine2: '',
-    city: 'New Delhi',
-    state: 'Delhi',
-    landmark: 'Near Statesman House',
+    city: currentUser.city || 'New Delhi',
+    state: currentUser.state || 'Delhi',
+    landmark: '',
     type: 'home',
   });
+
+  useEffect(() => {
+    if (currentUser.isLoggedIn) {
+      setAddress((prev) => ({
+        ...prev,
+        fullName: prev.fullName || currentUser.name,
+        mobile: prev.mobile || currentUser.mobile,
+        pincode: prev.pincode || currentUser.pincode || '',
+        city: prev.city || currentUser.city || 'New Delhi',
+        state: prev.state || currentUser.state || 'Delhi',
+        addressLine1: prev.addressLine1 || currentUser.savedAddresses?.[0]?.addressLine1 || '',
+      }));
+    }
+  }, [currentUser]);
 
   // Payment State
   const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>('upi');
   const [upiOption, setUpiOption] = useState<'qr' | 'id'>('qr');
-  const [upiIdInput, setUpiIdInput] = useState('pooja@okhdfcbank');
-  const [cardNumber, setCardNumber] = useState('4532 •••• •••• 8912');
-  const [cardExpiry, setCardExpiry] = useState('08/29');
-  const [cardCvv, setCardCvv] = useState('•••');
+  const [upiIdInput, setUpiIdInput] = useState('');
+  const [cardNumber, setCardNumber] = useState('');
+  const [cardExpiry, setCardExpiry] = useState('');
+  const [cardCvv, setCardCvv] = useState('');
   const [selectedBank, setSelectedBank] = useState('HDFC Bank');
   const [isProcessing, setIsProcessing] = useState(false);
 

@@ -33,6 +33,7 @@ import {
   INITIAL_ADMIN_NOTIFICATIONS,
   SUPER_ADMIN_INITIAL_STATS,
   DEMO_USERS,
+  INITIAL_GUEST_USER,
 } from '../data/mockData';
 
 interface StoreContextType {
@@ -66,6 +67,7 @@ interface StoreContextType {
   authModalMode: 'login' | 'signup' | 'role_gate';
   setAuthModalMode: (mode: 'login' | 'signup' | 'role_gate') => void;
   authGateMessage: string;
+  setAuthGateMessage: (message: string) => void;
   trackingOrderId: string | null;
   setTrackingOrderId: (id: string | null) => void;
 
@@ -207,17 +209,24 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   // User State (with Role Based Access Control)
   const [currentUser, setCurrentUser] = useState<AppUser>(() => {
     try {
-      const saved = localStorage.getItem('ananya_user_v2');
-      return saved ? JSON.parse(saved) : DEMO_USERS.customer;
+      const saved = localStorage.getItem('ananya_user_v3');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed.name === 'Pooja Agarwal' || parsed.id === 'usr-customer-1' || !parsed.isLoggedIn) {
+          return INITIAL_GUEST_USER;
+        }
+        return parsed;
+      }
+      return INITIAL_GUEST_USER;
     } catch {
-      return DEMO_USERS.customer;
+      return INITIAL_GUEST_USER;
     }
   });
 
   // Data States
   const [products, setProducts] = useState<Product[]>(() => {
     try {
-      const saved = localStorage.getItem('ananya_products_v5');
+      const saved = localStorage.getItem('ananya_products_v6');
       if (saved) {
         return JSON.parse(saved);
       }
@@ -362,7 +371,12 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   // Persist State
   useEffect(() => {
     try {
-      localStorage.setItem('ananya_user_v2', JSON.stringify(currentUser));
+      if (currentUser.isLoggedIn) {
+        localStorage.setItem('ananya_user_v3', JSON.stringify(currentUser));
+      } else {
+        localStorage.removeItem('ananya_user_v3');
+        localStorage.removeItem('ananya_user_v2');
+      }
     } catch {
       // ignore
     }
@@ -370,7 +384,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   useEffect(() => {
     try {
-      localStorage.setItem('ananya_products_v5', JSON.stringify(products));
+      localStorage.setItem('ananya_products_v6', JSON.stringify(products));
     } catch {
       // ignore
     }
@@ -970,13 +984,16 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const loginUser = (userData: Partial<AppUser>) => {
     const updatedUser: AppUser = {
       id: userData.id || `usr-${Date.now()}`,
-      name: userData.name || 'Pooja Agarwal',
-      email: userData.email || 'user@luxecart.in',
-      mobile: userData.mobile || '9871122334',
+      name: userData.name || 'Valued Customer',
+      email: userData.email || '',
+      mobile: userData.mobile || '',
       role: userData.role || 'customer',
       storeId: userData.storeId,
       storeName: userData.storeName,
       isLoggedIn: true,
+      city: userData.city || '',
+      state: userData.state || 'Delhi',
+      pincode: userData.pincode || '',
       savedAddresses: userData.savedAddresses || currentUser.savedAddresses,
     };
 
@@ -988,29 +1005,20 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   };
 
   const logoutUser = () => {
-    setCurrentUser({
-      id: '',
-      name: '',
-      email: '',
-      mobile: '',
-      role: 'customer',
-      isLoggedIn: false,
-    });
+    setCurrentUser(INITIAL_GUEST_USER);
+    try {
+      localStorage.removeItem('ananya_user_v3');
+      localStorage.removeItem('ananya_user_v2');
+    } catch {
+      // ignore
+    }
     setActiveTab('storefront');
   };
 
   const switchDemoRole = (role: UserRole) => {
-    const demoUser = DEMO_USERS[role];
-    if (demoUser) {
-      setCurrentUser(demoUser);
-      if (demoUser.storeId) {
-        setCurrentStoreId(demoUser.storeId);
-      }
-      setIsLoginModalOpen(false);
-      if (role === 'seller') setActiveTab('seller-admin');
-      else if (role === 'super_admin') setActiveTab('super-admin');
-      else setActiveTab('storefront');
-    }
+    if (role === 'seller') setActiveTab('seller-admin');
+    else if (role === 'super_admin') setActiveTab('admin');
+    else setActiveTab('storefront');
   };
 
   const saveUserAddress = (address: CustomerAddress) => {
@@ -1057,6 +1065,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         authModalMode,
         setAuthModalMode,
         authGateMessage,
+        setAuthGateMessage,
         trackingOrderId,
         setTrackingOrderId,
         lastPlacedOrder,

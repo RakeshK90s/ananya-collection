@@ -70,7 +70,6 @@ export const Header: React.FC<HeaderProps> = ({
     setIsAdminLoginModalOpen,
     logoutUser,
     navigateToProtectedTab,
-    switchDemoRole,
     products,
     setSelectedProduct,
   } = useStore();
@@ -274,7 +273,7 @@ export const Header: React.FC<HeaderProps> = ({
                   setIsAdminLoginModalOpen(true);
                 }
               }}
-              title="Boutique Administration Portal (Authorized Only: acadmin)"
+              title="Boutique Administration Portal"
               aria-label="Admin Portal Login"
               className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-stone-900 hover:bg-black text-amber-300 border border-amber-500/40 hover:border-amber-400 transition-all cursor-pointer font-medium text-[11px] group shadow-2xs"
             >
@@ -702,18 +701,6 @@ export const Header: React.FC<HeaderProps> = ({
                       >
                         Sign In / Register
                       </button>
-
-                      <div className="pt-2 border-t border-stone-100 dark:border-stone-800">
-                        <button
-                          onClick={() => {
-                            switchDemoRole('customer');
-                            setIsAccountMenuOpen(false);
-                          }}
-                          className="w-full py-1.5 text-[10px] bg-stone-100 hover:bg-stone-200 dark:bg-stone-800 dark:hover:bg-stone-700 rounded-lg text-stone-700 dark:text-stone-300 font-semibold cursor-pointer"
-                        >
-                          Customer Demo (Pooja Agarwal)
-                        </button>
-                      </div>
                     </div>
                   )}
                 </div>

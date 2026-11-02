@@ -37,6 +37,10 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
     toggleWishlist,
     setSharingProduct,
     setActiveTab,
+    currentUser,
+    setIsLoginModalOpen,
+    setAuthModalMode,
+    setAuthGateMessage,
   } = useStore();
 
   const t = useTranslation(language);
@@ -95,6 +99,12 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
   const handleBuyNow = () => {
     if (isSoldOut) return;
     addToCart(product, quantity, selectedVariants);
+    if (!currentUser.isLoggedIn) {
+      setAuthModalMode('signup');
+      setAuthGateMessage('Please register or sign in to complete your order.');
+      setIsLoginModalOpen(true);
+      return;
+    }
     onClose();
     setActiveTab('checkout');
   };
@@ -134,43 +144,50 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
             
             {/* Gallery Column (5 Cols) */}
             <div className="md:col-span-5 flex flex-col gap-3">
-              <div className="relative aspect-4/5 w-full bg-slate-100 dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700">
-                <img
-                  src={product.images[activeImageIndex] || product.images[0]}
-                  alt={product.title}
-                  referrerPolicy="no-referrer"
-                  className={`w-full h-full object-cover object-center ${
-                    isSoldOut ? 'grayscale contrast-125' : ''
-                  }`}
-                />
+              {(() => {
+                const uniqueImages = Array.from(new Set(product.images.filter(Boolean)));
+                return (
+                  <>
+                    <div className="relative aspect-4/5 w-full bg-slate-100 dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700">
+                      <img
+                        src={uniqueImages[activeImageIndex] || uniqueImages[0] || ''}
+                        alt={product.title}
+                        referrerPolicy="no-referrer"
+                        className={`w-full h-full object-cover object-center ${
+                          isSoldOut ? 'grayscale contrast-125' : ''
+                        }`}
+                      />
 
-                {isSoldOut && (
-                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                    <span className="px-3 py-1 bg-red-600 text-white font-bold text-xs uppercase tracking-wider rounded-md shadow-md">
-                      {t.soldOut}
-                    </span>
-                  </div>
-                )}
-              </div>
+                      {isSoldOut && (
+                        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                          <span className="px-3 py-1 bg-red-600 text-white font-bold text-xs uppercase tracking-wider rounded-md shadow-md">
+                            {t.soldOut}
+                          </span>
+                        </div>
+                      )}
+                    </div>
 
-              {/* Thumbnails rail if multiple images */}
-              {product.images.length > 1 && (
-                <div className="flex items-center gap-2 overflow-x-auto no-scrollbar">
-                  {product.images.map((img, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => setActiveImageIndex(idx)}
-                      className={`relative w-14 h-16 rounded-lg overflow-hidden border-2 shrink-0 transition-all ${
-                        activeImageIndex === idx
-                          ? 'border-indigo-600 ring-2 ring-indigo-500/20'
-                          : 'border-slate-200 dark:border-slate-700 opacity-70 hover:opacity-100'
-                      }`}
-                    >
-                      <img src={img} alt={`Thumbnail ${idx}`} className="w-full h-full object-cover" />
-                    </button>
-                  ))}
-                </div>
-              )}
+                    {/* Thumbnails rail if multiple images */}
+                    {uniqueImages.length > 1 && (
+                      <div className="flex items-center gap-2 overflow-x-auto no-scrollbar">
+                        {uniqueImages.map((img, idx) => (
+                          <button
+                            key={idx}
+                            onClick={() => setActiveImageIndex(idx)}
+                            className={`relative w-14 h-16 rounded-lg overflow-hidden border-2 shrink-0 transition-all ${
+                              activeImageIndex === idx
+                                ? 'border-indigo-600 ring-2 ring-indigo-500/20'
+                                : 'border-slate-200 dark:border-slate-700 opacity-70 hover:opacity-100'
+                            }`}
+                          >
+                            <img src={img} alt={`Thumbnail ${idx}`} className="w-full h-full object-cover" />
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                );
+              })()}
 
               {/* Verified Store Marker */}
               <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 flex items-center justify-between text-xs">
